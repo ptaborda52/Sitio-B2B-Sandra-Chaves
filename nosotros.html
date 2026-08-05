@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros — Sandra Chaves y Asociados | Distribuidor Oficial Certificado Tango Software</title>
+  <meta name="description" content="Más de 30 años implementando Tango Software en empresas argentinas. Conocé al equipo de Sandra Chaves y Asociados: certificaciones Axoft, trayectoria y clientes.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Datos estructurados: AboutPage + Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Sandra Chaves y Asoc. S.A.S.",
+      "url": "https://sandrachavesyasoc.com",
+      "foundingDate": "1990",
+      "founder": { "@type": "Person", "name": "Sandra Elizabeth Chaves", "jobTitle": "Fundadora" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Córdoba", "addressCountry": "AR" },
+      "areaServed": { "@type": "Country", "name": "Argentina" }
+    }
+  }
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="animations.js" defer></script>
+  <link rel="icon" type="image/jpeg" href="LOGO-ICONO.jpg">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- ================= Topbar ================= -->
+  <div class="topbar" data-od-id="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <a href="https://wa.me/5493515135058" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg>
+          +54 9 351 513-5058
+        </a>
+        <a href="https://wa.me/5493512275675" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg>
+          +54 9 351 227-5675
+        </a>
+      </div>
+      <div class="topbar-right">
+        <span>Distribuidor Oficial Certificado — Tango Software</span>
+        <a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.1"/><path d="M14 10a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.2-1.1"/></svg>
+          linktr.ee/sandrachavesyasoc
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Header + Mega menú ================= -->
+  <header class="site-header" data-od-id="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Sandra Chaves y Asociados — Inicio">
+        <!-- Logo aplicado. REEMPLAZAR opcional: versión final SVG/PNG transparente -->
+        <img class="brand-logo" src="LGO-PRINCIPAL.jpg" alt="Sandra Chaves y Asociados — Distribuidor Oficial Tango Software" width="200" height="46">
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="nav-mega">
+            <button class="nav-mega-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="mega-soluciones">
+              Soluciones
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="mega" id="mega-soluciones" role="region" aria-label="Menú de soluciones">
+              <div class="mega-grid">
+                <div class="mega-col">
+                  <h4>Módulos Tango</h4>
+                  <ul>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Ventas y Facturación</strong><span>Pedidos, clientes, libro IVA automático</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Stock y Depósitos</strong><span>Saldos, comprometido y valorización</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Compras y Proveedores</strong><span>Circuito completo de abastecimiento</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Tesorería y Bancos</strong><span>Conciliación bancaria automática</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Contabilidad e I.V.A.</strong><span>Registración, ajustes y balances</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Live y Tango Net</strong><span>Tableros y conexión de sucursales</span></a></li>
+                  </ul>
+                </div>
+                <div class="mega-col">
+                  <h4>Servicios Sandra Chaves</h4>
+                  <ul>
+                    <li><a class="mega-link" href="contacto.html"><strong>Implementación</strong><span>Relevamiento funcional y puesta en marcha</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Migración de datos</strong><span>Pasaje ordenado desde tu sistema actual</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Capacitación</strong><span>Formación de equipos, también universitaria</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Soporte técnico</strong><span>Asistencia remota y en tu empresa</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Desarrollo a medida</strong><span>Interfaces externas que potencian Tango</span></a></li>
+                  </ul>
+                </div>
+                <a class="mega-feature" href="productos-tango.html#delta5" data-od-id="mega-feature-delta5">
+                  <span>
+                    <strong>Novedad: Tango Delta 5</strong>
+                    <span>La última versión del ecosistema: agilidad y seguridad operativa.</span>
+                  </span>
+                  <span class="arrow" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li><a href="productos-tango.html">Productos</a></li>
+          <li><a href="tango-gestion.html">Tango Gestión</a></li>
+          <li><a href="nosotros.html" aria-current="page">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn--primary" href="contacto.html" data-od-id="cta-header-demo">Solicitar Demostración</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Abrir menú" aria-controls="mobile-panel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Panel mobile -->
+  <div class="mobile-panel" id="mobile-panel">
+    <a class="m-link" href="index.html">Inicio</a>
+    <a class="m-link" href="productos-tango.html">Productos Tango</a>
+    <a class="m-link" href="tango-gestion.html">Tango Gestión</a>
+    <a class="m-link" href="nosotros.html" aria-current="page">Nosotros</a>
+    <a class="m-link" href="contacto.html">Contacto</a>
+    <a class="btn btn--primary" href="contacto.html">Solicitar Demostración</a>
+  </div>
+
+  <main id="contenido">
+
+    <!-- Migas de pan -->
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Migas de pan" data-od-id="breadcrumbs">
+        <ol>
+          <li><a href="index.html">Inicio</a></li>
+          <li aria-current="page">Nosotros</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- ================= Hero institucional ================= -->
+    <section class="section section--dark section--tight has-texture" data-od-id="nos-hero">
+      <!-- REEMPLAZAR: textura ambient definitiva generada con IA (Admiral/Capri, sin oficinas) — hoy assets/hero-ambient.svg -->
+      <div class="hero-texture" aria-hidden="true"></div>
+      <div class="container">
+        <div class="split-block">
+          <div>
+            <span class="eyebrow" data-anim="fade-in">Quiénes somos</span>
+            <h1 data-anim="fade-up" data-delay="0.1">Más de 30 años haciendo <span class="hl">Transformación Digital</span> en empresas argentinas</h1>
+            <p class="lead" data-anim="fade-up" data-delay="0.2">Somos Sandra Chaves y Asociados, Distribuidor Oficial Certificado de Tango Software / Axoft. Acompañamos a pymes y empresas en cada etapa: venta, implementación, capacitación, soporte y desarrollo a medida.</p>
+          </div>
+          <div class="value-panel" data-anim="fade-left" data-od-id="nos-hero-foto">
+            <!-- Foto real aplicada: ambiente de trabajo de la consultora. Nota: la firma no tiene oficina comercial abierta al público — el copy refleja la modalidad remota / en el cliente. -->
+            <figure class="hero-photo" data-parallax="soft">
+              <img src="OFICINA.jpg" alt="Ambiente de trabajo real de Sandra Chaves y Asociados, consultora de implementación de Tango Software" width="640" height="480" fetchpriority="high">
+              <figcaption>Nuestro ambiente de trabajo real — asesoramos remoto en todo el país y presencial en tu empresa</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Banda de cifras (momento signature) ================= -->
+    <section class="stats-band" data-od-id="nos-stats" aria-label="Cifras de trayectoria">
+      <div class="container">
+        <div class="stats-grid" data-anim-group>
+          <div class="stat">
+            <div class="stat-num"><span data-count="30">30</span><em>+</em></div>
+            <div class="stat-label">Años de trayectoria en consultoría informática, desde 1990</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num"><span data-count="200">200</span><em>+</em></div>
+            <div class="stat-label">Implementaciones Tango en empresas argentinas</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num"><span data-count="2">2</span></div>
+            <div class="stat-label">Certificaciones oficiales Axoft: Gestión Professional y Sueldos Professional</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num"><span data-count="35">35</span><em>+</em></div>
+            <div class="stat-label">Años de evolución del ecosistema Tango que respaldan tu inversión</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Historia / timeline ================= -->
+    <section class="section" data-od-id="nos-historia">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Nuestra historia</span>
+          <h2 data-anim="fade-up">Una trayectoria construida <span class="hl">cliente a cliente</span></h2>
+        </div>
+        <div class="timeline" data-od-id="nos-timeline">
+          <span class="timeline-progress" aria-hidden="true"></span>
+          <div class="timeline-item" data-anim="fade-up" data-od-id="tl-1990">
+            <span class="timeline-year">1990</span>
+            <h3>El comienzo</h3>
+            <p>La Ing. Sandra Elizabeth Chaves, egresada de la UTN, funda la consultora con una convicción: la tecnología tiene que resolver la operación real de las empresas.</p>
+          </div>
+          <div class="timeline-item" data-anim="fade-up" data-od-id="tl-axoft">
+            <span class="timeline-year">Certificación Axoft</span>
+            <h3>Distribuidor Oficial</h3>
+            <p>Nos convertimos en Centro de Ventas y Servicios Certificado de Tango Software / Axoft, con certificaciones Tango Gestión Professional y Sueldos Professional.</p>
+          </div>
+          <div class="timeline-item" data-anim="fade-up" data-od-id="tl-2008">
+            <span class="timeline-year">2008</span>
+            <h3>Crece el equipo</h3>
+            <p>Se incorpora Paola García, hoy certificada por Axoft, consolidando un equipo que combina experiencia de gestión con especialización técnica.</p>
+          </div>
+          <div class="timeline-item" data-anim="fade-up" data-od-id="tl-hoy">
+            <span class="timeline-year">Hoy</span>
+            <h3>200 implementaciones</h3>
+            <p>Más de 200 proyectos en empresas de todo el país y capacitación también en universidades, formando a las nuevas generaciones de usuarios Tango.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Equipo ================= -->
+    <section class="section section--surface" id="equipo" data-od-id="nos-equipo">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">El equipo</span>
+          <h2 data-anim="fade-up">Personas que responden <span class="hl">por nombre y apellido</span></h2>
+          <p class="lead" data-anim="fade-up">Nada de call centers anónimos: cuando nos necesitás, hablás con quien implementó tu sistema.</p>
+        </div>
+        <!-- Foto del staff aplicada (SANDRA-Y-PAO.jpg). REEMPLAZAR: versión definitiva en mayor resolución, mismo encuadre -->
+        <div class="team-group-photo" data-anim="fade-up" data-od-id="nos-equipo-foto">
+          <figure>
+            <img src="SANDRA-Y-PAO.jpg" alt="Paola García y la Ing. Sandra Elizabeth Chaves, el equipo de Sandra Chaves y Asociados" width="532" height="445" loading="lazy">
+            <figcaption>Paola García y la Ing. Sandra Elizabeth Chaves — el equipo que conoce tu sistema de punta a punta</figcaption>
+          </figure>
+        </div>
+        <div class="grid-2" data-anim-group data-od-id="nos-equipo-grid">
+          <article class="card team-card team-card--bare" data-od-id="team-sandra">
+            <!-- REEMPLAZAR: el logo Tango reemplaza el retrato individual (la foto grupal del staff está arriba).
+                 Sin fondo, igual que la insignia de Paola: el logo flota directo sobre la sección blanca. -->
+            <div class="team-photo team-photo-badge team-badge--tango" aria-hidden="true">
+              <img class="team-badge" src="LOGO-TANGO-1.png" alt="Logo Tango Software" width="1024" height="1024" loading="lazy">
+            </div>
+            <span class="team-role">Fundadora · Directora</span>
+            <h3>Ing. Sandra Elizabeth Chaves</h3>
+            <p>Egresada de la UTN, lidera la consultora desde 1990. Certificada Tango Gestión Professional y Sueldos Professional, dirige cada relevamiento funcional y acompaña personalmente las implementaciones estratégicas.</p>
+          </article>
+          <article class="card team-card team-card--bare" data-od-id="team-paola">
+            <!-- La insignia Tango Elite reemplaza el retrato individual (la foto grupal del staff está arriba) -->
+            <div class="team-photo team-photo-badge" aria-hidden="true">
+              <img class="team-badge" src="ELIT1-sin-fondo.png" alt="Insignia Tango Elite" width="1294" height="1216" loading="lazy">
+            </div>
+            <span class="team-role">Analista en Sistemas · Consultora Senior · Certificada Axoft</span>
+            <h3>Paola García</h3>
+            <p>Parte del equipo desde 2008. Especialista certificada por Axoft en implementación y soporte del ecosistema Tango: capacitación por rol, migración de datos y acompañamiento post salida en vivo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Certificaciones ================= -->
+    <section class="section" id="certificaciones" data-od-id="nos-certificaciones">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Respaldo oficial</span>
+          <h2 data-anim="fade-up">Certificaciones que <span class="hl">garantizan</span> el trabajo</h2>
+        </div>
+        <div class="cert-band" data-anim-group data-od-id="nos-cert-grid">
+          <div class="cert-card" data-od-id="cert-1">
+            <span class="c-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 19 5.5v5.2c0 4.6-3 8.3-7 10.8-4-2.5-7-6.2-7-10.8V5.5z"/><path d="m9 11.5 2.2 2.2L15.5 9"/></svg></span>
+            <div>
+              <strong>Tango Gestión Professional</strong>
+              <span>Certificación oficial de Axoft Argentina</span>
+            </div>
+          </div>
+          <div class="cert-card" data-od-id="cert-2">
+            <span class="c-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 2.5h7l4 4V21H7z"/><path d="M14 2.5v4h4"/><path d="m9.5 12.5 1.8 1.8 3.2-3.4"/></svg></span>
+            <div>
+              <strong>Tango Sueldos Professional</strong>
+              <span>Certificación oficial de Axoft Argentina</span>
+            </div>
+          </div>
+          <div class="cert-card" data-od-id="cert-3">
+            <span class="c-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.4 2.4 4.8-5"/></svg></span>
+            <div>
+              <strong>Centro de Ventas y Servicios Certificado</strong>
+              <span>Distribuidor Oficial del ecosistema Tango Software</span>
+            </div>
+          </div>
+          <div class="cert-card" data-od-id="cert-4">
+            <span class="c-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 4.5-9 4.5-9-4.5z"/><path d="M5.5 10.5V16c0 1.7 2.9 3 6.5 3s6.5-1.3 6.5-3v-5.5"/><path d="M21 7.5V13"/></svg></span>
+            <div>
+              <strong>Capacitación universitaria</strong>
+              <span>Formación de equipos y de nuevas generaciones de usuarios Tango</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Nuestros clientes (literal) ================= -->
+    <section class="section section--surface" id="clientes" data-od-id="nos-clientes">
+      <div class="container">
+        <div class="section-head" style="margin-inline:auto;text-align:center">
+          <span class="eyebrow" data-anim="fade-in" style="justify-content:center">Confianza comprobada</span>
+          <h2 data-anim="fade-up">Nuestros clientes</h2>
+          <p class="lead" data-anim="fade-up" style="margin-inline:auto">Empresas de comercio, industria y servicios que ya ordenaron su gestión con nuestro acompañamiento.</p>
+        </div>
+        <p class="small" data-anim="fade-in" style="text-align:center;margin-top:22px">Contamos con más de 200 clientes que confiaron en nosotros: al momento de contactarnos, podemos brindar sus contactos para obtener las mejores referencias.</p>
+      </div>
+    </section>
+
+    <!-- ================= CTA final (copy literal) ================= -->
+    <section class="section cta-final" data-od-id="nos-cta-final">
+      <div class="container">
+        <h2 data-anim="fade-up">Impulsá tu empresa hoy mismo</h2>
+        <p class="lead" data-anim="fade-up">No permitas que la burocracia o los procesos lentos detengan tu crecimiento. Con el respaldo de Sandra Chaves y asociados y la potencia de Tango Software, tu negocio estará siempre un paso adelante.</p>
+        <p class="cta-question" data-anim="fade-up">¿Estás listo para llevar tu gestión al siguiente nivel?</p>
+        <div class="btn-row" data-anim="fade-up">
+          <a class="btn btn--primary btn--lg" href="contacto.html" data-od-id="cta-final-demo">
+            Contactanos para un asesoramiento personalizado
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <p class="microcopy" data-anim="fade-in">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+          Sus datos están protegidos bajo certificación SSL. No enviaremos spam.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer" data-od-id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" style="color:var(--on-dark)">
+            <img class="brand-logo" src="OGO-BLANCO.jpg" alt="Sandra Chaves y Asociados" width="200" height="46">
+          </a>
+          <p>Consultoría informática y Distribuidor Oficial Certificado del ecosistema Tango Software. Córdoba, Argentina.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/sandrachavesyasociados" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.facebook.com/SandraChavesyAsociados" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 8.5H17V5.5h-3c-1.9 0-3.5 1.6-3.5 3.5v2H8v3h2.5v6.5h3V14h2.6l.6-3h-3.2V9c0-.3.2-.5.5-.5z"/></svg>
+            </a>
+            <a href="https://wa.me/5493515135058" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg>
+            </a>
+            <a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener" aria-label="Linktree">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.1"/><path d="M14 10a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.2-1.1"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4>Productos</h4>
+          <ul>
+            <li><a href="tango-gestion.html">Tango Gestión</a></li>
+            <li><a href="productos-tango.html#prod-pdv">Tango Punto de Venta</a></li>
+            <li><a href="productos-tango.html#prod-resto">Tango Restô</a></li>
+            <li><a href="productos-tango.html#prod-rrhh">Tango Capital Humano</a></li>
+            <li><a href="productos-tango.html#prod-estudios">Tango Estudios Contables</a></li>
+            <li><a href="productos-tango.html#catalogo">Ecosistema completo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="nosotros.html#clientes">Nuestros clientes</a></li>
+            <li><a href="index.html#razones">10 razones para elegir Tango</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/5493515135058" target="_blank" rel="noopener">WhatsApp: +54 9 351 513-5058</a></li>
+            <li><a href="https://wa.me/5493512275675" target="_blank" rel="noopener">WhatsApp: +54 9 351 227-5675</a></li>
+            <li><a href="mailto:info@sandrachavesyasoc.com">info@sandrachavesyasoc.com</a></li>
+            <li><a href="https://sandrachavesyasoc.com/" target="_blank" rel="noopener">sandrachavesyasoc.com</a></li>
+            <li><a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener">linktr.ee/sandrachavesyasoc</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Sandra Chaves y Asoc. S.A.S. — Córdoba, Argentina</span>
+        <span>Distribuidor Oficial Certificado de Tango Software · Axoft Argentina S.A.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

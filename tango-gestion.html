@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tango Gestión — Software de Gestión ERP para tu empresa | Sandra Chaves y Asociados</title>
+  <meta name="description" content="Tango Gestión: el ERP líder del mercado argentino. Ventas, Stock, Compras, Tesorería, Contabilidad y más, con Cumplimiento Normativo ARCA e integraciones omnicanal. Implementación certificada en Córdoba.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Datos estructurados: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Tango Gestión",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "ERP",
+    "operatingSystem": "Windows, Web",
+    "inLanguage": "es-AR",
+    "brand": { "@type": "Brand", "name": "Tango Software — Axoft Argentina" },
+    "featureList": "Ventas, Stock, Compras, Importaciones, Proveedores, Tesorería, Contabilidad, I.V.A., Activo Fijo, Central, Live, Tango Net"
+  }
+  </script>
+  <!-- Datos estructurados: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://sandrachavesyasoc.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Productos", "item": "https://sandrachavesyasoc.com/productos-tango.html" },
+      { "@type": "ListItem", "position": 3, "name": "Tango Gestión" }
+    ]
+  }
+  </script>
+  <!-- Datos estructurados: FAQPage (mismas Q&A del acordeón #faq) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "¿Cuánto tiempo lleva implementar Tango Gestión?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Depende de los módulos y del volumen de tu operación. Arrancamos con un relevamiento funcional y hacemos una puesta en marcha por etapas, para que tu empresa no frene su actividad durante la implementación." } },
+      { "@type": "Question", "name": "¿Puedo migrar mis datos desde otro sistema?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí. Realizamos una migración ordenada de maestros (clientes, artículos, proveedores y saldos) con validación previa antes de salir en vivo." } },
+      { "@type": "Question", "name": "¿Funciona en la nube o en servidores propios?",
+        "acceptedAnswer": { "@type": "Answer", "text": "En ambos escenarios. Tus datos son tuyos: vos elegís dónde alojar la información y te asesoramos según tu infraestructura y tus políticas de seguridad." } },
+      { "@type": "Question", "name": "¿Cómo se conecta con Mercado Libre, Tiendanube y bancos?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Mediante APIs y conectores del ecosistema: stock y precios se sincronizan en tiempo real para una verdadera Omnicanalidad, y la integración bancaria automatiza la conciliación." } },
+      { "@type": "Question", "name": "¿Capacitan a mi equipo?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí. Capacitamos por rol y área, y tu equipo accede al programa Tango Horizontes, que ya formó a más de 110.000 alumnos en todo el país." } },
+      { "@type": "Question", "name": "¿Qué pasa cuando cambia una norma de la ARCA?",
+        "acceptedAnswer": { "@type": "Answer", "text": "El ecosistema se actualiza de manera constante y se anticipa a los cambios legales e impositivos: tu empresa queda siempre en regla, sin gestiones extra de tu lado." } }
+    ]
+  }
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="animations.js" defer></script>
+  <link rel="icon" type="image/jpeg" href="LOGO-ICONO.jpg">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- ================= Topbar ================= -->
+  <div class="topbar" data-od-id="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <a href="https://wa.me/5493515135058" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg>
+          +54 9 351 513-5058
+        </a>
+        <a href="https://wa.me/5493512275675" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg>
+          +54 9 351 227-5675
+        </a>
+      </div>
+      <div class="topbar-right">
+        <span>Distribuidor Oficial Certificado — Tango Software</span>
+        <a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.1"/><path d="M14 10a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.2-1.1"/></svg>
+          linktr.ee/sandrachavesyasoc
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Header + Mega menú ================= -->
+  <header class="site-header" data-od-id="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Sandra Chaves y Asociados — Inicio">
+        <!-- Logo aplicado. REEMPLAZAR opcional: versión final SVG/PNG transparente -->
+        <img class="brand-logo" src="LGO-PRINCIPAL.jpg" alt="Sandra Chaves y Asociados — Distribuidor Oficial Tango Software" width="200" height="46">
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="nav-mega">
+            <button class="nav-mega-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="mega-soluciones">
+              Soluciones
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="mega" id="mega-soluciones" role="region" aria-label="Menú de soluciones">
+              <div class="mega-grid">
+                <div class="mega-col">
+                  <h4>Módulos Tango</h4>
+                  <ul>
+                    <li><a class="mega-link" href="#modulos"><strong>Ventas y Facturación</strong><span>Pedidos, clientes, libro IVA automático</span></a></li>
+                    <li><a class="mega-link" href="#modulos"><strong>Stock y Depósitos</strong><span>Saldos, comprometido y valorización</span></a></li>
+                    <li><a class="mega-link" href="#modulos"><strong>Compras y Proveedores</strong><span>Circuito completo de abastecimiento</span></a></li>
+                    <li><a class="mega-link" href="#modulos"><strong>Tesorería y Bancos</strong><span>Conciliación bancaria automática</span></a></li>
+                    <li><a class="mega-link" href="#modulos"><strong>Contabilidad e I.V.A.</strong><span>Registración, ajustes y balances</span></a></li>
+                    <li><a class="mega-link" href="#modulos"><strong>Live y Tango Net</strong><span>Tableros y conexión de sucursales</span></a></li>
+                  </ul>
+                </div>
+                <div class="mega-col">
+                  <h4>Servicios Sandra Chaves</h4>
+                  <ul>
+                    <li><a class="mega-link" href="contacto.html"><strong>Implementación</strong><span>Relevamiento funcional y puesta en marcha</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Migración de datos</strong><span>Pasaje ordenado desde tu sistema actual</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Capacitación</strong><span>Formación de equipos, también universitaria</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Soporte técnico</strong><span>Asistencia remota y en tu empresa</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Desarrollo a medida</strong><span>Interfaces externas que potencian Tango</span></a></li>
+                  </ul>
+                </div>
+                <a class="mega-feature" href="productos-tango.html" data-od-id="mega-feature-delta5">
+                  <span>
+                    <strong>Novedad: Tango Delta 5</strong>
+                    <span>La última versión del ecosistema: agilidad y seguridad operativa.</span>
+                  </span>
+                  <span class="arrow" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li><a href="productos-tango.html">Productos</a></li>
+          <li><a href="tango-gestion.html" aria-current="page">Tango Gestión</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn--primary" href="contacto.html" data-od-id="cta-header-demo">Solicitar Demostración</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Abrir menú" aria-controls="mobile-panel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Panel mobile -->
+  <div class="mobile-panel" id="mobile-panel">
+    <a class="m-link" href="index.html">Inicio</a>
+    <a class="m-link" href="productos-tango.html">Productos Tango</a>
+    <a class="m-link" href="tango-gestion.html" aria-current="page">Tango Gestión</a>
+    <a class="m-link" href="nosotros.html">Nosotros</a>
+    <a class="m-link" href="contacto.html">Contacto</a>
+    <a class="btn btn--primary" href="contacto.html">Solicitar Demostración</a>
+  </div>
+
+  <main id="contenido">
+
+    <!-- Migas de pan -->
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Migas de pan" data-od-id="breadcrumbs">
+        <ol>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos-tango.html">Productos</a></li>
+          <li aria-current="page">Tango Gestión</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- ================= Hero (copy literal) ================= -->
+    <section class="hero hero--landing" data-od-id="tg-hero">
+      <div class="hero-fallback" aria-hidden="true"></div>
+      <div class="hero-media" data-parallax="soft" aria-hidden="true">
+        <!-- REEMPLAZAR VIDEO: loop final del producto / mockup animado de Tango Gestión
+             Estado: video real Tango-AI.MP4 aplicado (36,5 MB). Pendiente: comprimir a <4 MB
+             (webm/mp4) cuando haya ffmpeg disponible — ver placeholders.md -->
+        <video data-hero-video muted autoplay loop playsinline preload="metadata">
+          <source src="Tango-AI.MP4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero-grid-overlay" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-inner">
+          <div>
+            <span class="eyebrow" data-anim="fade-in">ERP · Líder del mercado argentino</span>
+            <h1 data-anim="fade-up" data-delay="0.1">Software de Gestión <span class="hl">para tu empresa</span></h1>
+            <p class="lead" data-anim="fade-up" data-delay="0.2">Tango Gestión hace que obtengas la mayor rentabilidad de tu empresa</p>
+            <ul class="hero-list" data-anim-group>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5.5"/></svg><span>Administrá eficientemente todas las operaciones y circuitos de tu negocio</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5.5"/></svg><span>Siempre está al día con toda la reglamentación vigente</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5.5"/></svg><span>Conectate con otras herramientas y dispositivos</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5.5"/></svg><span>Es fácil de usar · Te ayuda a decidir · Te ayuda a vender</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5.5"/></svg><span>Es líder del mercado, el más utilizado por las empresas argentinas.</span></li>
+            </ul>
+            <div class="btn-row" data-anim="fade-up" data-delay="0.2">
+              <a class="btn btn--primary btn--lg" href="contacto.html" data-od-id="cta-tg-demo">
+                Programar Demostración Gratuita
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+              </a>
+              <a class="btn btn--on-dark btn--lg" href="#modulos" data-od-id="cta-tg-modulos">Ver módulos</a>
+            </div>
+          </div>
+
+          <!-- Captura real de Tango Live (tablero) -->
+          <div class="mockup" data-anim="scale-in" data-delay="0.25" data-od-id="tg-hero-mockup">
+            <div class="mockup-frame">
+              <div class="mockup-bar">
+                <i></i><i></i><i></i>
+                <span class="mockup-url">live.tango.software/tablero</span>
+              </div>
+              <img class="mockup-shot" src="tablero-2.png" alt="Tablero de Tango Live: gestión integral de documentos comerciales y reportes" width="1536" height="1024" fetchpriority="high">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Trust / validación social ================= -->
+    <section class="section section--tight section--surface" data-od-id="tg-trust">
+      <div class="container">
+        <div class="section-head" style="margin-bottom:28px">
+          <span class="eyebrow" data-anim="fade-in">Validación de mercado</span>
+          <h2 data-anim="fade-up" style="font-size:clamp(1.4rem,2.4vw,1.9rem)">El ERP elegido por más de 79.800 empresas, con soporte en todo el país</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Módulos ================= -->
+    <section class="section" id="modulos" data-od-id="tg-modulos">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Módulos del ecosistema</span>
+          <h2 data-anim="fade-up">Un ecosistema integral: <span class="hl">cada área, un mismo dato</span></h2>
+          <p data-anim="fade-up" data-delay="0.1">Activás solo los módulos que necesitás hoy y escalás cuando tu empresa lo pida. Todos comparten la misma base: sin duplicidad, sin errores de carga, con <strong>Automatización</strong> de punta a punta.</p>
+        </div>
+
+        <div class="grid-3" data-anim-group data-od-id="tg-modulos-grid">
+          <!-- Ventas -->
+          <article class="card" data-od-id="mod-ventas">
+            <div class="card-icon">
+              <svg class="lottie-fallback" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 39V21m10 18V13m10 26V25m10 14V9"/><path d="M6 43h36"/></svg>
+            </div>
+            <h3>Ventas</h3>
+            <p>Pedidos, remitos y facturación con libro de IVA Ventas automático. Cumplimiento Normativo ARCA con factura electrónica integrada.</p>
+            <span class="badge-anchor">Factura electrónica</span>
+          </article>
+          <!-- Stock -->
+          <article class="card" data-od-id="mod-stock">
+            <div class="card-icon">
+              <svg class="lottie-fallback" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 6l16 8v20l-16 8-16-8V14l16-8z"/><path d="M8 14l16 8 16-8M24 22v20"/></svg>
+            </div>
+            <h3>Stock</h3>
+            <p>Saldos por depósito, stock comprometido y valorización en tiempo real. Alertas de faltantes antes de perder una venta.</p>
+            <span class="badge-anchor">Multi-depósito</span>
+          </article>
+          <!-- Compras -->
+          <article class="card" data-od-id="mod-compras">
+            <div class="card-icon">
+              <svg class="lottie-fallback" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 10h6l5 22h18l5-16H14"/><circle cx="20" cy="38" r="2.5"/><circle cx="32" cy="38" r="2.5"/></svg>
+            </div>
+            <h3>Compras</h3>
+            <p>Circuito completo de abastecimiento: solicitudes, órdenes de compra, recepción y libro de IVA Compras sin doble carga.</p>
+            <span class="badge-anchor">Abastecimiento</span>
+          </article>
+          <!-- Importaciones -->
+          <article class="card" data-od-id="mod-importaciones">
+            <div class="card-icon">
+              <svg class="lottie-fallback" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="18"/><path d="M6 24h36M24 6c6 5 6 31 0 36-6-5-6-31 0-36z"/></svg>
+            </div>
+            <h3>Importaciones</h3>
+            <p>Costos de nacionalización, embarques y gastos asociados distribuidos automáticamente en el costo final de cada artículo.</p>
+            <span class="badge-anchor">Costo real</span>
+          </article>
+          <!-- Proveedores -->
+          <article class="card" data-od-id="mod-proveedores">
+            <div class="card-icon">
+              <svg class="lottie-fallback" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="17" cy="16" r="6"/><path d="M5 40c0-7 5-11 12-11s12 4 12 11"/><circle cx="34" cy="20" r="4"/><path d="M33 40c3-1 10-2 10-7"/></svg>
+            </div>
+            <h3>Proveedores</h3>
+            <p>Cuentas corrientes, órdenes de pago y retenciones con imputación automática. Historial completo de cada relación comercial.</p>
+            <span class="badge-anchor">Retenciones</span>
+          </article>
+          <!-- Tesorería -->
+          <article class="card" data-od-id="mod-tesoreria">
+            <div class="card-icon">
+              <svg class="lottie-fallback" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="12" width="36" height="26" rx="3"/><path d="M6 20h36M12 30h8"/></svg>
+            </div>
+            <h3>Tesorería</h3>
+            <p>Caja, bancos, cheques y valores a cobrar. Conciliación bancaria automática contra los extractos: cero planillas manuales.</p>
+            <span class="badge-anchor">Conciliación</span>
+          </article>
+          <!-- Contabilidad -->
+          <article class="card" data-od-id="mod-contabilidad">
+            <div class="card-icon">
+              <svg class="lottie-fallback" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6h20l10 10v26H12V6z"/><path d="M32 6v10h10M18 24h12M18 30h12M18 36h7"/></svg>
+            </div>
+            <h3>Contabilidad</h3>
+            <p>Registración automática de los movimientos del ecosistema, ajustes y balances. Asientos sin carga manual: Datos Empíricos para decidir.</p>
+            <span class="badge-anchor">Integrada</span>
+          </article>
+          <!-- I.V.A. -->
+          <article class="card" data-od-id="mod-iva">
+            <div class="card-icon">
+              <svg class="lottie-fallback" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 10h22v30H14z"/><path d="M18 34l4-8m0 8l-4-8M26 26l4-4m-4 0l4 4"/><path d="M24 4v6"/></svg>
+            </div>
+            <h3>I.V.A.</h3>
+            <p>Liquidación del impuesto con subdiarios y reportes listos para la ARCA. Siempre al día con la reglamentación vigente.</p>
+            <span class="badge-anchor">ARCA ready</span>
+          </article>
+          <!-- Activo Fijo -->
+          <article class="card" data-od-id="mod-activofijo">
+            <div class="card-icon">
+              <svg class="lottie-fallback" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 40V20l16-12 16 12v20"/><path d="M18 40V28h12v12"/></svg>
+            </div>
+            <h3>Activo Fijo</h3>
+            <p>Altas, bajas, amortizaciones y valuaciones del patrimonio. Control total de bienes de uso con impacto contable automático.</p>
+            <span class="badge-anchor">Patrimonio</span>
+          </article>
+          <!-- Central -->
+          <article class="card" data-od-id="mod-central">
+            <div class="card-icon">
+              <svg class="lottie-fallback" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="5"/><path d="M24 10v8m0 12v8m-14-14h8m12 0h8"/></svg>
+            </div>
+            <h3>Central</h3>
+            <p>Administración centralizada de empresas y sucursales: consolidación de información y parámetros comunes del grupo.</p>
+            <span class="badge-anchor">Multi-empresa</span>
+          </article>
+          <!-- Live -->
+          <article class="card" data-od-id="mod-live">
+            <div class="card-icon">
+              <svg class="lottie-fallback" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="8" width="36" height="24" rx="3"/><path d="M12 26l6-6 5 4 8-9M18 38h12"/></svg>
+            </div>
+            <h3>Live</h3>
+            <p>Tableros de indicadores en tiempo real, desde cualquier dispositivo. Transformá datos en decisiones con información confiable.</p>
+            <span class="badge-anchor">BI incluido</span>
+          </article>
+          <!-- Tango Net -->
+          <article class="card" data-od-id="mod-tangonet">
+            <div class="card-icon">
+              <svg class="lottie-fallback" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="12" r="4"/><circle cx="10" cy="34" r="4"/><circle cx="38" cy="34" r="4"/><path d="M22 16l-9 14m17-14l9 14m-25 0h20"/></svg>
+            </div>
+            <h3>Tango Net</h3>
+            <p>Conectá sucursales y distribuidores en tiempo real: pedidos, catálogos y estado de cuenta sin llamados ni correos.</p>
+            <span class="badge-anchor">Colaboración</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Automatización ================= -->
+    <section class="section section--dark" data-od-id="tg-automatizacion">
+      <div class="container">
+        <div class="split-block">
+          <div>
+            <span class="eyebrow" data-anim="fade-in">Automatización</span>
+            <h2 data-anim="fade-up">Menos tareas manuales, <span class="hl">más Rentabilidad</span></h2>
+            <p data-anim="fade-up" data-delay="0.1">Cada comprobante que cargás una vez recorre solo todo el circuito: stock, cuenta corriente, tesorería y contabilidad se actualizan en el mismo instante. Tu equipo deja de cargar datos y empieza a analizarlos.</p>
+            <ul class="check-list" data-anim-group>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span><strong>Escalabilidad real:</strong> el mismo ecosistema acompaña tu crecimiento sin cambiar de plataforma.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span><strong>Cumplimiento Normativo:</strong> anticipación constante a los cambios legales e impositivos de la ARCA.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span><strong>Datos Empíricos:</strong> cada decisión se apoya en información real de tu operación, no en supuestos.</span></li>
+            </ul>
+          </div>
+          <div class="value-panel" data-anim="fade-left" data-od-id="tg-auto-visual">
+            <!-- Banner real "Un solo flujo" con parallax sutil de scroll (data-parallax="soft") -->
+            <img class="sol-visual" src="UN-SOLO-FLUJO.jpg" alt="Un solo flujo: cada comprobante recorre stock, tesorería y contabilidad sin volver a tipearse" loading="lazy" width="1600" height="873" data-parallax="soft">
+            <h3 style="text-align:center;margin-top:18px">Un solo flujo de trabajo</h3>
+            <p style="text-align:center;margin:8px auto 0;max-width:38ch">Cada comprobante recorre stock, tesorería y contabilidad sin volver a tipearse.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Integraciones ================= -->
+    <section class="section" data-od-id="tg-integraciones">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Omnicanalidad</span>
+          <h2 data-anim="fade-up">Conectado con <span class="hl">todo tu ecosistema</span></h2>
+          <p data-anim="fade-up" data-delay="0.1">Stock y precios sincronizados en tiempo real con tus canales de venta, bancos y la ARCA. Una sola fuente de verdad para toda la operación.</p>
+        </div>
+
+        <!-- REEMPLAZAR: ilustración/animación final del diagrama de integraciones -->
+        <div class="integr-wrap" data-od-id="tg-integr-diagram">
+          <svg class="integr-svg" viewBox="0 0 960 440" role="img" aria-label="Diagrama de integraciones de Tango Gestión con ARCA, Mercado Libre, Bancos, Tiendanube y sucursales vía Tango Net">
+            <!-- Cables: se muestran completos (dash punteado del CSS, sin pinning) -->
+            <path class="wire" d="M 380 200 C 300 200, 230 86, 212 86"/>
+            <path class="wire" d="M 580 200 C 660 200, 730 86, 748 86"/>
+            <path class="wire" d="M 380 250 C 300 250, 230 356, 212 356"/>
+            <path class="wire" d="M 580 250 C 660 250, 730 356, 748 356"/>
+            <path class="wire" d="M 480 183 C 480 150, 480 100, 480 74"/>
+            <!-- Nodos -->
+            <g class="integr-node">
+              <rect class="node-box" x="60" y="60" width="150" height="52" rx="12"/>
+              <text class="node-label" x="135" y="82" text-anchor="middle">ARCA</text>
+              <text class="node-sub" x="135" y="99" text-anchor="middle">Factura electrónica</text>
+            </g>
+            <g class="integr-node">
+              <rect class="node-box" x="750" y="60" width="150" height="52" rx="12"/>
+              <text class="node-label" x="825" y="82" text-anchor="middle">Mercado Libre</text>
+              <text class="node-sub" x="825" y="99" text-anchor="middle">Stock en tiempo real</text>
+            </g>
+            <g class="integr-node">
+              <rect class="node-box" x="60" y="330" width="150" height="52" rx="12"/>
+              <text class="node-label" x="135" y="352" text-anchor="middle">Bancos</text>
+              <text class="node-sub" x="135" y="369" text-anchor="middle">Conciliación automática</text>
+            </g>
+            <g class="integr-node">
+              <rect class="node-box" x="750" y="330" width="150" height="52" rx="12"/>
+              <text class="node-label" x="825" y="352" text-anchor="middle">Tiendanube</text>
+              <text class="node-sub" x="825" y="369" text-anchor="middle">E-commerce</text>
+            </g>
+            <g class="integr-node">
+              <rect class="node-box" x="405" y="20" width="150" height="52" rx="12"/>
+              <text class="node-label" x="480" y="42" text-anchor="middle">Tango Net</text>
+              <text class="node-sub" x="480" y="59" text-anchor="middle">Sucursales</text>
+            </g>
+            <!-- Hub central -->
+            <g class="integr-node">
+              <rect class="hub-box" x="380" y="183" width="200" height="74" rx="16"/>
+              <text class="hub-label" x="480" y="216" text-anchor="middle">Tango Gestión</text>
+              <text class="hub-sub" x="480" y="236" text-anchor="middle">Ecosistema central</text>
+            </g>
+            <!-- Puntos de conexión -->
+            <circle class="wire-dot" cx="210" cy="86" r="5"/>
+            <circle class="wire-dot" cx="750" cy="86" r="5"/>
+            <circle class="wire-dot" cx="210" cy="356" r="5"/>
+            <circle class="wire-dot" cx="750" cy="356" r="5"/>
+            <circle class="wire-dot" cx="480" cy="72" r="5"/>
+          </svg>
+          <p class="integr-caption small" data-anim="fade-in">Tango Gestión se conecta con la ARCA, los bancos, los canales de venta y tus sucursales vía Tango Net.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Calculadora ROI ================= -->
+    <section class="section section--surface" data-od-id="tg-roi">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Datos Empíricos</span>
+          <h2 data-anim="fade-up">Calculá el retorno de tu <span class="hl">inversión</span></h2>
+          <p class="lead" data-anim="fade-up">Estimá cuánto recupera tu empresa cada mes al automatizar los circuitos administrativos con Tango Gestión.</p>
+        </div>
+        <div class="roi-card" data-roi data-anim="fade-up" data-od-id="tg-roi-card">
+          <div class="roi-grid">
+            <form data-od-id="tg-roi-form" novalidate>
+              <div class="field">
+                <label for="roi-empleados">Personas en tareas administrativas</label>
+                <input type="number" id="roi-empleados" name="empleados" min="1" max="500" value="5" inputmode="numeric">
+              </div>
+              <div class="field">
+                <label for="roi-horas">Horas semanales de carga manual por persona</label>
+                <input type="number" id="roi-horas" name="horas" min="1" max="60" value="6" inputmode="numeric">
+              </div>
+              <div class="field">
+                <label for="roi-costo">Costo horario promedio ($)</label>
+                <input type="number" id="roi-costo" name="costo" min="100" max="100000" step="100" value="4500" inputmode="numeric">
+              </div>
+            </form>
+            <div class="roi-result" data-od-id="tg-roi-result">
+              <span class="eyebrow" style="color:var(--accent-strong)">Recupero estimado mensual</span>
+              <div class="roi-amount" aria-live="polite">$ 0</div>
+              <p class="roi-note">Proyección anual: <strong data-roi-anual>$ 0</strong></p>
+              <p class="roi-note">Estimación orientativa basada en un recupero del 60&nbsp;% del tiempo de carga manual. El resultado real depende de cada implementación.</p>
+              <a class="btn btn--primary" href="contacto.html" data-od-id="cta-roi-analisis" style="margin-top:10px">Pedir un análisis de tu caso</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section" id="faq" data-od-id="tg-faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Preguntas frecuentes</span>
+          <h2 data-anim="fade-up">Todo lo que necesitás saber <span class="hl">antes de decidir</span></h2>
+        </div>
+        <div class="acc" data-accordion="single" data-od-id="tg-faq-acc">
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="tg-faq-1">
+              <span class="acc-title">¿Cuánto tiempo lleva implementar Tango Gestión?</span>
+              <span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+            </button>
+            <div class="acc-panel" id="tg-faq-1" role="region"><div class="acc-panel-inner">
+              <p>Depende de los módulos y del volumen de tu operación. Arrancamos con un relevamiento funcional y hacemos una puesta en marcha por etapas, para que tu empresa no frene su actividad durante la implementación.</p>
+            </div></div>
+          </div>
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="tg-faq-2">
+              <span class="acc-title">¿Puedo migrar mis datos desde otro sistema?</span>
+              <span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+            </button>
+            <div class="acc-panel" id="tg-faq-2" role="region"><div class="acc-panel-inner">
+              <p>Sí. Realizamos una migración ordenada de maestros (clientes, artículos, proveedores y saldos) con validación previa antes de salir en vivo.</p>
+            </div></div>
+          </div>
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="tg-faq-3">
+              <span class="acc-title">¿Funciona en la nube o en servidores propios?</span>
+              <span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+            </button>
+            <div class="acc-panel" id="tg-faq-3" role="region"><div class="acc-panel-inner">
+              <p>En ambos escenarios. Tus datos son tuyos: vos elegís dónde alojar la información y te asesoramos según tu infraestructura y tus políticas de seguridad.</p>
+            </div></div>
+          </div>
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="tg-faq-4">
+              <span class="acc-title">¿Cómo se conecta con Mercado Libre, Tiendanube y bancos?</span>
+              <span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+            </button>
+            <div class="acc-panel" id="tg-faq-4" role="region"><div class="acc-panel-inner">
+              <p>Mediante APIs y conectores del ecosistema: stock y precios se sincronizan en tiempo real para una verdadera Omnicanalidad, y la integración bancaria automatiza la conciliación.</p>
+            </div></div>
+          </div>
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="tg-faq-5">
+              <span class="acc-title">¿Capacitan a mi equipo?</span>
+              <span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+            </button>
+            <div class="acc-panel" id="tg-faq-5" role="region"><div class="acc-panel-inner">
+              <p>Sí. Capacitamos por rol y área, y tu equipo accede al programa Tango Horizontes, que ya formó a más de 110.000 alumnos en todo el país.</p>
+            </div></div>
+          </div>
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="tg-faq-6">
+              <span class="acc-title">¿Qué pasa cuando cambia una norma de la ARCA?</span>
+              <span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+            </button>
+            <div class="acc-panel" id="tg-faq-6" role="region"><div class="acc-panel-inner">
+              <p>El ecosistema se actualiza de manera constante y se anticipa a los cambios legales e impositivos: tu empresa queda siempre en regla, sin gestiones extra de tu lado.</p>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA final (copy literal) ================= -->
+    <section class="section cta-final" data-od-id="tg-cta-final">
+      <div class="container">
+        <h2 data-anim="fade-up">Impulsá tu empresa hoy mismo</h2>
+        <p class="lead" data-anim="fade-up">No permitas que la burocracia o los procesos lentos detengan tu crecimiento. Con el respaldo de Sandra Chaves y asociados y la potencia de Tango Software, tu negocio estará siempre un paso adelante.</p>
+        <p class="cta-question" data-anim="fade-up">¿Estás listo para llevar tu gestión al siguiente nivel?</p>
+        <div class="btn-row" data-anim="fade-up">
+          <a class="btn btn--primary btn--lg" href="contacto.html" data-od-id="cta-final-demo">
+            Contactanos para un asesoramiento personalizado
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <p class="microcopy" data-anim="fade-in">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+          Sus datos están protegidos bajo certificación SSL. No enviaremos spam.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer" data-od-id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" style="color:var(--on-dark)">
+            <img class="brand-logo" src="OGO-BLANCO.jpg" alt="Sandra Chaves y Asociados" width="200" height="46">
+          </a>
+          <p>Consultoría informática y Distribuidor Oficial Certificado del ecosistema Tango Software. Córdoba, Argentina.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/sandrachavesyasociados" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.facebook.com/SandraChavesyAsociados" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 8.5H17V5.5h-3c-1.9 0-3.5 1.6-3.5 3.5v2H8v3h2.5v6.5h3V14h2.6l.6-3h-3.2V9c0-.3.2-.5.5-.5z"/></svg>
+            </a>
+            <a href="https://wa.me/5493515135058" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg>
+            </a>
+            <a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener" aria-label="Linktree">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.1"/><path d="M14 10a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.2-1.1"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4>Productos</h4>
+          <ul>
+            <li><a href="tango-gestion.html">Tango Gestión</a></li>
+            <li><a href="productos-tango.html#prod-pdv">Tango Punto de Venta</a></li>
+            <li><a href="productos-tango.html#prod-resto">Tango Restô</a></li>
+            <li><a href="productos-tango.html#prod-rrhh">Tango Capital Humano</a></li>
+            <li><a href="productos-tango.html#prod-estudios">Tango Estudios Contables</a></li>
+            <li><a href="productos-tango.html#catalogo">Ecosistema completo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="nosotros.html#clientes">Nuestros clientes</a></li>
+            <li><a href="index.html#razones">10 razones para elegir Tango</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/5493515135058" target="_blank" rel="noopener">WhatsApp: +54 9 351 513-5058</a></li>
+            <li><a href="https://wa.me/5493512275675" target="_blank" rel="noopener">WhatsApp: +54 9 351 227-5675</a></li>
+            <li><a href="mailto:info@sandrachavesyasoc.com">info@sandrachavesyasoc.com</a></li>
+            <li><a href="https://sandrachavesyasoc.com/" target="_blank" rel="noopener">sandrachavesyasoc.com</a></li>
+            <li><a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener">linktr.ee/sandrachavesyasoc</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Sandra Chaves y Asoc. S.A.S. — Córdoba, Argentina</span>
+        <span>Distribuidor Oficial Certificado de Tango Software · Axoft Argentina S.A.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

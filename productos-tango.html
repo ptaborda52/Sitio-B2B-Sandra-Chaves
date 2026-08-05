@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos Tango — Impulsá tu empresa con la potencia de Tango Software | Sandra Chaves y Asociados</title>
+  <meta name="description" content="Tango Gestión, Tango Punto de Venta, Tango Restô, Tango Capital Humano y más. Conocé el ecosistema Tango Software y la nueva versión Delta 5, con implementación certificada en Córdoba.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Datos estructurados: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://sandrachavesyasoc.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Productos Tango" }
+    ]
+  }
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="animations.js" defer></script>
+  <link rel="icon" type="image/jpeg" href="LOGO-ICONO.jpg">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- ================= Topbar ================= -->
+  <div class="topbar" data-od-id="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <a href="https://wa.me/5493515135058" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg>
+          +54 9 351 513-5058
+        </a>
+        <a href="https://wa.me/5493512275675" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg>
+          +54 9 351 227-5675
+        </a>
+      </div>
+      <div class="topbar-right">
+        <span>Distribuidor Oficial Certificado — Tango Software</span>
+        <a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.1"/><path d="M14 10a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.2-1.1"/></svg>
+          linktr.ee/sandrachavesyasoc
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Header + Mega menú ================= -->
+  <header class="site-header" data-od-id="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Sandra Chaves y Asociados — Inicio">
+        <!-- Logo aplicado. REEMPLAZAR opcional: versión final SVG/PNG transparente -->
+        <img class="brand-logo" src="LGO-PRINCIPAL.jpg" alt="Sandra Chaves y Asociados — Distribuidor Oficial Tango Software" width="200" height="46">
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="nav-mega">
+            <button class="nav-mega-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="mega-soluciones">
+              Soluciones
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="mega" id="mega-soluciones" role="region" aria-label="Menú de soluciones">
+              <div class="mega-grid">
+                <div class="mega-col">
+                  <h4>Módulos Tango</h4>
+                  <ul>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Ventas y Facturación</strong><span>Pedidos, clientes, libro IVA automático</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Stock y Depósitos</strong><span>Saldos, comprometido y valorización</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Compras y Proveedores</strong><span>Circuito completo de abastecimiento</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Tesorería y Bancos</strong><span>Conciliación bancaria automática</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Contabilidad e I.V.A.</strong><span>Registración, ajustes y balances</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Live y Tango Net</strong><span>Tableros y conexión de sucursales</span></a></li>
+                  </ul>
+                </div>
+                <div class="mega-col">
+                  <h4>Servicios Sandra Chaves</h4>
+                  <ul>
+                    <li><a class="mega-link" href="contacto.html"><strong>Implementación</strong><span>Relevamiento funcional y puesta en marcha</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Migración de datos</strong><span>Pasaje ordenado desde tu sistema actual</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Capacitación</strong><span>Formación de equipos, también universitaria</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Soporte técnico</strong><span>Asistencia remota y en tu empresa</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Desarrollo a medida</strong><span>Interfaces externas que potencian Tango</span></a></li>
+                  </ul>
+                </div>
+                <a class="mega-feature" href="#delta5" data-od-id="mega-feature-delta5">
+                  <span>
+                    <strong>Novedad: Tango Delta 5</strong>
+                    <span>La última versión del ecosistema: agilidad y seguridad operativa.</span>
+                  </span>
+                  <span class="arrow" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li><a href="productos-tango.html" aria-current="page">Productos</a></li>
+          <li><a href="tango-gestion.html">Tango Gestión</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn--primary" href="contacto.html" data-od-id="cta-header-demo">Solicitar Demostración</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Abrir menú" aria-controls="mobile-panel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Panel mobile -->
+  <div class="mobile-panel" id="mobile-panel">
+    <a class="m-link" href="index.html">Inicio</a>
+    <a class="m-link" href="productos-tango.html" aria-current="page">Productos Tango</a>
+    <a class="m-link" href="tango-gestion.html">Tango Gestión</a>
+    <a class="m-link" href="nosotros.html">Nosotros</a>
+    <a class="m-link" href="contacto.html">Contacto</a>
+    <a class="btn btn--primary" href="contacto.html">Solicitar Demostración</a>
+  </div>
+
+  <main id="contenido">
+
+    <!-- Migas de pan -->
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Migas de pan" data-od-id="breadcrumbs">
+        <ol>
+          <li><a href="index.html">Inicio</a></li>
+          <li aria-current="page">Productos Tango</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- ================= Hero (copy literal) ================= -->
+    <section class="hero hero--landing" data-od-id="prod-hero">
+      <div class="hero-fallback" aria-hidden="true"></div>
+      <div class="hero-media" data-parallax="soft" aria-hidden="true">
+        <!-- Video real aplicado: spot institucional Tango Management (Martín Tetaz).
+             REEMPLAZAR opcional: loop propio de recorrido del ecosistema (sin tomas de oficina propia) -->
+        <video data-hero-video muted autoplay loop playsinline preload="metadata">
+          <source src="Spot-Tango-Management-and-Martin-Tetaz---Tango-Software.MP4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero-grid-overlay" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-inner">
+          <div>
+            <span class="eyebrow" data-anim="fade-in">Ecosistema Tango Software</span>
+            <h1 data-anim="fade-up" data-delay="0.1">Impulsá tu empresa con la <span class="hl">potencia de Tango Software</span></h1>
+            <p class="lead" data-anim="fade-up" data-delay="0.2">Conocé la nueva versión Tango Delta 5</p>
+            <div class="btn-row" data-anim="fade-up" data-delay="0.25">
+              <a class="btn btn--primary btn--lg" href="contacto.html" data-od-id="cta-prod-demo">
+                Programar Demostración Gratuita
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+              </a>
+              <a class="btn btn--on-dark btn--lg" href="#catalogo" data-od-id="cta-prod-catalogo">Explorar el catálogo              </a>
+            </div>
+            <div class="hero-partner" data-anim="fade-up" data-delay="0.3">
+              <img class="partner-logo" src="LOGO-TANGO.png" alt="Tango Software" width="108" height="108">
+              <span class="small">Distribuidor Oficial Certificado — Axoft Argentina</span>
+            </div>
+          </div>
+
+          <!-- Imagen real de producto: Tango Delta 5 -->
+          <figure class="sweep-figure" data-anim="fade-left" data-delay="0.25" data-od-id="prod-hero-img">
+            <img class="card-img card-img--bare" src="TANGO-DELTA-5.png" alt="Tango Delta 5 — nueva versión del ecosistema Tango Software" loading="eager" width="640" height="360">
+            <figcaption class="small" style="margin-top:12px;text-align:center">Tango Delta 5 · la última versión del ecosistema</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Catálogo de productos ================= -->
+    <section class="section" id="catalogo" data-od-id="prod-catalogo">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Catálogo</span>
+          <h2 data-anim="fade-up">Un producto para <span class="hl">cada necesidad</span></h2>
+          <p data-anim="fade-up" data-delay="0.1">Todos integrados entre sí y con el mismo estándar de <strong>Cumplimiento Normativo</strong>: empezás por donde más lo necesitás y sumás piezas del ecosistema a medida que crecés.</p>
+        </div>
+
+        <div class="grid-3" data-anim-group data-od-id="prod-grid">
+          <article class="card product-card" data-od-id="prod-tango-gestion">
+            <img class="card-img card-img--bare img-blend" src="GESTION.jpg" alt="Tango Gestión — ERP líder del mercado argentino" loading="lazy" width="640" height="360">
+            <h3>Tango Gestión</h3>
+            <p>El ERP líder del mercado argentino: Ventas, Stock, Compras, Tesorería y Contabilidad en un solo ecosistema, siempre al día con la ARCA.</p>
+            <span class="badge-anchor">ERP central</span>
+            <a class="btn btn--ghost" href="tango-gestion.html" data-od-id="cta-prod-tg">Ver la landing completa
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+          <article class="card product-card" id="prod-pdv" data-od-id="prod-pdv">
+            <img class="card-img card-img--bare img-blend" src="PUNTO-DE-VENTA.jpg" alt="Tango Punto de Venta — facturación ágil en mostrador" loading="lazy" width="640" height="360">
+            <h3>Tango Punto de Venta</h3>
+            <p>Facturación ágil en mostrador con tickets, lectores de códigos y medios de pago. Descarga de stock y Cumplimiento Normativo automáticos.</p>
+            <span class="badge-anchor">Retail</span>
+            <a class="btn btn--ghost" href="contacto.html" data-od-id="cta-prod-pdv">Consultar
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+          <article class="card product-card" id="prod-resto" data-od-id="prod-resto">
+            <img class="card-img card-img--bare img-blend" src="RESTO.jpg" alt="Tango Restô — gestión gastronómica de salón, cocina y delivery" loading="lazy" width="640" height="360">
+            <h3>Tango Restô</h3>
+            <p>Gestión gastronómica de punta a punta: salón, comandas, cocina y delivery, integrados con el stock y la facturación del ecosistema.</p>
+            <span class="badge-anchor">Gastronomía</span>
+            <a class="btn btn--ghost" href="contacto.html" data-od-id="cta-prod-resto">Consultar
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+          <article class="card product-card" id="prod-rrhh" data-od-id="prod-rrhh">
+            <img class="card-img card-img--bare img-blend" src="CAPITAL-HUMANO.jpg" alt="Tango Capital Humano — liquidación de sueldos y gestión de legajos" loading="lazy" width="640" height="360">
+            <h3>Tango Capital Humano</h3>
+            <p>Liquidación de sueldos, legajos y cargas sociales con todas las reglamentaciones vigentes. Información confiable para tu equipo de RRHH.</p>
+            <span class="badge-anchor">Sueldos y RRHH</span>
+            <a class="btn btn--ghost" href="contacto.html" data-od-id="cta-prod-rrhh">Consultar
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+          <article class="card product-card" id="prod-estudios" data-od-id="prod-estudios">
+            <img class="card-img card-img--bare img-blend" src="ESTUDIOS-CONTABLES.jpg" alt="Tango Estudios Contables — gestión multi-empresa" loading="lazy" width="640" height="360">
+            <h3>Tango Estudios Contables</h3>
+            <p>Gestión multi-empresa para estudios: registraciones, impuestos y reportes de todas tus empresas clientes desde un solo lugar.</p>
+            <span class="badge-anchor">Multi-empresa</span>
+            <a class="btn btn--ghost" href="contacto.html" data-od-id="cta-prod-estudios">Consultar
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Delta 5 (banda destacada) ================= -->
+    <section class="section delta-band" id="delta5" data-od-id="prod-delta5">
+      <div class="container split-block">
+        <div>
+          <span class="delta-tag" data-anim="fade-in">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6L12 2z"/></svg>
+            Novedad del ecosistema
+          </span>
+          <h2 data-anim="fade-up" style="margin-top:18px">Tango <span class="hl">Delta 5</span></h2>
+          <p class="lead" data-anim="fade-up" style="margin-top:14px;color:var(--muted-on-dark)">La última versión del ecosistema: más agilidad operativa, más seguridad y una experiencia de uso renovada para que tu equipo trabaje más rápido desde el primer día.</p>
+          <ul class="check-list" data-anim-group>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span><strong>Agilidad:</strong> procesos optimizados y tiempos de respuesta mejorados en los circuitos de uso intensivo.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span><strong>Seguridad operativa:</strong> permisos, trazabilidad y respaldo de la información de tu empresa.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span><strong>Escalabilidad:</strong> preparado para crecer en usuarios, sucursales y volumen de operaciones.</span></li>
+          </ul>
+          <div class="btn-row" data-anim="fade-up" style="margin-top:28px">
+            <a class="btn btn--primary" href="contacto.html" data-od-id="cta-delta5-migrar">Quiero migrar a Delta 5</a>
+            <a class="btn btn--on-dark" href="https://wa.me/5493515135058" target="_blank" rel="noopener" data-od-id="cta-delta5-wa">Consultar por WhatsApp</a>
+          </div>
+        </div>
+        <figure class="liquid-figure" data-anim="fade-right" data-od-id="delta5-img">
+          <!-- Imagen real: presentación vertical de Tango Delta 5 (PNG sin fondo, flota sobre la banda Admiral) -->
+          <!-- Sin marco blanco: la figura es transparente. Efecto dinámico exclusivo de esta página:
+               Iridescent Liquid Gradient — "blobs" de color metálico (púrpura, azul, magenta, cian) que
+               fluyen y se deforman como mercurio o líquido denso (CSS vía .liquid-figure, styles.css 18c). -->
+          <span class="liquid-pool" aria-hidden="true">
+            <span class="liquid-blob b1"></span>
+            <span class="liquid-blob b2"></span>
+            <span class="liquid-blob b3"></span>
+            <span class="liquid-blob b4"></span>
+            <span class="liquid-blob b5"></span>
+          </span>
+          <span class="liquid-sheen" aria-hidden="true"></span>
+          <img class="img-float" src="DELTA-5-VERTICAL-2.png" alt="Tango Delta 5 — versión vigente del ecosistema" loading="lazy">
+          <figcaption class="small" style="margin-top:12px;text-align:center">Tango Delta 5 · versión vigente del ecosistema</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= Por qué implementar con nosotros ================= -->
+    <section class="section section--surface" data-od-id="prod-porque">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Implementación certificada</span>
+          <h2 data-anim="fade-up">El producto es Tango. <span class="hl">La diferencia es quién lo implementa</span></h2>
+        </div>
+        <div class="grid-3" data-anim-group>
+          <article class="card" data-od-id="pq-1">
+            <h3>Relevamiento funcional</h3>
+            <p>Antes de instalar nada, entendemos cómo opera tu empresa: circuitos, roles y puntos de dolor. La configuración nace de tu realidad.</p>
+          </article>
+          <article class="card" data-od-id="pq-2">
+            <h3>Puesta en marcha por etapas</h3>
+            <p>Salís en vivo sin frenar la actividad: migración validada, capacitación por rol y acompañamiento en las primeras semanas.</p>
+          </article>
+          <article class="card" data-od-id="pq-3">
+            <h3>Soporte que responde</h3>
+            <p>Asistencia remota en todo el país y presencial en tu empresa, de un equipo certificado por Axoft, con más de 30 años de trayectoria y 200 implementaciones.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA final (copy literal) ================= -->
+    <section class="section cta-final" data-od-id="prod-cta-final">
+      <div class="container">
+        <h2 data-anim="fade-up">Impulsá tu empresa hoy mismo</h2>
+        <p class="lead" data-anim="fade-up">No permitas que la burocracia o los procesos lentos detengan tu crecimiento. Con el respaldo de Sandra Chaves y asociados y la potencia de Tango Software, tu negocio estará siempre un paso adelante.</p>
+        <p class="cta-question" data-anim="fade-up">¿Estás listo para llevar tu gestión al siguiente nivel?</p>
+        <div class="btn-row" data-anim="fade-up">
+          <a class="btn btn--primary btn--lg" href="contacto.html" data-od-id="cta-final-demo">
+            Contactanos para un asesoramiento personalizado
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <p class="microcopy" data-anim="fade-in">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+          Sus datos están protegidos bajo certificación SSL. No enviaremos spam.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer" data-od-id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" style="color:var(--on-dark)">
+            <img class="brand-logo" src="OGO-BLANCO.jpg" alt="Sandra Chaves y Asociados" width="200" height="46">
+          </a>
+          <p>Consultoría informática y Distribuidor Oficial Certificado del ecosistema Tango Software. Córdoba, Argentina.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/sandrachavesyasociados" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.facebook.com/SandraChavesyAsociados" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 8.5H17V5.5h-3c-1.9 0-3.5 1.6-3.5 3.5v2H8v3h2.5v6.5h3V14h2.6l.6-3h-3.2V9c0-.3.2-.5.5-.5z"/></svg>
+            </a>
+            <a href="https://wa.me/5493515135058" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg>
+            </a>
+            <a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener" aria-label="Linktree">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.1"/><path d="M14 10a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.2-1.1"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4>Productos</h4>
+          <ul>
+            <li><a href="tango-gestion.html">Tango Gestión</a></li>
+            <li><a href="#prod-pdv">Tango Punto de Venta</a></li>
+            <li><a href="#prod-resto">Tango Restô</a></li>
+            <li><a href="#prod-rrhh">Tango Capital Humano</a></li>
+            <li><a href="#prod-estudios">Tango Estudios Contables</a></li>
+            <li><a href="#catalogo">Ecosistema completo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="nosotros.html#clientes">Nuestros clientes</a></li>
+            <li><a href="index.html#razones">10 razones para elegir Tango</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/5493515135058" target="_blank" rel="noopener">WhatsApp: +54 9 351 513-5058</a></li>
+            <li><a href="https://wa.me/5493512275675" target="_blank" rel="noopener">WhatsApp: +54 9 351 227-5675</a></li>
+            <li><a href="mailto:info@sandrachavesyasoc.com">info@sandrachavesyasoc.com</a></li>
+            <li><a href="https://sandrachavesyasoc.com/" target="_blank" rel="noopener">sandrachavesyasoc.com</a></li>
+            <li><a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener">linktr.ee/sandrachavesyasoc</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Sandra Chaves y Asoc. S.A.S. — Córdoba, Argentina</span>
+        <span>Distribuidor Oficial Certificado de Tango Software · Axoft Argentina S.A.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
