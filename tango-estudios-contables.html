@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tango Estudios Contables Delta 6 — Multi-empresa para estudios | Sandra Chaves y Asociados</title>
+  <meta name="description" content="Tango Estudios Contables Delta 6: gestión multi-empresa para estudios. Contabilidad, sueldos hasta 30.000 legajos, Liquidador de IVA, Activo Fijo y Estados Contables con trazabilidad y AI. Implementación certificada en Córdoba.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Tango Estudios Contables Delta 6",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "Accounting",
+    "operatingSystem": "Windows, Web",
+    "inLanguage": "es-AR",
+    "softwareVersion": "Delta 6",
+    "brand": { "@type": "Brand", "name": "Tango Software — Axoft Argentina" },
+    "featureList": "Contabilidad, Sueldos (30.000 legajos), Liquidador de IVA, Activo Fijo, Estados Contables, Tango Live, Historial de Asientos, Asistente AI"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://sandrachavesyasoc.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Productos", "item": "https://sandrachavesyasoc.com/productos-tango.html" },
+      { "@type": "ListItem", "position": 3, "name": "Tango Estudios Contables Delta 6" }
+    ]
+  }
+  </script>
+
+  <style>
+    /* =====================================================================
+       TANGO ESTUDIOS CONTABLES DELTA 6 — Stack exclusivo:
+       "Data-Stream & Glassmorphism"
+       1) Tarjetas Glassmorphism (cristal esmerilado, backdrop-filter: blur)
+       2) Tablero interactivo con contadores numéricos animados (Counter Up)
+       3) Bento Grid con bordes de luz neón al pasar el cursor (Spotlight)
+       Paleta: naranja #F47D30 sobre base cálida oscura.
+       ===================================================================== */
+    :root {
+      --eecc-orange: #F47D30;
+      --eecc-orange-strong: #D96213;
+      --eecc-glow: rgba(244, 125, 48, 0.45);
+      --eecc-ink: oklch(16% 0.03 45);
+    }
+
+    .eecc-hero {
+      position: relative; overflow: hidden; isolation: isolate;
+      background:
+        radial-gradient(880px 460px at 84% -8%, rgba(244,125,48,.5), transparent 60%),
+        radial-gradient(680px 400px at -8% 112%, rgba(217,98,19,.35), transparent 62%),
+        linear-gradient(138deg, #1B120C, #120C08 60%, #0A0705);
+      color: var(--on-dark); padding-block: clamp(52px, 7vw, 92px);
+    }
+    .eecc-hero::before {
+      content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+      background:
+        radial-gradient(2px 2px at 22% 32%, #fff, transparent),
+        radial-gradient(2px 2px at 68% 64%, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 44% 82%, #ffd9b8, transparent);
+      opacity: .5; animation: eecc-twinkle 5s ease-in-out infinite alternate;
+    }
+    @keyframes eecc-twinkle { from { opacity: .25; } to { opacity: .6; } }
+    .eecc-hero__grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(30px, 4vw, 60px); align-items: center; position: relative; z-index: 2; }
+    .eecc-hero h1 { color: var(--on-dark); margin: 20px 0 14px; }
+    .eecc-hero h1 .eecc-grad { background: linear-gradient(100deg, #FFB37D, #F47D30 45%, #FFD9B8); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .eecc-hero .lead { color: oklch(82% 0.04 60); max-width: 48ch; }
+    .eecc-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(244,125,48,.12); border: 1px solid rgba(244,125,48,.4); border-radius: 999px; padding: 7px 16px 7px 9px; font-size: .78rem; font-weight: 600; color: #FFD9B8; backdrop-filter: blur(8px); }
+    .eecc-badge img { height: 24px; width: auto; }
+    .eecc-btn { position: relative; overflow: hidden; background: linear-gradient(120deg, #D96213, #F47D30); color: #1B0D04; border: none; box-shadow: 0 10px 30px var(--eecc-glow); transition: transform .2s, box-shadow .3s; font-weight: 800; }
+    .eecc-btn::after { content: ""; position: absolute; inset: 0; background: linear-gradient(110deg, transparent 32%, rgba(255,255,255,.5) 50%, transparent 68%); transform: translateX(-130%); animation: eecc-shine 3.6s ease-in-out infinite; }
+    @keyframes eecc-shine { 0% { transform: translateX(-130%); } 55%, 100% { transform: translateX(130%); } }
+    .eecc-btn:hover { transform: translateY(-3px); box-shadow: 0 18px 44px rgba(244,125,48,.55); color: #1B0D04; }
+    .eecc-ghost { background: rgba(255,255,255,.06); color: var(--on-dark); border: 1.5px solid rgba(244,125,48,.55); backdrop-filter: blur(8px); transition: all .25s; }
+    .eecc-ghost:hover { border-color: #F47D30; background: rgba(244,125,48,.14); box-shadow: 0 0 26px rgba(244,125,48,.4); transform: translateY(-3px); color: var(--on-dark); }
+
+    /* ---------- Glassmorphism ---------- */
+    .glass {
+      background: rgba(255,255,255,.1); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,.2); border-radius: 18px;
+      box-shadow: 0 18px 46px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.15);
+    }
+    .glass h3 { color: var(--on-dark); }
+    .glass p { color: oklch(84% 0.03 70); }
+
+    /* Hero: lluvia digital financiera + logo */
+    .eecc-rain { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; display: block; pointer-events: none; }
+    .eecc-logo { display: flex; justify-content: center; align-items: center; }
+    .eecc-logo img { max-width: min(100%, 420px); height: auto; border-radius: 18px; box-shadow: 0 16px 40px rgba(0,0,0,.35); }
+
+    /* ---------- Bento con Spotlight (borde de luz neón) ---------- */
+    .eecc-bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.2vw, 22px); }
+    .eecc-card { position: relative; overflow: hidden; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md); padding: clamp(20px, 2.4vw, 28px); min-height: 100%; }
+    .eecc-card::before {
+      content: ""; position: absolute; inset: 0; border-radius: inherit; opacity: 0; transition: opacity .3s ease; pointer-events: none;
+      background: radial-gradient(320px circle at var(--sx, 50%) var(--sy, 50%), rgba(244,125,48,.18), transparent 55%);
+    }
+    .eecc-card::after {
+      content: ""; position: absolute; inset: 0; border-radius: inherit; opacity: 0; transition: opacity .3s ease; pointer-events: none;
+      box-shadow: inset 0 0 0 1.5px rgba(244,125,48,.55), inset 0 0 26px rgba(244,125,48,.12);
+    }
+    .eecc-card:hover::before, .eecc-card:hover::after { opacity: 1; }
+    .eecc-card > * { position: relative; z-index: 2; }
+    .eecc-card--lg { grid-column: span 2; }
+    .eecc-tag { display: inline-flex; align-items: center; gap: 7px; font-family: var(--font-mono); font-size: .64rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #D96213; background: rgba(244,125,48,.1); border-radius: 999px; padding: 5px 12px; margin-bottom: 14px; }
+    .eecc-tag--new { background: linear-gradient(120deg, #D96213, #F47D30); color: #1B0D04; font-weight: 800; }
+    .eecc-ic { width: 52px; height: 52px; border-radius: 13px; display: grid; place-items: center; background: rgba(244,125,48,.12); border: 1px solid rgba(244,125,48,.3); margin-bottom: 14px; }
+    .eecc-ic img { width: 36px; height: 36px; object-fit: contain; }
+
+    .eecc-dark { background: linear-gradient(140deg, #1B120C, #120C08); color: var(--on-dark); position: relative; overflow: hidden; }
+    .eecc-dark .eecc-tag { color: #FFD9B8; background: rgba(244,125,48,.14); }
+    .eecc-dark .glass p { color: oklch(82% 0.04 70); }
+
+    @media (max-width: 960px) { .eecc-hero__grid { grid-template-columns: 1fr; } .eecc-bento { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .eecc-bento { grid-template-columns: 1fr; } .eecc-card--lg { grid-column: span 1; } }
+    @media (prefers-reduced-motion: reduce) { .eecc-hero::before, .eecc-btn::after { animation: none !important; } }
+
+    /* ---------- Licencias (tabla de planes) ---------- */
+    .d6-license { width: 100%; border-collapse: separate; border-spacing: 0; overflow: hidden; border: 1px solid var(--border); border-radius: var(--r-md); background: var(--surface); box-shadow: var(--shadow-sm); }
+    .d6-license th { background: var(--ink); color: var(--on-dark); padding: 15px 18px; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.04em; text-align: center; }
+    .d6-license th:first-child { text-align: left; }
+    .d6-license td { padding: 13px 18px; text-align: center; border-top: 1px solid var(--border); font-size: 0.9rem; color: var(--fg); }
+    .d6-license td:first-child { text-align: left; font-weight: 600; }
+    .d6-license tbody tr:hover { background: var(--brand-soft); }
+    .d6-license .d6-check { color: var(--success); }
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="animations.js" defer></script>
+  <link rel="icon" type="image/jpeg" href="LOGO-ICONO.jpg">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- ================= Topbar ================= -->
+  <div class="topbar" data-od-id="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <a href="https://wa.me/5493515135058" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg>
+          +54 9 351 513-5058
+        </a>
+        <a href="https://wa.me/5493512275675" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg>
+          +54 9 351 227-5675
+        </a>
+      </div>
+      <div class="topbar-right">
+        <span>Distribuidor Oficial Certificado — Tango Software</span>
+        <a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.1"/><path d="M14 10a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.2-1.1"/></svg>
+          linktr.ee/sandrachavesyasoc
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Header + Mega menú ================= -->
+  <header class="site-header" data-od-id="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Sandra Chaves y Asociados — Inicio">
+        <img class="brand-logo" src="LGO-PRINCIPAL.jpg" alt="Sandra Chaves y Asociados — Distribuidor Oficial Tango Software" width="200" height="46">
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="nav-mega">
+            <button class="nav-mega-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="mega-soluciones">
+              Soluciones
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="mega" id="mega-soluciones" role="region" aria-label="Menú de soluciones">
+              <div class="mega-grid">
+                <div class="mega-col">
+                  <h4>Módulos Tango</h4>
+                  <ul>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Ventas y Facturación</strong><span>Pedidos, clientes, libro IVA automático</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Stock y Depósitos</strong><span>Saldos, comprometido y valorización</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Compras y Proveedores</strong><span>Circuito completo de abastecimiento</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Tesorería y Bancos</strong><span>Conciliación bancaria automática</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Contabilidad e I.V.A.</strong><span>Registración, ajustes y balances</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Live y Tango Net</strong><span>Tableros y conexión de sucursales</span></a></li>
+                  </ul>
+                </div>
+                <div class="mega-col">
+                  <h4>Servicios Sandra Chaves</h4>
+                  <ul>
+                    <li><a class="mega-link" href="contacto.html"><strong>Implementación</strong><span>Relevamiento funcional y puesta en marcha</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Migración de datos</strong><span>Pasaje ordenado desde tu sistema actual</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Capacitación</strong><span>Formación de equipos, también universitaria</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Soporte técnico</strong><span>Asistencia remota y en tu empresa</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Desarrollo a medida</strong><span>Interfaces externas que potencian Tango</span></a></li>
+                  </ul>
+                </div>
+                <a class="mega-feature" href="productos-tango.html" data-od-id="mega-feature-delta5">
+                  <span><strong>Novedad: Tango Delta 6</strong><span>La última versión del ecosistema: agilidad y seguridad operativa.</span></span>
+                  <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li><a href="productos-tango.html" aria-current="page">Productos</a></li>
+          <li><a href="tango-gestion.html">Tango Gestión</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a class="btn btn--primary" href="contacto.html" data-od-id="cta-header-demo">Solicitar Demostración</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Abrir menú" aria-controls="mobile-panel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Panel mobile -->
+  <div class="mobile-panel" id="mobile-panel">
+    <a class="m-link" href="index.html">Inicio</a>
+    <a class="m-link" href="productos-tango.html" aria-current="page">Productos Tango</a>
+    <a class="m-link" href="tango-gestion.html">Tango Gestión</a>
+    <a class="m-link" href="nosotros.html">Nosotros</a>
+    <a class="m-link" href="contacto.html">Contacto</a>
+    <a class="btn btn--primary" href="contacto.html">Solicitar Demostración</a>
+  </div>
+
+  <main id="contenido">
+    <!-- Migas de pan -->
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Migas de pan" data-od-id="breadcrumbs">
+        <ol>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos-tango.html">Productos</a></li>
+          <li aria-current="page">Tango Estudios Contables Delta 6</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- ================= Hero + lluvia financiera + logo ================= -->
+    <section class="eecc-hero" data-od-id="eecc-hero">
+      <canvas class="eecc-rain" aria-hidden="true"></canvas>
+      <div class="container">
+        <div class="eecc-hero__grid">
+          <div>
+            <span class="eecc-badge" data-anim="fade-in">
+              <img src="D6-n.png" alt="Insignia Delta 6" width="24" height="24">
+              Nueva versión · TANGO DELTA 6
+            </span>
+            <h1 data-anim="fade-up" data-delay="0.1">Tango Estudios Contables <span class="eecc-grad">Delta 6</span></h1>
+            <p class="lead" data-anim="fade-up" data-delay="0.2">Facilitá y potenciá tu trabajo con herramientas diseñadas para profesionales contables. Gestioná todas tus empresas cliente desde un solo lugar, con trazabilidad y AI.</p>
+            <div class="btn-row" data-anim="fade-up" data-delay="0.25">
+              <a class="btn btn--lg eecc-btn" href="#herramientas" data-od-id="cta-eecc-herramientas">Ver herramientas
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+              <a class="btn btn--lg eecc-ghost" href="contacto.html" data-od-id="cta-eecc-demo">Solicitar Demostración</a>
+            </div>
+          </div>
+
+          <!-- Logo Tango Estudios Contables -->
+          <div data-anim="fade-left" data-delay="0.2">
+            <div class="eecc-logo">
+              <img src="TangoEECC_v2.png" alt="Tango Estudios Contables Delta 6">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Bento grid con spotlight (herramientas) ================= -->
+    <section class="section section--surface" id="herramientas" data-od-id="eecc-herramientas">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Herramientas del estudio</span>
+          <h2 data-anim="fade-up">Diseñado para <span class="hl">profesionales contables</span></h2>
+          <p data-anim="fade-up" data-delay="0.1">Mové el cursor sobre las tarjetas: el borde de luz sigue tu posición.</p>
+        </div>
+        <div class="eecc-bento" data-anim-group>
+          <article class="eecc-card eecc-card--lg" data-spotlight data-od-id="eecc-asientos">
+            <span class="eecc-tag eecc-tag--new">Trazabilidad</span>
+            <h3>Historial de Asientos <span class="new-badge">NUEVO</span></h3>
+            <p>Consultá quién realizó cada acción, cómo, cuándo y desde qué puesto de trabajo. Mayor trazabilidad contable con registro completo de cambios sobre los asientos.</p>
+          </article>
+          <article class="eecc-card" data-spotlight data-od-id="eecc-contabilidad">
+            <div class="eecc-ic"><img src="assets/modulos/ModContabilidad.png" alt=""></div>
+            <h3>Contabilidad</h3>
+            <p>Multi-ejercicio y multi-monetario. API para ingreso y consulta de asientos, importación masiva desde Excel y ajuste por inflación.</p>
+            <span class="badge-anchor" style="margin-top:14px">Multi-empresa</span>
+          </article>
+          <article class="eecc-card" data-spotlight data-od-id="eecc-sueldos">
+            <div class="eecc-ic"><img src="assets/modulos/ModSueldos.png" alt=""></div>
+            <h3>Sueldos</h3>
+            <p>Hasta <strong>30.000 legajos</strong> para estudios contables. Integración SiRADIG/SIAp y Ganancias 4ta categoría.</p>
+            <span class="badge-anchor" style="margin-top:14px">30.000 legajos</span>
+          </article>
+          <article class="eecc-card" data-spotlight data-od-id="eecc-iva">
+            <div class="eecc-ic"><img src="assets/modulos/ModIva.png" alt=""></div>
+            <h3>Liquidador de IVA</h3>
+            <p>Importación desde Ventas y Compras. SIFERE, RG 3685, SICORE y RG 3572 con subdiario rubricable.</p>
+            <span class="badge-anchor" style="margin-top:14px">ARCA ready</span>
+          </article>
+          <article class="eecc-card" data-spotlight data-od-id="eecc-activo">
+            <div class="eecc-ic"><img src="assets/modulos/ModActivoFijo.png" alt=""></div>
+            <h3>Activo Fijo</h3>
+            <p>Bienes de uso ilimitados, depreciaciones y revalúos con generación automática de asientos.</p>
+            <span class="badge-anchor" style="margin-top:14px">Patrimonio</span>
+          </article>
+          <article class="eecc-card" data-spotlight data-od-id="eecc-eecc">
+            <div class="eecc-ic"><img src="assets/modulos/ModEstadosContables.png" alt=""></div>
+            <h3>Estados Contables</h3>
+            <p>Informes predefinidos, exportación automática y papeles de trabajo para el cierre del ejercicio.</p>
+            <span class="badge-anchor" style="margin-top:14px">Cierre</span>
+          </article>
+          <article class="eecc-card" data-spotlight data-od-id="eecc-live">
+            <div class="eecc-ic"><img src="assets/modulos/ModLive.png" alt=""></div>
+            <h3>Tango Live</h3>
+            <p>Consultas personalizables, gráficos dinámicos y exportación a Excel, Word o PDF para tus clientes.</p>
+            <span class="badge-anchor" style="margin-top:14px">BI incluido</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Novedades Delta 6 (glass) ================= -->
+    <section class="section eecc-dark" id="novedades" data-od-id="eecc-novedades">
+      <div class="container">
+        <div class="section-head">
+          <span class="eecc-tag" data-anim="fade-in">Novedades Delta 6</span>
+          <h2 data-anim="fade-up">Inteligencia y <span style="color:#FFD9B8">trazabilidad</span></h2>
+          <p data-anim="fade-up" data-delay="0.1" style="color:oklch(82% 0.04 70)">Las novedades que simplifican el trabajo diario del estudio.</p>
+        </div>
+        <div class="grid-3" data-anim-group>
+          <article class="glass" style="padding:24px" data-od-id="eecc-formularios">
+            <span class="eecc-tag eecc-tag--new">Nuevo</span>
+            <h3>Formularios Personalizables</h3>
+            <p>Gestión Documental con formularios que integran datos automáticos y aprobaciones digitales, accesibles desde web o móvil.</p>
+          </article>
+          <article class="glass" style="padding:24px" data-od-id="eecc-asistente">
+            <span class="eecc-tag eecc-tag--new">Nuevo</span>
+            <h3>Asistente AI</h3>
+            <p>La AI interpreta documentación de RRHH y responde las consultas frecuentes de tus colaboradores de forma inmediata.</p>
+          </article>
+          <article class="glass" style="padding:24px" data-od-id="eecc-consolida">
+            <span class="eecc-tag">Consolidación</span>
+            <h3>Consolidación de saldos</h3>
+            <p>Consolidación de saldos entre empresas y múltiples planes de cuenta para una visión global del portfolio de clientes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Licencias ================= -->
+    <section class="section" id="licencias" data-od-id="eecc-licencias">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Licencias</span>
+          <h2 data-anim="fade-up">Planes <span class="hl">disponibles</span></h2>
+        </div>
+        <div style="overflow-x:auto" data-anim="fade-up">
+          <table class="d6-license">
+            <thead><tr><th>Característica</th><th>Evolución</th><th>Plus</th><th>X-Plus</th><th>Gold</th></tr></thead>
+            <tbody>
+              <tr><td>Legajos mensuales</td><td>1.000</td><td>30.000</td><td>30.000</td><td>30.000</td></tr>
+              <tr><td>Contabilidad</td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td></tr>
+              <tr><td>Sueldos</td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small" data-anim="fade-in" style="margin-top:16px">Los límites de legajos aplican para clientes cuya actividad principal declarada en ARCA es "Servicios de contabilidad, auditoría y asesoría fiscal" (692000). En caso contrario, ver los límites de Tango Gestión.</p>
+        <div class="lic-stage" data-anim="fade-up">
+          <div class="lic-canvas">
+            <img src="evolucion-planes.jpeg" alt="Diagrama de evolución de planes desde Evolución hasta Gold" width="914" height="514" loading="lazy">
+            <span class="lic-scan" aria-hidden="true"></span>
+            <span class="lic-aura" aria-hidden="true"></span>
+            <span class="lic-ring" aria-hidden="true"></span>
+            <span class="lic-ring lic-ring--two" aria-hidden="true"></span>
+            <span class="lic-core" aria-hidden="true"></span>
+            <span class="lic-stream lic-s1" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="lic-stream lic-s2" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="lic-stream lic-s3" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="lic-stream lic-s4" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="lic-orbit lic-o1" aria-hidden="true"></span>
+            <span class="lic-orbit lic-o2" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section section--surface" id="faq" data-od-id="eecc-faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Preguntas frecuentes</span>
+          <h2 data-anim="fade-up">Todo lo que necesitás saber <span class="hl">antes de decidir</span></h2>
+        </div>
+        <div class="acc d6-faq-wrap" data-accordion="single" data-od-id="eecc-faq-acc">
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="eecc-faq-1"><span class="acc-title">¿Cuántas empresas puedo gestionar?</span><span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-panel" id="eecc-faq-1" role="region"><div class="acc-panel-inner"><p>Tango Estudios Contables está diseñado para gestión multi-empresa: todas tus empresas cliente en un solo lugar, con consolidación de saldos y múltiples planes de cuenta.</p></div></div>
+          </div>
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="eecc-faq-2"><span class="acc-title">¿Hasta cuántos legajos de sueldos?</span><span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-panel" id="eecc-faq-2" role="region"><div class="acc-panel-inner"><p>Hasta 30.000 legajos mensuales en los planes Plus, X-Plus y Gold (aplican para clientes con actividad principal 692000). Integración SiRADIG/SIAp y Ganancias 4ta categoría.</p></div></div>
+          </div>
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="eecc-faq-3"><span class="acc-title">¿Cómo se controla quién modifica un asiento?</span><span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-panel" id="eecc-faq-3" role="region"><div class="acc-panel-inner"><p>Con el nuevo Historial de Asientos, cada acción queda registrada: quién la realizó, cómo, cuándo y desde qué puesto de trabajo.</p></div></div>
+          </div>
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="eecc-faq-4"><span class="acc-title">¿Se integra con la ARCA y SIFERE?</span><span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-panel" id="eecc-faq-4" role="region"><div class="acc-panel-inner"><p>Sí. Liquidador de IVA con SIFERE, RG 3685, SICORE y RG 3572, y subdiario rubricable. El ecosistema se anticipa a los cambios normativos de la ARCA.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA final ================= -->
+    <section class="section eecc-dark" data-od-id="eecc-cta" style="padding-block:clamp(64px,9vw,96px)">
+      <div class="container" style="text-align:center">
+        <h2 data-anim="fade-up">Potenciá tu estudio <span style="color:#FFD9B8">con datos que hablan</span></h2>
+        <p class="lead" data-anim="fade-up" data-delay="0.1" style="margin-inline:auto;color:oklch(82% 0.04 70)">Más empresas, más legajos y más confianza en cada balance. Implementación certificada para estudios contables.</p>
+        <div class="btn-row" style="justify-content:center" data-anim="fade-up" data-delay="0.2">
+          <a class="btn btn--lg eecc-btn" href="contacto.html" data-od-id="cta-eecc-final">Programar demostración gratuita<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--lg eecc-ghost" href="https://wa.me/5493515135058?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Tango%20Estudios%20Contables%20Delta%206" target="_blank" rel="noopener" data-od-id="cta-eecc-wa">Consultar por WhatsApp<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer" data-od-id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" style="color:var(--on-dark)">
+            <img class="brand-logo" src="OGO-BLANCO.jpg" alt="Sandra Chaves y Asociados" width="200" height="46">
+            <img class="brand-logo" src="TS-Dist-Certificado_light.png" alt="Distribuidor Oficial Certificado Tango Software" width="322" height="107">
+          </a>
+          <p>Consultoría informática y Distribuidor Oficial Certificado del ecosistema Tango Software. Córdoba, Argentina.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/sandrachavesyasociados" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.facebook.com/SandraChavesyAsociados" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 8.5H17V5.5h-3c-1.9 0-3.5 1.6-3.5 3.5v2H8v3h2.5v6.5h3V14h2.6l.6-3h-3.2V9c0-.3.2-.5.5-.5z"/></svg></a>
+            <a href="https://wa.me/5493515135058" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg></a>
+            <a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener" aria-label="Linktree"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.1"/><path d="M14 10a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.2-1.1"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Productos</h4>
+          <ul>
+            <li><a href="tango-gestion.html">Tango Gestión Delta 6</a></li>
+            <li><a href="tango-punto-de-venta.html">Tango Punto de Venta</a></li>
+            <li><a href="tango-resto.html">Tango Restô</a></li>
+            <li><a href="tango-capital-humano.html">Tango Capital Humano</a></li>
+            <li><a href="tango-estudios-contables.html">Tango Estudios Contables</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Solución</h4>
+          <ul>
+            <li><a href="#herramientas">Herramientas del estudio</a></li>
+            <li><a href="#novedades">Novedades Delta 6</a></li>
+            <li><a href="#licencias">Licencias</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/5493515135058" target="_blank" rel="noopener">WhatsApp: +54 9 351 513-5058</a></li>
+            <li><a href="https://wa.me/5493512275675" target="_blank" rel="noopener">WhatsApp: +54 9 351 227-5675</a></li>
+            <li><a href="mailto:adm@sandrachavesyasoc.com">adm@sandrachavesyasoc.com</a></li>
+            <li><a href="https://sandrachavesyasoc.com/" target="_blank" rel="noopener">sandrachavesyasoc.com</a></li>
+            <li><a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener">linktr.ee/sandrachavesyasoc</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Sandra Chaves y Asoc. S.A.S. — Córdoba, Argentina</span>
+        <span>Distribuidor Oficial Certificado de Tango Software · Axoft Argentina S.A.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* Lluvia digital financiera (Matrix contable) + spotlight */
+    (function () {
+      'use strict';
+      var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* Lluvia digital financiera sobre el hero */
+      var canvas = document.querySelector('.eecc-rain');
+      if (canvas && !reduceMotion) {
+        var ctx = canvas.getContext('2d');
+        var digits = '0123456789';
+        var sym = '+-×÷=%√$€¥£';
+        var terms = ['DEBE', 'HABER', 'IVA', 'CBU', 'NETO', 'C360', 'AI', 'SUELDOS', 'BALANCE', 'ASIENTO', 'IMPUESTO', 'GANANCIAS', 'SICORE', 'SIFERE', 'RETENCIÓN', 'PERCEPCIÓN', 'EJERCICIO', 'AMORTIZACIÓN', 'MONOTRIBUTO', 'ARCA', 'AFIP', 'SIAP'];
+        var fontSize = 15;
+        var columns = 0, cols = [], speeds = [], words = [], W = 0, H = 0;
+
+        function randChar() {
+          var r = Math.random();
+          if (r < 0.78) return digits.charAt((Math.random() * digits.length) | 0);
+          return sym.charAt((Math.random() * sym.length) | 0);
+        }
+
+        function resize() {
+          var dpr = window.devicePixelRatio || 1;
+          W = canvas.offsetWidth; H = canvas.offsetHeight;
+          canvas.width = W * dpr; canvas.height = H * dpr;
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          columns = Math.ceil(W / fontSize);
+          cols = []; speeds = [];
+          for (var i = 0; i < columns; i++) {
+            cols[i] = { head: Math.floor(Math.random() * (H / fontSize)), len: 8 + ((Math.random() * 16) | 0) };
+            speeds[i] = 0.03 + Math.random() * 0.1;
+          }
+        }
+
+        function draw() {
+          /* borrado progresivo: estela suave */
+          ctx.fillStyle = 'rgba(3, 7, 18, 0.14)';
+          ctx.fillRect(0, 0, W, H);
+          ctx.font = '600 15px "JetBrains Mono", "Fira Code", "Courier New", monospace';
+
+          /* 1) columnas de números y símbolos matemáticos estilo Matrix (toda la columna visible) */
+          for (var i = 0; i < columns; i++) {
+            var x = i * fontSize;
+            var c = cols[i];
+            for (var k = 0; k < c.len; k++) {
+              var y = (c.head - k) * fontSize;
+              if (y < -fontSize) break;
+              var t = k / c.len;                       /* 0 = cabezal, 1 = cola */
+              var alpha = Math.max(0.4, 0.9 - 0.5 * t); /* cola bien visible: se leen los caracteres */
+              if (k === 0) {
+                ctx.fillStyle = 'rgba(255,217,184,.95)';   /* cabezal durazno brillante */
+              } else {
+                ctx.fillStyle = Math.random() < 0.5
+                  ? 'rgba(244,125,48,' + alpha.toFixed(3) + ')'
+                  : 'rgba(217,98,19,' + alpha.toFixed(3) + ')';
+              }
+              ctx.fillText(randChar(), x, y);
+            }
+            c.head += speeds[i];
+            if (c.head > H / fontSize + c.len) {
+              c.head = Math.floor(Math.random() * 5);
+              c.len = 8 + ((Math.random() * 16) | 0);
+            }
+          }
+
+          /* 2) palabras contables que se van escribiendo letra por letra */
+          for (var w = words.length - 1; w >= 0; w--) {
+            var word = words[w];
+            word.progress += word.rate;
+            var typed = Math.floor(word.progress);
+            if (typed >= word.text.length) {
+              word.life -= 1;
+              ctx.fillStyle = 'rgba(255,217,184,' + (Math.max(0, word.life / 45) * 0.75).toFixed(3) + ')';
+              ctx.fillText(word.text, word.x, word.y);
+              if (word.life <= 0) words.splice(w, 1);
+            } else {
+              ctx.fillStyle = 'rgba(255,217,184,.85)';
+              ctx.fillText(word.text.slice(0, typed), word.x, word.y);
+            }
+          }
+
+          /* aparición frecuente de palabras de contabilidad e impuestos */
+          if (words.length < 8 && Math.random() < 0.06) {
+            var term = terms[(Math.random() * terms.length) | 0];
+            words.push({
+              text: term,
+              x: Math.random() * Math.max(10, W - term.length * fontSize * 0.62),
+              y: 30 + Math.random() * (H - 60),
+              progress: 0,
+              rate: 0.3 + Math.random() * 0.35,
+              life: 45
+            });
+          }
+        }
+
+        if ('ResizeObserver' in window) {
+          var ro = new ResizeObserver(resize);
+          ro.observe(canvas);
+        }
+        window.addEventListener('resize', resize);
+        resize();
+        setInterval(draw, 40);
+      }
+
+      /* Spotlight hover en bento */
+      var fine = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      if (fine && !reduceMotion) {
+        document.querySelectorAll('[data-spotlight]').forEach(function (card) {
+          card.addEventListener('mousemove', function (ev) {
+            var r = card.getBoundingClientRect();
+            card.style.setProperty('--sx', ((ev.clientX - r.left) / r.width * 100).toFixed(1) + '%');
+            card.style.setProperty('--sy', ((ev.clientY - r.top) / r.height * 100).toFixed(1) + '%');
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

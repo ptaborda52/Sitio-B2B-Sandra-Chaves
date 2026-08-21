@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tango Capital Humano Delta 6 — Sueldos y RRHH con AI | Sandra Chaves y Asociados</title>
+  <meta name="description" content="Tango Capital Humano Delta 6: liquidación de sueldos, control de presentismo y gestión documental con AI. Fórmulas AI, Tango Empleados, Tango Fichadas y asistente RRHH. Implementación certificada en Córdoba.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Tango Capital Humano Delta 6",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "HR / Payroll",
+    "operatingSystem": "Windows, Web, Android, iOS",
+    "inLanguage": "es-AR",
+    "softwareVersion": "Delta 6",
+    "brand": { "@type": "Brand", "name": "Tango Software — Axoft Argentina" },
+    "featureList": "Sueldos, Control de Personal, Tango Empleados, Tango Fichadas, Tango Live, Editor de Fórmulas AI, Asistente AI RRHH, Formularios Personalizables"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://sandrachavesyasoc.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Productos", "item": "https://sandrachavesyasoc.com/productos-tango.html" },
+      { "@type": "ListItem", "position": 3, "name": "Tango Capital Humano Delta 6" }
+    ]
+  }
+  </script>
+
+  <style>
+    /* =====================================================================
+       TANGO CAPITAL HUMANO DELTA 6 — Stack exclusivo:
+       "Floating Gravitational Nodes & Interactive Timeline"
+       1) Nodos / badges flotantes en levitación continua (cliqueables)
+       2) Timeline interactiva de liquidación activada por scroll
+       3) Hero Feature Badge con menú desplegable flotante (Dropdown Pill)
+       Paleta: celeste Capri #2FA7DF sobre base azul marino profunda (identidad de marca).
+       ===================================================================== */
+    :root {
+      --rrhh-blue: #2FA7DF;
+      --rrhh-blue-strong: #0E7FB8;
+      --rrhh-glow: rgba(47, 167, 223, 0.45);
+      --rrhh-ink: oklch(15% 0.05 245);
+    }
+
+    .rrhh-hero {
+      position: relative; overflow: hidden; isolation: isolate;
+      background:
+        radial-gradient(880px 460px at 84% -8%, rgba(47,167,223,.5), transparent 60%),
+        radial-gradient(680px 400px at -8% 112%, rgba(14,127,184,.35), transparent 62%),
+        linear-gradient(138deg, #0B1B2B, #071221 60%, #050D18);
+      color: var(--on-dark); padding-block: clamp(52px, 7vw, 92px);
+    }
+    .rrhh-hero::before {
+      content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+      background: radial-gradient(620px 340px at 50% 118%, rgba(47,167,223,.16), transparent 70%);
+    }
+    .rrhh-hero__grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(30px, 4vw, 60px); align-items: center; position: relative; z-index: 2; }
+    .rrhh-hero h1 { color: var(--on-dark); margin: 20px 0 14px; }
+    .rrhh-hero h1 .rrhh-grad { background: linear-gradient(100deg, #4FC3F7, #2FA7DF 45%, #9BE0FF); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .rrhh-hero .lead { color: oklch(80% 0.05 230); max-width: 48ch; }
+    .rrhh-btn { position: relative; overflow: hidden; background: linear-gradient(120deg, #0E7FB8, #2FA7DF); color: #fff; border: none; box-shadow: 0 10px 30px var(--rrhh-glow); transition: transform .2s, box-shadow .3s; font-weight: 800; }
+    .rrhh-btn::after { content: ""; position: absolute; inset: 0; background: linear-gradient(110deg, transparent 32%, rgba(255,255,255,.5) 50%, transparent 68%); transform: translateX(-130%); animation: rrhh-shine 3.4s ease-in-out infinite; }
+    @keyframes rrhh-shine { 0% { transform: translateX(-130%); } 55%, 100% { transform: translateX(130%); } }
+    .rrhh-btn:hover { transform: translateY(-3px); box-shadow: 0 18px 44px rgba(47,167,223,.6); color: #fff; }
+    .rrhh-ghost { background: rgba(255,255,255,.06); color: var(--on-dark); border: 1.5px solid rgba(47,167,223,.55); backdrop-filter: blur(8px); transition: all .25s; }
+    .rrhh-ghost:hover { border-color: #2FA7DF; background: rgba(47,167,223,.14); box-shadow: 0 0 26px rgba(47,167,223,.4); transform: translateY(-3px); color: var(--on-dark); }
+
+    /* ---------- Hero Feature Badge con dropdown ---------- */
+    .rrhh-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(47,167,223,.12); border: 1px solid rgba(47,167,223,.4); border-radius: 999px; padding: 7px 14px 7px 9px; font-size: .78rem; font-weight: 600; color: #9BE0FF; backdrop-filter: blur(8px); }
+    .rrhh-badge img { height: 24px; width: auto; }
+    .rrhh-drop { position: relative; display: inline-block; margin-top: 14px; }
+    .rrhh-drop__pill {
+      display: inline-flex; align-items: center; gap: 8px; background: #2FA7DF; color: #fff;
+      border: none; border-radius: 999px; padding: 8px 16px; font-size: .8rem; font-weight: 800; cursor: pointer;
+      font-family: var(--font-display); transition: all .2s; box-shadow: 0 8px 24px rgba(47,167,223,.4);
+    }
+    .rrhh-drop__pill:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(47,167,223,.55); }
+    .rrhh-drop__pill svg { width: 15px; height: 15px; transition: transform .25s; }
+    .rrhh-drop.open .rrhh-drop__pill svg { transform: rotate(180deg); }
+    .rrhh-drop__menu {
+      position: absolute; left: 0; top: calc(100% + 12px); z-index: 60; min-width: 240px;
+      background: #0B1B2B; border: 1px solid rgba(47,167,223,.4); border-radius: 16px; padding: 8px;
+      box-shadow: 0 24px 60px rgba(0,0,0,.5), 0 0 40px rgba(47,167,223,.18);
+      opacity: 0; transform: translateY(-8px); pointer-events: none; transition: all .22s ease;
+    }
+    .rrhh-drop.open .rrhh-drop__menu { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .rrhh-drop__menu a { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 10px; color: var(--on-dark); font-size: .86rem; font-weight: 600; text-decoration: none; transition: background .18s; }
+    .rrhh-drop__menu a:hover { background: rgba(47,167,223,.16); color: #9BE0FF; }
+    .rrhh-drop__menu a svg { width: 17px; height: 17px; color: #2FA7DF; }
+
+    /* ---------- Nodos flotantes (levitación) ---------- */
+    .nodes { position: relative; min-height: 420px; }
+    .node {
+      position: absolute; display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(11,27,43,.8); border: 1px solid rgba(47,167,223,.4); border-radius: 999px;
+      padding: 10px 16px; color: var(--on-dark); font-size: .82rem; font-weight: 700; text-decoration: none;
+      box-shadow: 0 16px 40px rgba(0,0,0,.4), 0 0 26px rgba(47,167,223,.14);
+      backdrop-filter: blur(8px); transition: border-color .2s, box-shadow .2s, transform .2s;
+      animation: rrhh-lev 5.5s ease-in-out infinite;
+    }
+    .node:hover { border-color: #2FA7DF; box-shadow: 0 18px 46px rgba(47,167,223,.35), 0 0 34px rgba(47,167,223,.3); color: #9BE0FF; }
+    .node img { height: 22px; width: auto; }
+    .node.n1 { top: 2%; left: 4%; animation-delay: 0s; }
+    .node.n2 { top: 16%; right: 2%; animation-delay: .8s; }
+    .node.n3 { top: 46%; left: -2%; animation-delay: 1.6s; }
+    .node.n4 { bottom: 4%; right: 10%; animation-delay: 2.4s; }
+    .node.n5 { bottom: 16%; left: 22%; animation-delay: 3.2s; }
+    @keyframes rrhh-lev { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+    .rrhh-orbit { position: absolute; inset: 8%; border-radius: 50%; border: 1.5px dashed rgba(47,167,223,.4); animation: rrhh-spin 46s linear infinite; }
+    @keyframes rrhh-spin { to { transform: rotate(360deg); } }
+    .rrhh-core {
+      position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+      width: 190px; aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center;
+      background: radial-gradient(circle at 35% 30%, #4FC3F7, #0E7FB8 62%, #071221);
+      box-shadow: 0 30px 70px rgba(47,167,223,.4), inset 0 0 60px rgba(0,0,0,.35);
+    }
+    .rrhh-core img { width: 68%; height: auto; filter: drop-shadow(0 8px 16px rgba(0,0,0,.4)); }
+
+    /* ---------- Timeline interactiva ---------- */
+    .tl { max-width: 760px; margin: 0 auto; position: relative; padding-left: 34px; }
+    .tl::before { content: ""; position: absolute; left: 12px; top: 8px; bottom: 8px; width: 3px; border-radius: 999px; background: var(--border); }
+    .tl::after { content: ""; position: absolute; left: 12px; top: 8px; width: 3px; height: 0; border-radius: 999px; background: linear-gradient(180deg, #2FA7DF, #0E7FB8); transition: height .2s linear; }
+    .tl-step { position: relative; padding: 0 0 30px 18px; opacity: .45; transform: translateX(10px); transition: opacity .4s ease, transform .4s ease; }
+    .tl-step.is-on { opacity: 1; transform: translateX(0); }
+    .tl-step::before { content: ""; position: absolute; left: -28px; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--surface); border: 3px solid var(--border); transition: all .3s; }
+    .tl-step.is-on::before { background: #2FA7DF; border-color: #2FA7DF; box-shadow: 0 0 0 5px rgba(47,167,223,.2), 0 0 18px rgba(47,167,223,.5); }
+    .tl-step h3 { margin: 0 0 6px; font-size: 1.08rem; }
+    .tl-step p { font-size: .9rem; color: var(--muted); margin: 0; }
+    .tl-step .tl-num { font-family: var(--font-mono); font-size: .7rem; color: #0E7FB8; font-weight: 700; letter-spacing: .12em; margin-bottom: 4px; display: block; }
+    .tl-step.is-on .tl-num { color: #2FA7DF; }
+
+    .rrhh-tag { display: inline-flex; align-items: center; gap: 7px; font-family: var(--font-mono); font-size: .64rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #0E7FB8; background: rgba(47,167,223,.1); border-radius: 999px; padding: 5px 12px; margin-bottom: 14px; }
+    .rrhh-tag--new { background: linear-gradient(120deg, #0E7FB8, #2FA7DF); color: #fff; font-weight: 800; }
+    .rrhh-mod-icon { width: 52px; height: 52px; border-radius: 13px; display: grid; place-items: center; background: rgba(47,167,223,.12); border: 1px solid rgba(47,167,223,.3); margin-bottom: 14px; }
+    .rrhh-mod-icon img { width: 36px; height: 36px; object-fit: contain; }
+    .rrhh-dark { background: linear-gradient(140deg, #0B1B2B, #071221); color: var(--on-dark); position: relative; overflow: hidden; }
+    .rrhh-dark .rrhh-tag { color: #9BE0FF; background: rgba(47,167,223,.14); }
+    .rrhh-dark .card { background: rgba(255,255,255,.05); border-color: rgba(47,167,223,.25); }
+    .rrhh-dark .card h3 { color: var(--on-dark); }
+    .rrhh-dark .card p { color: oklch(76% 0.05 230); }
+    .rrhh-dark .card:hover { border-color: rgba(47,167,223,.6); box-shadow: 0 18px 50px rgba(0,0,0,.4), 0 0 40px rgba(47,167,223,.15); }
+
+    @media (max-width: 960px) { .rrhh-hero__grid { grid-template-columns: 1fr; } .nodes { min-height: 360px; max-width: 480px; margin-inline: auto; } }
+    @media (max-width: 560px) { .nodes { min-height: 420px; } .node { font-size: .74rem; padding: 8px 12px; } }
+    @media (prefers-reduced-motion: reduce) { .node, .rrhh-orbit, .rrhh-btn::after { animation: none !important; } }
+
+    /* ---------- Licencias (tabla de planes) ---------- */
+    .d6-license { width: 100%; border-collapse: separate; border-spacing: 0; overflow: hidden; border: 1px solid var(--border); border-radius: var(--r-md); background: var(--surface); box-shadow: var(--shadow-sm); }
+    .d6-license th { background: var(--ink); color: var(--on-dark); padding: 15px 18px; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.04em; text-align: center; }
+    .d6-license th:first-child { text-align: left; }
+    .d6-license td { padding: 13px 18px; text-align: center; border-top: 1px solid var(--border); font-size: 0.9rem; color: var(--fg); }
+    .d6-license td:first-child { text-align: left; font-weight: 600; }
+    .d6-license tbody tr:hover { background: var(--brand-soft); }
+    .d6-license .d6-check { color: var(--success); }
+
+    /* ---------- Video destacado (Capital Humano) ---------- */
+    .rrhh-video { text-align: center; }
+    .rrhh-video__frame { position: relative; max-width: 640px; margin: 0 auto; border-radius: 20px; overflow: hidden; border: 1px solid rgba(47,167,223,.35); box-shadow: 0 24px 60px rgba(0,0,0,.35), 0 0 0 6px rgba(47,167,223,.08); background: #071221; }
+    .rrhh-video__frame video { display: block; width: 100%; height: auto; aspect-ratio: 630 / 586; object-fit: cover; }
+    .rrhh-video__caption { margin-top: 14px; font-family: var(--font-mono); font-size: .68rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: rgba(47,167,223,.7); }
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="animations.js" defer></script>
+  <link rel="icon" type="image/jpeg" href="LOGO-ICONO.jpg">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- ================= Topbar ================= -->
+  <div class="topbar" data-od-id="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <a href="https://wa.me/5493515135058" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg>
+          +54 9 351 513-5058
+        </a>
+        <a href="https://wa.me/5493512275675" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg>
+          +54 9 351 227-5675
+        </a>
+      </div>
+      <div class="topbar-right">
+        <span>Distribuidor Oficial Certificado — Tango Software</span>
+        <a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.1"/><path d="M14 10a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.2-1.1"/></svg>
+          linktr.ee/sandrachavesyasoc
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Header + Mega menú ================= -->
+  <header class="site-header" data-od-id="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Sandra Chaves y Asociados — Inicio">
+        <img class="brand-logo" src="LGO-PRINCIPAL.jpg" alt="Sandra Chaves y Asociados — Distribuidor Oficial Tango Software" width="200" height="46">
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="nav-mega">
+            <button class="nav-mega-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="mega-soluciones">
+              Soluciones
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="mega" id="mega-soluciones" role="region" aria-label="Menú de soluciones">
+              <div class="mega-grid">
+                <div class="mega-col">
+                  <h4>Módulos Tango</h4>
+                  <ul>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Ventas y Facturación</strong><span>Pedidos, clientes, libro IVA automático</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Stock y Depósitos</strong><span>Saldos, comprometido y valorización</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Compras y Proveedores</strong><span>Circuito completo de abastecimiento</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Tesorería y Bancos</strong><span>Conciliación bancaria automática</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Contabilidad e I.V.A.</strong><span>Registración, ajustes y balances</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Live y Tango Net</strong><span>Tableros y conexión de sucursales</span></a></li>
+                  </ul>
+                </div>
+                <div class="mega-col">
+                  <h4>Servicios Sandra Chaves</h4>
+                  <ul>
+                    <li><a class="mega-link" href="contacto.html"><strong>Implementación</strong><span>Relevamiento funcional y puesta en marcha</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Migración de datos</strong><span>Pasaje ordenado desde tu sistema actual</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Capacitación</strong><span>Formación de equipos, también universitaria</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Soporte técnico</strong><span>Asistencia remota y en tu empresa</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Desarrollo a medida</strong><span>Interfaces externas que potencian Tango</span></a></li>
+                  </ul>
+                </div>
+                <a class="mega-feature" href="productos-tango.html" data-od-id="mega-feature-delta5">
+                  <span><strong>Novedad: Tango Delta 6</strong><span>La última versión del ecosistema: agilidad y seguridad operativa.</span></span>
+                  <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li><a href="productos-tango.html" aria-current="page">Productos</a></li>
+          <li><a href="tango-gestion.html">Tango Gestión</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a class="btn btn--primary" href="contacto.html" data-od-id="cta-header-demo">Solicitar Demostración</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Abrir menú" aria-controls="mobile-panel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Panel mobile -->
+  <div class="mobile-panel" id="mobile-panel">
+    <a class="m-link" href="index.html">Inicio</a>
+    <a class="m-link" href="productos-tango.html" aria-current="page">Productos Tango</a>
+    <a class="m-link" href="tango-gestion.html">Tango Gestión</a>
+    <a class="m-link" href="nosotros.html">Nosotros</a>
+    <a class="m-link" href="contacto.html">Contacto</a>
+    <a class="btn btn--primary" href="contacto.html">Solicitar Demostración</a>
+  </div>
+
+  <main id="contenido">
+    <!-- Migas de pan -->
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Migas de pan" data-od-id="breadcrumbs">
+        <ol>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos-tango.html">Productos</a></li>
+          <li aria-current="page">Tango Capital Humano Delta 6</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- ================= Hero ================= -->
+    <section class="rrhh-hero" data-od-id="rrhh-hero">
+      <div class="container">
+        <div class="rrhh-hero__grid">
+          <div>
+            <span class="rrhh-badge" data-anim="fade-in">
+              <img src="D6-n.png" alt="Insignia Delta 6" width="24" height="24">
+              Nueva versión · TANGO DELTA 6
+            </span>
+            <h1 data-anim="fade-up" data-delay="0.1">Tango Capital Humano <span class="rrhh-grad">Delta 6</span></h1>
+            <p class="lead" data-anim="fade-up" data-delay="0.2">Liquidá sueldos, controlá presentismo y gestioná la documentación de tus empleados con inteligencia artificial. Explorá los procesos que más importan en tu área.</p>
+
+            <div class="btn-row" data-anim="fade-up" data-delay="0.25" style="margin-top:18px">
+              <a class="btn btn--lg rrhh-btn" href="#novedades" data-od-id="cta-rrhh-novedades">Ver novedades Delta 6
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+              <a class="btn btn--lg rrhh-ghost" href="contacto.html" data-od-id="cta-rrhh-demo">Solicitar Demostración</a>
+            </div>
+
+            <!-- Hero Feature Badge con dropdown -->
+            <div class="rrhh-drop" data-rrhh-drop data-anim="fade-up" data-delay="0.3">
+              <button class="rrhh-drop__pill" type="button" aria-haspopup="true" aria-expanded="false">
+                Procesos de liquidación
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="rrhh-drop__menu" role="menu">
+                <a role="menuitem" href="#modulos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Liquidación de sueldos</a>
+                <a role="menuitem" href="#modulos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6"/></svg>Control de personal</a>
+                <a role="menuitem" href="#modulos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/></svg>Recibos digitales</a>
+                <a role="menuitem" href="#timeline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Fichadas y presentismo</a>
+                <a role="menuitem" href="#modulos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/></svg>Asistente AI RRHH</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nodos flotantes gravitacionales -->
+          <div class="nodes" data-anim="fade-left" data-delay="0.2" aria-label="Ecosistema de módulos">
+            <div class="rrhh-orbit" aria-hidden="true"></div>
+            <a class="node n1" href="#modulos"><img src="TangoEmpleados_hb.png" alt="">Tango Empleados</a>
+            <a class="node n2" href="#modulos"><img src="TangoFichadas_hb.png" alt="">Tango Fichadas</a>
+            <a class="node n3" href="#modulos"><img src="D6-b.png" alt="" style="height:20px">Sueldos · SiRADIG</a>
+            <a class="node n4" href="#novedades">Fórmulas AI <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/></svg></a>
+            <a class="node n5" href="#timeline">Presentismo <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v5l3 3"/></svg></a>
+            <div class="rrhh-core">
+              <img src="TangoEmpleados_vb.png" alt="Tango Capital Humano Delta 6">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Timeline de liquidación (scroll) ================= -->
+    <section class="section section--surface" id="timeline" data-od-id="rrhh-timeline">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Proceso de liquidación</span>
+          <h2 data-anim="fade-up">El ciclo completo, <span class="hl">paso a paso</span></h2>
+          <p data-anim="fade-up" data-delay="0.1">Desplazate y mirá cómo avanza cada etapa de la liquidación con Tango Capital Humano.</p>
+        </div>
+        <div class="tl" data-timeline data-anim="fade-up">
+          <div class="tl-step is-on" data-od-id="tl-1">
+            <span class="tl-num">PASO 01</span>
+            <h3>Carga de novedades</h3>
+            <p>Ingresos, egresos, licencias, vacaciones y ausentismo se cargan una sola vez, integrados con Control de Personal y Tango Fichadas.</p>
+          </div>
+          <div class="tl-step" data-od-id="tl-2">
+            <span class="tl-num">PASO 02</span>
+            <h3>Cálculo de haberes</h3>
+            <p>Multi-convenio, categorías libres y el nuevo Editor de Fórmulas AI con búsqueda ágil y sugerencias automáticas. Ganancias 4ta categoría incluida.</p>
+          </div>
+          <div class="tl-step" data-od-id="tl-3">
+            <span class="tl-num">PASO 03</span>
+            <h3>Aportes y cargas sociales</h3>
+            <p>Integración SiRADIG y SIAp con generación automática de asientos contables y plantillas de liquidación reutilizables.</p>
+          </div>
+          <div class="tl-step" data-od-id="tl-4">
+            <span class="tl-num">PASO 04</span>
+            <h3>Acreditación bancaria</h3>
+            <p>Liquidación con acreditación en múltiples CBU y distribución de cuentas por importe o porcentaje, lista para el banco.</p>
+          </div>
+          <div class="tl-step" data-od-id="tl-5">
+            <span class="tl-num">PASO 05</span>
+            <h3>Recibo digital</h3>
+            <p>Publicación y firma digital de recibos en Tango Empleados, con acceso desde web o móvil y gestión documental con AI.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Video Capital Humano ================= -->
+    <section class="section" id="video" data-od-id="rrhh-video">
+      <div class="container">
+        <div class="rrhh-video" data-anim="fade-up">
+          <div class="rrhh-video__frame">
+            <video autoplay muted loop playsinline preload="metadata" poster="capital-humano-poster.jpg">
+              <source src="capital-humano.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de video.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Novedades ================= -->
+    <section class="section" id="novedades" data-od-id="rrhh-novedades">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Novedades Delta 6</span>
+          <h2 data-anim="fade-up">Innovaciones para <span class="hl">tu equipo de RRHH</span></h2>
+          <p data-anim="fade-up" data-delay="0.1">La inteligencia artificial aplicada a la gestión del capital humano.</p>
+        </div>
+        <div class="grid-3" data-anim-group>
+          <article class="card" data-od-id="rrhh-formulas-ai">
+            <div class="rrhh-mod-icon"><img src="assets/modulos/ModSueldos.png" alt=""></div>
+            <span class="rrhh-tag rrhh-tag--new">Nuevo</span>
+            <h3>Editor de Fórmulas AI</h3>
+            <p>Nuevo editor con búsqueda ágil y sugerencias automáticas. Múltiples cuentas por empleado con distribución por importe o porcentaje.</p>
+          </article>
+          <article class="card" data-od-id="rrhh-formularios">
+            <div class="rrhh-mod-icon"><img src="assets/modulos/ModControlPersonal.png" alt=""></div>
+            <span class="rrhh-tag rrhh-tag--new">Nuevo</span>
+            <h3>Formularios Personalizables</h3>
+            <p>Gestión Documental con formularios que integran datos automáticos, aprobaciones digitales y acceso desde web o móvil.</p>
+          </article>
+          <article class="card" data-od-id="rrhh-asistente">
+            <div class="rrhh-mod-icon"><img src="assets/modulos/ModSueldos.png" alt=""></div>
+            <span class="rrhh-tag rrhh-tag--new">Nuevo</span>
+            <h3>Asistente AI RRHH</h3>
+            <p>Centralizá la documentación de RRHH para que la AI interprete y responda de forma inmediata las consultas más frecuentes de tus colaboradores.</p>
+          </article>
+          <article class="card" data-od-id="rrhh-fichadas-export">
+            <div class="rrhh-mod-icon"><img src="assets/modulos/ModControlPersonal.png" alt=""></div>
+            <span class="rrhh-tag rrhh-tag--new">Nuevo</span>
+            <h3>Exportación Automática de Fichadas</h3>
+            <p>Nuevo servicio de exportación automática de fichadas para optimizar el seguimiento del presentismo en la nube.</p>
+          </article>
+          <article class="card" data-od-id="rrhh-empleados">
+            <div class="rrhh-mod-icon"><img src="assets/modulos/ModSueldos.png" alt=""></div>
+            <span class="rrhh-tag">Tango Empleados</span>
+            <h3>Recibos y portales</h3>
+            <p>Publicación y firma digital de recibos, licencias y vacaciones con formularios personalizables para tus colaboradores.</p>
+          </article>
+          <article class="card" data-od-id="rrhh-live">
+            <div class="rrhh-mod-icon"><img src="assets/modulos/ModLive.png" alt=""></div>
+            <span class="rrhh-tag">Tango Live</span>
+            <h3>Tableros de RRHH</h3>
+            <p>Consultas personalizables, gráficos y tablas dinámicas, y exportación a Excel, Word o PDF para tus reportes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Módulos ================= -->
+    <section class="section rrhh-dark" id="modulos" data-od-id="rrhh-modulos">
+      <div class="container">
+        <div class="section-head">
+          <span class="rrhh-tag" data-anim="fade-in">Módulos</span>
+          <h2 data-anim="fade-up">Gestión integral de <span style="color:#9BE0FF">tu personal</span></h2>
+          <p data-anim="fade-up" data-delay="0.1" style="color:oklch(76% 0.05 230)">Un mismo dato, todas las áreas de RRHH conectadas.</p>
+        </div>
+        <div class="grid-3" data-anim-group>
+          <article class="card" data-od-id="mod-sueldos">
+            <div class="rrhh-mod-icon"><img src="assets/modulos/ModSueldos.png" alt=""></div>
+            <h3>Sueldos</h3>
+            <p>Multi-convenio y categorías libres. Integración SiRADIG y SIAp. Ganancias 4ta categoría. Acreditación en múltiples CBU y hasta 1.100 legajos (Gold).</p>
+            <span class="badge-anchor" style="margin-top:14px;align-self:flex-start">Liquidación</span>
+          </article>
+          <article class="card" data-od-id="mod-personal">
+            <div class="rrhh-mod-icon"><img src="assets/modulos/ModControlPersonal.png" alt=""></div>
+            <h3>Control de Personal</h3>
+            <p>Horarios fijos, rotativos y flexibles. Integración Tango Fichadas, estadísticas de ausentismo y análisis multidimensional.</p>
+            <span class="badge-anchor" style="margin-top:14px;align-self:flex-start">Presentismo</span>
+          </article>
+          <article class="card" data-od-id="mod-empleados">
+            <div class="rrhh-mod-icon"><img src="assets/modulos/ModSueldos.png" alt=""></div>
+            <h3>Tango Empleados</h3>
+            <p>Publicación y firma digital de recibos. Gestión documental con AI, licencias y vacaciones, y formularios personalizables.</p>
+            <span class="badge-anchor" style="margin-top:14px;align-self:flex-start">Autoservicio</span>
+          </article>
+          <article class="card" data-od-id="mod-fichadas">
+            <div class="rrhh-mod-icon"><img src="assets/modulos/ModControlPersonal.png" alt=""></div>
+            <h3>Tango Fichadas</h3>
+            <p>Control de presentismo en la nube. Fichada desde PC o smartphone con GPS o WiFi corporativo y tablero de control.</p>
+            <span class="badge-anchor" style="margin-top:14px;align-self:flex-start">Nube</span>
+          </article>
+          <article class="card" data-od-id="mod-live">
+            <div class="rrhh-mod-icon"><img src="assets/modulos/ModLive.png" alt=""></div>
+            <h3>Tango Live</h3>
+            <p>Consultas personalizables, gráficos y tablas dinámicas, y exportación a Excel, Word o PDF.</p>
+            <span class="badge-anchor" style="margin-top:14px;align-self:flex-start">BI incluido</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Licencias ================= -->
+    <section class="section" id="licencias" data-od-id="rrhh-licencias">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Licencias</span>
+          <h2 data-anim="fade-up">Planes <span class="hl">disponibles</span></h2>
+        </div>
+        <div style="overflow-x:auto" data-anim="fade-up">
+          <table class="d6-license">
+            <thead><tr><th>Característica</th><th>Evolución</th><th>Plus</th><th>X-Plus</th><th>Gold</th></tr></thead>
+            <tbody>
+              <tr><td>Legajos a liquidar</td><td>50</td><td>200</td><td>600</td><td>1.100</td></tr>
+              <tr><td>Sueldos</td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td></tr>
+              <tr><td>Control de Personal</td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td></tr>
+              <tr><td>Tango Empleados</td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="lic-stage" data-anim="fade-up">
+          <div class="lic-canvas">
+            <img src="evolucion-planes.jpeg" alt="Diagrama de evolución de planes desde Evolución hasta Gold" width="914" height="514" loading="lazy">
+            <span class="lic-scan" aria-hidden="true"></span>
+            <span class="lic-aura" aria-hidden="true"></span>
+            <span class="lic-ring" aria-hidden="true"></span>
+            <span class="lic-ring lic-ring--two" aria-hidden="true"></span>
+            <span class="lic-core" aria-hidden="true"></span>
+            <span class="lic-stream lic-s1" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="lic-stream lic-s2" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="lic-stream lic-s3" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="lic-stream lic-s4" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="lic-orbit lic-o1" aria-hidden="true"></span>
+            <span class="lic-orbit lic-o2" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section section--surface" id="faq" data-od-id="rrhh-faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Preguntas frecuentes</span>
+          <h2 data-anim="fade-up">Todo lo que necesitás saber <span class="hl">antes de decidir</span></h2>
+        </div>
+        <div class="acc d6-faq-wrap" data-accordion="single" data-od-id="rrhh-faq-acc">
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="rrhh-faq-1"><span class="acc-title">¿Hasta cuántos legajos puedo liquidar?</span><span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-panel" id="rrhh-faq-1" role="region"><div class="acc-panel-inner"><p>Según el plan: 50 (Evolución), 200 (Plus), 600 (X-Plus) o 1.100 legajos (Gold). Para estudios contables, el límite llega a 30.000 legajos.</p></div></div>
+          </div>
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="rrhh-faq-2"><span class="acc-title">¿Se integra con la ARCA y SiRADIG?</span><span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-panel" id="rrhh-faq-2" role="region"><div class="acc-panel-inner"><p>Sí. Integración SiRADIG y SIAp, liquidación de Ganancias 4ta categoría y generación automática de asientos contables, siempre al día con la reglamentación.</p></div></div>
+          </div>
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="rrhh-faq-3"><span class="acc-title">¿Cómo firman los recibos mis empleados?</span><span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-panel" id="rrhh-faq-3" role="region"><div class="acc-panel-inner"><p>Con Tango Empleados, publicás los recibos y tus colaboradores los consultan y firman digitalmente desde web o móvil, con gestión documental con AI.</p></div></div>
+          </div>
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="rrhh-faq-4"><span class="acc-title">¿Cómo se registra el presentismo?</span><span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-panel" id="rrhh-faq-4" role="region"><div class="acc-panel-inner"><p>Con Tango Fichadas, la fichada se hace desde PC o smartphone con GPS o WiFi corporativo, con exportación automática de fichadas y tablero de control en la nube.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA final ================= -->
+    <section class="section rrhh-dark" data-od-id="rrhh-cta" style="padding-block:clamp(64px,9vw,96px)">
+      <div class="container" style="text-align:center">
+        <h2 data-anim="fade-up">Cuidá a tu gente <span style="color:#9BE0FF">con la mejor tecnología</span></h2>
+        <p class="lead" data-anim="fade-up" data-delay="0.1" style="margin-inline:auto;color:oklch(76% 0.05 230)">Liquidaciones precisas, presentismo al día y documentación digital con inteligencia artificial.</p>
+        <div class="btn-row" style="justify-content:center" data-anim="fade-up" data-delay="0.2">
+          <a class="btn btn--lg rrhh-btn" href="contacto.html" data-od-id="cta-rrhh-final">Programar demostración gratuita<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--lg rrhh-ghost" href="https://wa.me/5493515135058?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Tango%20Capital%20Humano%20Delta%206" target="_blank" rel="noopener" data-od-id="cta-rrhh-wa">Consultar por WhatsApp<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer" data-od-id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" style="color:var(--on-dark)">
+            <img class="brand-logo" src="OGO-BLANCO.jpg" alt="Sandra Chaves y Asociados" width="200" height="46">
+            <img class="brand-logo" src="TS-Dist-Certificado_light.png" alt="Distribuidor Oficial Certificado Tango Software" width="322" height="107">
+          </a>
+          <p>Consultoría informática y Distribuidor Oficial Certificado del ecosistema Tango Software. Córdoba, Argentina.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/sandrachavesyasociados" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.facebook.com/SandraChavesyAsociados" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 8.5H17V5.5h-3c-1.9 0-3.5 1.6-3.5 3.5v2H8v3h2.5v6.5h3V14h2.6l.6-3h-3.2V9c0-.3.2-.5.5-.5z"/></svg></a>
+            <a href="https://wa.me/5493515135058" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg></a>
+            <a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener" aria-label="Linktree"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.1"/><path d="M14 10a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.2-1.1"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Productos</h4>
+          <ul>
+            <li><a href="tango-gestion.html">Tango Gestión Delta 6</a></li>
+            <li><a href="tango-punto-de-venta.html">Tango Punto de Venta</a></li>
+            <li><a href="tango-resto.html">Tango Restô</a></li>
+            <li><a href="tango-capital-humano.html">Tango Capital Humano</a></li>
+            <li><a href="tango-estudios-contables.html">Tango Estudios Contables</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Solución</h4>
+          <ul>
+            <li><a href="#timeline">Proceso de liquidación</a></li>
+            <li><a href="#novedades">Novedades Delta 6</a></li>
+            <li><a href="#modulos">Módulos</a></li>
+            <li><a href="#licencias">Licencias</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/5493515135058" target="_blank" rel="noopener">WhatsApp: +54 9 351 513-5058</a></li>
+            <li><a href="https://wa.me/5493512275675" target="_blank" rel="noopener">WhatsApp: +54 9 351 227-5675</a></li>
+            <li><a href="mailto:adm@sandrachavesyasoc.com">adm@sandrachavesyasoc.com</a></li>
+            <li><a href="https://sandrachavesyasoc.com/" target="_blank" rel="noopener">sandrachavesyasoc.com</a></li>
+            <li><a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener">linktr.ee/sandrachavesyasoc</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Sandra Chaves y Asoc. S.A.S. — Córdoba, Argentina</span>
+        <span>Distribuidor Oficial Certificado de Tango Software · Axoft Argentina S.A.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* Dropdown pill badge */
+    (function () {
+      'use strict';
+      var drop = document.querySelector('[data-rrhh-drop]');
+      var btn = drop.querySelector('.rrhh-drop__pill');
+      btn.addEventListener('click', function () {
+        var open = drop.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', function (ev) {
+        if (!ev.target.closest('[data-rrhh-drop]')) { drop.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+      });
+
+      /* Timeline activada por scroll (IntersectionObserver) */
+      var steps = document.querySelectorAll('[data-timeline] .tl-step');
+      var bar = document.querySelector('[data-timeline]::after');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) { if (en.isIntersecting) en.target.classList.add('is-on'); });
+        }, { threshold: 0.45 });
+        steps.forEach(function (s) { io.observe(s); });
+      } else { steps.forEach(function (s) { s.classList.add('is-on'); }); }
+    })();
+  </script>
+</body>
+</html>

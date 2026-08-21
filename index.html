@@ -23,6 +23,67 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
+  <!-- Elemento animado Tango AI: infografía DATOS en movimiento (flujos de datos, anillos, núcleo pulsante) -->
+  <style>
+    .tai-stage { width: 100%; max-width: 420px; margin-inline: auto; }
+    .tai-stage.tai-stage--zoom-xl:hover .tai-canvas { transform: scale(2); }
+    .tai-canvas { position: relative; width: 100%; overflow: hidden; border: 1px solid rgb(11 152 211 / 18%); border-radius: 1.5rem; background: #eaf7fc; box-shadow: 0 24px 70px rgb(10 117 177 / 16%); }
+    .tai-infographic { display: block; width: 100%; height: auto; }
+    .tai-cover { position: absolute; top: 1.5%; right: 23%; width: 15%; height: 16%; background: #effaff; filter: blur(2px); opacity: 1; }
+    .tai-ring { position: absolute; top: 36%; left: 50%; width: 18%; aspect-ratio: 1; border: 2px solid rgb(10 173 224 / 45%); border-radius: 50%; box-shadow: 0 0 24px rgb(10 173 224 / 35%), inset 0 0 20px rgb(10 173 224 / 18%); transform: translate(-50%, -50%); animation: tai-breathe 3.2s ease-in-out infinite; }
+    .tai-ring--two { width: 25%; border-color: rgb(10 173 224 / 20%); animation-delay: -1.2s; }
+    .tai-core { position: absolute; top: 50%; left: 50%; width: 2.4%; aspect-ratio: 1; border-radius: 50%; background: #0aaee0; box-shadow: 0 0 0 0 rgb(10 174 224 / 70%); transform: translate(-50%, -50%); animation: tai-pulse 2s ease-out infinite; }
+    .tai-stream { position: absolute; display: flex; gap: 0.6rem; align-items: center; animation: tai-stream 4.8s linear infinite; }
+    .tai-stream i { display: block; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: #16c7ec; box-shadow: 0 0 10px #16c7ec; }
+    .tai-s1 { top: 42%; left: 26%; transform: rotate(20deg); }
+    .tai-s2 { top: 42%; right: 26%; transform: rotate(160deg); animation-delay: -1.3s; }
+    .tai-s3 { top: 59%; left: 27%; transform: rotate(-20deg); animation-delay: -2.1s; }
+    .tai-s4 { top: 59%; right: 27%; transform: rotate(200deg); animation-delay: -3.3s; }
+    .tai-controls { display: flex; align-items: center; justify-content: center; gap: 0.55rem; padding-top: 1rem; color: #42617c; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; }
+    .tai-live { width: 0.45rem; height: 0.45rem; border-radius: 50%; background: #11b981; box-shadow: 0 0 10px #11b981; }
+    .tai-controls button { margin-left: 0.5rem; border: 1px solid rgb(16 45 103 / 20%); border-radius: 999px; padding: 0.35rem 0.7rem; color: #102d67; font-size: 0.68rem; background: transparent; cursor: pointer; transition: background 180ms ease; font-family: var(--font-mono); }
+    .tai-controls button:hover { background: rgb(16 45 103 / 7%); }
+    .tai-stage.is-paused * { animation-play-state: paused !important; }
+    @keyframes tai-breathe { 0%, 100% { opacity: 0.55; transform: translate(-50%, -50%) scale(0.94); } 50% { opacity: 1; transform: translate(-50%, -50%) scale(1.07); } }
+    @keyframes tai-pulse { 0% { box-shadow: 0 0 0 0 rgb(10 174 224 / 65%); } 70% { box-shadow: 0 0 0 24px rgb(10 174 224 / 0%); } 100% { box-shadow: 0 0 0 0 rgb(10 174 224 / 0%); } }
+    @keyframes tai-stream { 0% { opacity: 0.15; translate: -20px 0; } 30%, 70% { opacity: 1; } 100% { opacity: 0.15; translate: 20px 0; } }
+    @media (max-width: 640px) { .tai-canvas { border-radius: 1rem; } .tai-controls { font-size: 0.62rem; } .tai-controls button { font-size: 0.6rem; } }
+    @media (prefers-reduced-motion: reduce) { .tai-ring, .tai-core, .tai-stream, .tai2-scan { animation: none !important; } }
+
+    /* Segundo elemento animado (tango-ai2): "Un solo sistema" — flujo digital de comprobantes */
+    .tai-stage--wide { max-width: none; }
+    .tai-infographic--sistema { filter: saturate(0.88) hue-rotate(18deg) brightness(1.08) contrast(0.97); }
+    .tai2-cover {
+      position: absolute; top: 81%; right: -1%; width: 15%; height: 19%;
+      background: linear-gradient(135deg, #4d536f 0%, #665573 48%, #80657d 100%);
+      filter: blur(5px); opacity: 0.98; z-index: 2;
+      -webkit-mask-image: radial-gradient(ellipse at 72% 68%, #000 45%, transparent 78%);
+              mask-image: radial-gradient(ellipse at 72% 68%, #000 45%, transparent 78%);
+    }
+    .tai2-cover::after {
+      position: absolute; inset: 18% 10% 12% 34%; border-radius: 50%;
+      background: rgb(123 106 135 / 45%); content: ''; filter: blur(15px);
+    }
+    .tai2-scan {
+      position: absolute; top: 0; left: -12%; width: 10%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgb(101 238 255 / 26%), transparent);
+      filter: blur(8px); pointer-events: none; animation: tai2-scan 5.5s ease-in-out infinite;
+    }
+    @keyframes tai2-scan { 0% { left: -12%; opacity: 0; } 15% { opacity: 1; } 65% { opacity: 0.9; } 100% { left: 105%; opacity: 0; } }
+
+    /* Agrandar ambas infografías al pasar el cursor para que el contenido se vea */
+    .tai-stage .tai-canvas {
+      transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.3, 1.15), box-shadow 0.4s ease;
+      will-change: transform;
+    }
+    .tai-stage:hover .tai-canvas {
+      transform: scale(1.4);
+      z-index: 12;
+      box-shadow: 0 34px 90px rgb(10 117 177 / 30%);
+    }
+    @media (prefers-reduced-motion: reduce) { .tai-stage .tai-canvas { transition: none; } }
+  </style>
+
   <!-- Datos estructurados: Organization -->
   <script type="application/ld+json">
   {
@@ -138,7 +199,7 @@
                 </div>
                 <a class="mega-feature" href="productos-tango.html" data-od-id="mega-feature-delta5">
                   <span>
-                    <strong>Novedad: Tango Delta 5</strong>
+                    <strong>Delta 6</strong>
                     <span>La última versión del ecosistema: agilidad y seguridad operativa.</span>
                   </span>
                   <span class="arrow" aria-hidden="true">
@@ -191,7 +252,11 @@
 
       <div class="container">
         <div class="hero-inner">
-          <div>
+          <div class="hero-copy">
+            <!-- Logo corporativo de respaldo: delante del video, detrás de las letras del hero -->
+            <div class="hero-logo" aria-hidden="true">
+              <img src="logo_SF_SC.png" alt="" width="1481" height="791">
+            </div>
             <span class="eyebrow" data-anim="fade-in">Distribuidor Oficial Certificado · Axoft Argentina</span>
             <h1 data-anim="fade-up" data-delay="0.1">Sandra Chaves y asociados: Tu <span class="hl">aliado estratégico</span> en soluciones de gestión</h1>
             <p class="lead" data-anim="fade-up" data-delay="0.2">Potenciamos el crecimiento de tu empresa con tecnología de vanguardia y asesoramiento profesional especializado.</p>
@@ -283,9 +348,21 @@
           </div>
         </div>
         <div class="value-panel" data-anim="fade-left" data-od-id="home-quienes-lottie">
-          <!-- Imagen real aplicada: visualización de datos del ecosistema (PNG sin fondo, flota sobre el panel).
-               REEMPLAZAR opcional: captura real de tableros Tango Live -->
-          <img class="img-float" src="DATOS.png" width="1000" height="667" alt="Tableros y visualización de datos del ecosistema Tango" loading="lazy" style="max-width:300px;margin-inline:auto;display:block">
+          <!-- Elemento animado de Tango AI: la infografía DATOS en movimiento (flujos de datos, anillos y núcleo pulsante).
+               Portado de tango-ai/components/flowing-infographic.tsx a HTML/CSS/JS puro. -->
+          <div class="tai-stage tai-stage--zoom-xl" data-tai-stage>
+            <div class="tai-canvas">
+              <img class="tai-infographic" src="DATOS.png" width="1000" height="667" alt="Infografía de TANGO AI: decisiones con datos en movimiento" loading="lazy">
+              <span class="tai-cover" aria-hidden="true"></span>
+              <span class="tai-ring" aria-hidden="true"></span>
+              <span class="tai-ring tai-ring--two" aria-hidden="true"></span>
+              <span class="tai-core" aria-hidden="true"></span>
+              <span class="tai-stream tai-s1" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="tai-stream tai-s2" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="tai-stream tai-s3" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="tai-stream tai-s4" aria-hidden="true"><i></i><i></i><i></i></span>
+            </div>
+          </div>
           <h3 style="text-align:center;margin-top:18px">Decisiones con datos, no con intuición</h3>
           <p style="text-align:center;margin:8px auto 0;max-width:38ch">Tableros paramétricos y trazabilidad total para dirección, finanzas, RRHH y operaciones.</p>
         </div>
@@ -381,8 +458,22 @@
     <section class="section" id="solucion" data-od-id="home-solucion">
       <div class="container split-block">
         <div class="value-panel" data-anim="fade-right" data-od-id="home-solucion-visual">
-          <!-- Banner real "Un solo sistema" con parallax sutil de scroll (data-parallax="soft") -->
-          <img class="sol-visual" src="UN-SOLO-SISTEMA.jpg" alt="Un solo sistema: el ecosistema Tango gestionando toda la operación sobre la misma base de datos" loading="lazy" width="1600" height="873" data-parallax="soft">
+          <!-- Elemento animado de Tango AI (tango-ai2): flujo digital de comprobantes sobre "Un solo sistema".
+               Portado de tango-ai2/components/flowing-infographic.tsx a HTML/CSS/JS puro. -->
+          <div class="tai-stage tai-stage--wide" data-tai-stage>
+            <div class="tai-canvas">
+              <img class="tai-infographic tai-infographic--sistema" src="UN-SOLO-SISTEMA.jpg" width="1600" height="873" alt="Un solo sistema: flujo digital de comprobantes entre stock, tesorería y contabilidad" loading="lazy">
+              <span class="tai2-cover" aria-hidden="true"></span>
+              <span class="tai2-scan" aria-hidden="true"></span>
+              <span class="tai-ring" aria-hidden="true"></span>
+              <span class="tai-ring tai-ring--two" aria-hidden="true"></span>
+              <span class="tai-core" aria-hidden="true"></span>
+              <span class="tai-stream tai-s1" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="tai-stream tai-s2" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="tai-stream tai-s3" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="tai-stream tai-s4" aria-hidden="true"><i></i><i></i><i></i></span>
+            </div>
+          </div>
           <h3 style="text-align:center;margin-top:18px">Un solo sistema nervioso central</h3>
           <p style="text-align:center;margin:8px auto 0;max-width:38ch">Ventas, stock, tesorería y contabilidad trabajando sobre la misma base de datos.</p>
         </div>
@@ -408,7 +499,7 @@
       </div>
     </section>
 
-    <!-- ================= Delta 5: la VERSIÓN vigente del ecosistema (no un producto aparte) ================= -->
+    <!-- ================= Delta 6: la VERSIÓN vigente del ecosistema (no un producto aparte) ================= -->
     <section class="section delta-band" id="version-delta" data-od-id="home-delta5">
       <div class="container split-block">
         <div>
@@ -416,12 +507,12 @@
             <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6L12 2z"/></svg>
             Versión vigente del ecosistema
           </span>
-          <h2 data-anim="fade-up" style="margin-top:18px">Tango <span class="hl">Delta 5</span>, ahora con Inteligencia Artificial</h2>
+          <h2 data-anim="fade-up" style="margin-top:18px">Tango <span class="hl">Delta 6</span>, ahora con Inteligencia Artificial</h2>
           <p class="lead" data-anim="fade-up" style="margin-top:14px;color:var(--muted-on-dark)">Delta es la versión evolutiva del software: tu ecosistema se actualiza sin cambiar de producto. Mantené tu negocio a la vanguardia tecnológica y normativa con la última versión del ecosistema Tango, diseñada para ofrecerte la mayor agilidad y seguridad operativa.</p>
           <ul class="check-list" data-anim-group>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5.5"/></svg>
-              <span><strong>Inteligencia Artificial:</strong> Delta 5 incorpora IA aplicada a la gestión diaria de tu empresa.</span>
+              <span><strong>Inteligencia Artificial:</strong> Delta 6 incorpora IA aplicada a la gestión diaria de tu empresa.</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5.5"/></svg>
@@ -433,17 +524,17 @@
             </li>
           </ul>
           <div class="btn-row" data-anim="fade-up" style="margin-top:28px">
-            <a class="btn btn--primary" href="productos-tango.html#delta5" data-od-id="cta-home-delta5">Conocé Tango Delta 5
+            <a class="btn btn--primary" href="productos-tango.html#delta5" data-od-id="cta-home-delta5">Conocé Tango Delta 6
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
             </a>
           </div>
         </div>
         <figure class="delta-figure" data-anim="fade-right" data-od-id="home-delta5-img">
-          <!-- Imagen real: presentación vertical de Tango Delta 5 (PNG sin fondo, flota sobre la banda Admiral) -->
+          <!-- Imagen real: presentación vertical de Tango Delta 6 (PNG sin fondo, flota sobre la banda Admiral) -->
           <!-- El halo iridiscente (Gradiente líquido) se dibuja con CSS vía .delta-figure::before/::after — no requiere asset -->
           <!-- Rastro blanco del haz de luz: cruza el logo y se desvanece, "el objeto llega" -->
           <span class="delta-beam" aria-hidden="true"></span>
-          <img class="img-float" src="DELTA-5-VERTICAL.png" width="900" height="1350" alt="Tango Delta 5 — versión vigente del ecosistema, ahora con Inteligencia Artificial" loading="lazy">
+          <img class="img-float" src="TangoDelta6-vn.png" width="900" height="1350" alt="Tango Delta 6 — versión vigente del ecosistema, ahora con Inteligencia Artificial" loading="lazy">
         </figure>
       </div>
     </section>
@@ -742,6 +833,7 @@
         <div class="footer-brand">
           <a class="brand" href="index.html" style="color:var(--on-dark)">
             <img class="brand-logo" src="OGO-BLANCO.jpg" alt="Sandra Chaves y Asociados" width="200" height="46">
+            <img class="brand-logo" src="TS-Dist-Certificado_light.png" alt="Distribuidor Oficial Certificado Tango Software" width="322" height="107">
           </a>
           <p>Consultoría informática y Distribuidor Oficial Certificado del ecosistema Tango Software. Córdoba, Argentina.</p>
           <div class="footer-social">
@@ -784,7 +876,7 @@
           <ul>
             <li><a href="https://wa.me/5493515135058" target="_blank" rel="noopener">WhatsApp: +54 9 351 513-5058</a></li>
             <li><a href="https://wa.me/5493512275675" target="_blank" rel="noopener">WhatsApp: +54 9 351 227-5675</a></li>
-            <li><a href="mailto:info@sandrachavesyasoc.com">info@sandrachavesyasoc.com</a></li>
+            <li><a href="mailto:adm@sandrachavesyasoc.com">adm@sandrachavesyasoc.com</a></li>
             <li><a href="https://sandrachavesyasoc.com/" target="_blank" rel="noopener">sandrachavesyasoc.com</a></li>
             <li><a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener">linktr.ee/sandrachavesyasoc</a></li>
           </ul>

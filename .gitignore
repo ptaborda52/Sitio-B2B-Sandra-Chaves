@@ -1,0 +1,15 @@
+# Carpetas de desarrollo / referencia (no se suben al servidor)
+materiales/
+tango-ai/
+tango-ai2/
+tango-ai3/
+
+# Paquete de deploy (copia local para subir al servidor)
+deploy/
+
+# Fuente de video sin optimizar (no se usa en el sitio)
+Capital Humano.mp4
+
+# Sistema / editor
+.DS_Store
+Thumbs.db

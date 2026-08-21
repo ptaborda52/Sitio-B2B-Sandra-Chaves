@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tango Punto de Venta Delta 6 — Facturación ágil en mostrador | Sandra Chaves y Asociados</title>
+  <meta name="description" content="Tango Punto de Venta Delta 6: facturación electrónica en mostrador, Ventas Mobile, cobro integrado (Mercado Pago, Payway, Clover, GetNet, Nave), promociones y Cumplimiento Normativo ARCA. Implementación certificada en Córdoba.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Tango Punto de Venta Delta 6",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "POS / Retail",
+    "operatingSystem": "Windows, Android",
+    "inLanguage": "es-AR",
+    "softwareVersion": "Delta 6",
+    "brand": { "@type": "Brand", "name": "Tango Software — Axoft Argentina" },
+    "featureList": "Facturador, Ventas Mobile, Cobro integrado (Mercado Pago, Payway, Clover, GetNet, Nave), Búsqueda AI, eCommerce, Stock, Tesorería, Central, Tango Live"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://sandrachavesyasoc.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Productos", "item": "https://sandrachavesyasoc.com/productos-tango.html" },
+      { "@type": "ListItem", "position": 3, "name": "Tango Punto de Venta Delta 6" }
+    ]
+  }
+  </script>
+
+  <style>
+    /* =====================================================================
+       TANGO PUNTO DE VENTA DELTA 6 — Stack exclusivo:
+       "Interactive POS Terminal & Holographic HUD"
+       1) Simulador de facturación interactivo (POS en vivo con ticket)
+       2) Paneles HUD holográficos con scanlines y brillo neón
+       3) Tarjetas de equipos con glow al hover
+       Paleta: cian #2FA7DF sobre base azul marino profunda.
+       ===================================================================== */
+    :root {
+      --pdv-cyan: #2FA7DF;
+      --pdv-cyan-strong: #0E7FB8;
+      --pdv-glow: rgba(47, 167, 223, 0.45);
+      --pdv-ink: oklch(14% 0.05 245);
+      --pdv-panel: oklch(19% 0.05 240);
+    }
+
+    /* ---------- Hero HUD ---------- */
+    .pdv-hero {
+      position: relative; overflow: hidden; isolation: isolate;
+      background:
+        radial-gradient(900px 480px at 85% -10%, rgba(47,167,223,.5), transparent 60%),
+        radial-gradient(700px 420px at -8% 110%, rgba(14,127,184,.35), transparent 60%),
+        linear-gradient(140deg, #0B1B2B, #071221 60%, #050D18);
+      color: var(--on-dark);
+      padding-block: clamp(52px, 7vw, 92px);
+    }
+    .pdv-hero::before {
+      content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+      background:
+        linear-gradient(rgba(47,167,223,.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,167,223,.07) 1px, transparent 1px);
+      background-size: 42px 42px;
+      -webkit-mask-image: radial-gradient(ellipse 75% 85% at 50% 0%, #000, transparent 78%);
+              mask-image: radial-gradient(ellipse 75% 85% at 50% 0%, #000, transparent 78%);
+    }
+    .pdv-hero::after {
+      content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+      background: repeating-linear-gradient(0deg, rgba(47,167,223,.05) 0 2px, transparent 2px 5px);
+      mix-blend-mode: overlay; animation: pdv-scan 7s linear infinite;
+    }
+    @keyframes pdv-scan { from { background-position-y: 0; } to { background-position-y: 5px; } }
+    .pdv-hero__grid { display: grid; grid-template-columns: 1.02fr 0.98fr; gap: clamp(30px, 4vw, 60px); align-items: center; position: relative; z-index: 2; }
+    .pdv-hero h1 { color: var(--on-dark); margin: 20px 0 14px; letter-spacing: -0.02em; }
+    .pdv-hero h1 .pdv-grad { background: linear-gradient(100deg, #4FC3F7, #2FA7DF 45%, #9BE0FF); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+    .pdv-hero .lead { color: oklch(80% 0.05 230); max-width: 48ch; }
+    .pdv-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(47,167,223,.12); border: 1px solid rgba(47,167,223,.4); border-radius: 999px; padding: 7px 16px 7px 9px; font-size: .78rem; font-weight: 600; color: #9BE0FF; backdrop-filter: blur(8px); }
+    .pdv-badge img { height: 24px; width: auto; }
+    .pdv-hero .btn-row { margin-top: 28px; }
+    .pdv-btn {
+      position: relative; overflow: hidden; background: linear-gradient(120deg, #0E7FB8, #2FA7DF); color: #fff; border: none;
+      box-shadow: 0 10px 30px var(--pdv-glow); transition: transform .2s ease, box-shadow .3s ease;
+    }
+    .pdv-btn::after { content: ""; position: absolute; inset: 0; background: linear-gradient(110deg, transparent 32%, rgba(255,255,255,.5) 50%, transparent 68%); transform: translateX(-130%); animation: pdv-shine 3.4s ease-in-out infinite; }
+    @keyframes pdv-shine { 0% { transform: translateX(-130%); } 55%, 100% { transform: translateX(130%); } }
+    .pdv-btn:hover { transform: translateY(-3px); box-shadow: 0 18px 44px rgba(47,167,223,.6); }
+    .pdv-ghost { background: rgba(255,255,255,.06); color: var(--on-dark); border: 1.5px solid rgba(47,167,223,.55); backdrop-filter: blur(8px); transition: all .25s ease; }
+    .pdv-ghost:hover { border-color: #2FA7DF; background: rgba(47,167,223,.14); box-shadow: 0 0 26px rgba(47,167,223,.4); transform: translateY(-3px); color: var(--on-dark); }
+
+    /* ---------- Imagen Tango PDV sobre vórtice de partículas 3D ---------- */
+    .pdv-vortex {
+      position: relative; isolation: isolate; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      width: 100%; min-height: 560px; border-radius: 22px;
+      background: radial-gradient(900px 480px at 50% 120%, rgba(47,167,223,.18), transparent 60%), #050D18;
+      border: 1px solid rgba(47,167,223,.35);
+      box-shadow: 0 34px 90px rgba(0,0,0,.55), 0 0 60px rgba(47,167,223,.15);
+    }
+    .pdv-vortex__canvas { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; display: block; }
+    .pdv-vortex__logo {
+      position: relative; z-index: 1;
+      width: min(36%, 180px); height: auto;
+      border-radius: 18px;
+      filter: drop-shadow(0 0 30px rgba(56,189,248,.35));
+      animation: pdv-logo-float 5.5s ease-in-out infinite;
+    }
+    @keyframes pdv-logo-float { 0%,100% { translate: 0 0; } 50% { translate: 0 -12px; } }
+
+    /* ---------- Secciones ---------- */
+    .pdv-chip-row { display: flex; flex-wrap: wrap; gap: 10px; }
+    .pdv-chip { display: inline-flex; align-items: center; gap: 9px; padding: 11px 18px; border-radius: 999px; border: 1px solid var(--border); background: var(--brand-soft); color: var(--brand); font-weight: 700; font-size: .86rem; text-decoration: none; transition: all .2s; }
+    .pdv-chip:hover { border-color: #2FA7DF; background: rgba(47,167,223,.12); color: #0E7FB8; transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+    .pdv-chip svg { width: 16px; height: 16px; }
+    .pdv-tag { display: inline-flex; align-items: center; gap: 7px; font-family: var(--font-mono); font-size: .64rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #0E7FB8; background: rgba(47,167,223,.12); border-radius: 999px; padding: 5px 12px; margin-bottom: 14px; }
+    .pdv-tag--new { background: linear-gradient(120deg, #0E7FB8, #2FA7DF); color: #fff; }
+    .pdv-hud { background: linear-gradient(140deg, #0B1B2B, #071221); color: var(--on-dark); position: relative; overflow: hidden; }
+    .pdv-hud::before { content: ""; position: absolute; inset: 0; background: radial-gradient(600px 320px at 50% 0%, rgba(47,167,223,.16), transparent 70%); pointer-events: none; }
+    .pdv-hud .pdv-tag { color: #9BE0FF; background: rgba(47,167,223,.14); }
+    .pdv-hud .card { background: rgba(255,255,255,.05); border-color: rgba(47,167,223,.22); backdrop-filter: blur(8px); }
+    .pdv-hud .card h3 { color: var(--on-dark); }
+    .pdv-hud .card p { color: oklch(76% 0.05 230); }
+    .pdv-hud .card:hover { border-color: rgba(47,167,223,.6); box-shadow: 0 18px 50px rgba(0,0,0,.4), 0 0 40px rgba(47,167,223,.15); }
+    .pdv-mod-icon { width: 52px; height: 52px; border-radius: 13px; display: grid; place-items: center; background: rgba(47,167,223,.14); border: 1px solid rgba(47,167,223,.3); margin-bottom: 14px; }
+    .pdv-mod-icon img { width: 36px; height: 36px; object-fit: contain; }
+    .pdv-equip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .pdv-equip .card { text-align: center; padding: 20px 14px; }
+    .pdv-equip .card h3 { font-size: .95rem; margin: 10px 0 4px; }
+    .pdv-equip .card p { font-size: .78rem; }
+
+    @media (max-width: 960px) {
+      .pdv-hero__grid { grid-template-columns: 1fr; }
+      .pos { max-width: 620px; margin-inline: auto; }
+      .pdv-equip { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .pos { grid-template-columns: 1fr; }
+      .pdv-equip { grid-template-columns: 1fr 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) { .pdv-hero::after, .pdv-btn::after, .pdv-vortex__logo { animation: none !important; } }
+
+    /* ---------- Licencias (tabla de planes) ---------- */
+    .d6-license { width: 100%; border-collapse: separate; border-spacing: 0; overflow: hidden; border: 1px solid var(--border); border-radius: var(--r-md); background: var(--surface); box-shadow: var(--shadow-sm); }
+    .d6-license th { background: var(--ink); color: var(--on-dark); padding: 15px 18px; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.04em; text-align: center; }
+    .d6-license th:first-child { text-align: left; }
+    .d6-license td { padding: 13px 18px; text-align: center; border-top: 1px solid var(--border); font-size: 0.9rem; color: var(--fg); }
+    .d6-license td:first-child { text-align: left; font-weight: 600; }
+    .d6-license tbody tr:hover { background: var(--brand-soft); }
+    .d6-license .d6-check { color: var(--success); }
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="animations.js" defer></script>
+  <link rel="icon" type="image/jpeg" href="LOGO-ICONO.jpg">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- ================= Topbar ================= -->
+  <div class="topbar" data-od-id="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <a href="https://wa.me/5493515135058" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg>
+          +54 9 351 513-5058
+        </a>
+        <a href="https://wa.me/5493512275675" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg>
+          +54 9 351 227-5675
+        </a>
+      </div>
+      <div class="topbar-right">
+        <span>Distribuidor Oficial Certificado — Tango Software</span>
+        <a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.1"/><path d="M14 10a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.2-1.1"/></svg>
+          linktr.ee/sandrachavesyasoc
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Header + Mega menú ================= -->
+  <header class="site-header" data-od-id="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Sandra Chaves y Asociados — Inicio">
+        <img class="brand-logo" src="LGO-PRINCIPAL.jpg" alt="Sandra Chaves y Asociados — Distribuidor Oficial Tango Software" width="200" height="46">
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="nav-mega">
+            <button class="nav-mega-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="mega-soluciones">
+              Soluciones
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="mega" id="mega-soluciones" role="region" aria-label="Menú de soluciones">
+              <div class="mega-grid">
+                <div class="mega-col">
+                  <h4>Módulos Tango</h4>
+                  <ul>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Ventas y Facturación</strong><span>Pedidos, clientes, libro IVA automático</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Stock y Depósitos</strong><span>Saldos, comprometido y valorización</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Compras y Proveedores</strong><span>Circuito completo de abastecimiento</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Tesorería y Bancos</strong><span>Conciliación bancaria automática</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Contabilidad e I.V.A.</strong><span>Registración, ajustes y balances</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Live y Tango Net</strong><span>Tableros y conexión de sucursales</span></a></li>
+                  </ul>
+                </div>
+                <div class="mega-col">
+                  <h4>Servicios Sandra Chaves</h4>
+                  <ul>
+                    <li><a class="mega-link" href="contacto.html"><strong>Implementación</strong><span>Relevamiento funcional y puesta en marcha</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Migración de datos</strong><span>Pasaje ordenado desde tu sistema actual</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Capacitación</strong><span>Formación de equipos, también universitaria</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Soporte técnico</strong><span>Asistencia remota y en tu empresa</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Desarrollo a medida</strong><span>Interfaces externas que potencian Tango</span></a></li>
+                  </ul>
+                </div>
+                <a class="mega-feature" href="productos-tango.html" data-od-id="mega-feature-delta5">
+                  <span><strong>Novedad: Tango Delta 6</strong><span>La última versión del ecosistema: agilidad y seguridad operativa.</span></span>
+                  <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li><a href="productos-tango.html" aria-current="page">Productos</a></li>
+          <li><a href="tango-gestion.html">Tango Gestión</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a class="btn btn--primary" href="contacto.html" data-od-id="cta-header-demo">Solicitar Demostración</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Abrir menú" aria-controls="mobile-panel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Panel mobile -->
+  <div class="mobile-panel" id="mobile-panel">
+    <a class="m-link" href="index.html">Inicio</a>
+    <a class="m-link" href="productos-tango.html" aria-current="page">Productos Tango</a>
+    <a class="m-link" href="tango-gestion.html">Tango Gestión</a>
+    <a class="m-link" href="nosotros.html">Nosotros</a>
+    <a class="m-link" href="contacto.html">Contacto</a>
+    <a class="btn btn--primary" href="contacto.html">Solicitar Demostración</a>
+  </div>
+
+  <main id="contenido">
+    <!-- Migas de pan -->
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Migas de pan" data-od-id="breadcrumbs">
+        <ol>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos-tango.html">Productos</a></li>
+          <li aria-current="page">Tango Punto de Venta Delta 6</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- ================= Hero HUD + Simulador POS ================= -->
+    <section class="pdv-hero" data-od-id="pdv-hero">
+      <div class="container">
+        <div class="pdv-hero__grid">
+          <div>
+            <span class="pdv-badge" data-anim="fade-in">
+              <img src="D6-n.png" alt="Insignia Delta 6" width="24" height="24">
+              Nueva versión · TANGO DELTA 6
+            </span>
+            <h1 data-anim="fade-up" data-delay="0.1">Tango Punto de Venta <span class="pdv-grad">Delta 6</span></h1>
+            <p class="lead" data-anim="fade-up" data-delay="0.2">Facturación ágil en mostrador con tickets, lectores de códigos y medios de pago integrados. Probá el simulador: agregá productos y cobrá como en tu negocio.</p>
+            <div class="pdv-chip-row" data-anim-group>
+              <a class="pdv-chip" href="#novedades"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>Ventas Mobile</a>
+              <a class="pdv-chip" href="#novedades"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18M7 15h4"/></svg>Cobro integrado</a>
+              <a class="pdv-chip" href="#facturador"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/></svg>Búsqueda AI</a>
+            </div>
+            <div class="btn-row" data-anim="fade-up" data-delay="0.25">
+              <a class="btn btn--lg pdv-btn" href="#novedades" data-od-id="cta-pdv-novedades">Ver novedades Delta 6
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+              <a class="btn btn--lg pdv-ghost" href="contacto.html" data-od-id="cta-pdv-demo">Solicitar Demostración</a>
+            </div>
+          </div>
+
+          <!-- Logo Tango AI Software sobre vórtice de partículas 3D -->
+          <div class="pdv-vortex" data-anim="fade-left" data-delay="0.2">
+            <canvas class="pdv-vortex__canvas" data-vortex aria-hidden="true"></canvas>
+            <img class="pdv-vortex__logo" src="TangoPDV_v2.png" alt="Tango Punto de Venta" width="640" height="640">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Trust ================= -->
+    <section class="section section--tight section--surface" data-od-id="pdv-trust">
+      <div class="container">
+        <div class="section-head" style="margin-bottom:0">
+          <span class="eyebrow" data-anim="fade-in">Validación de mercado</span>
+          <h2 data-anim="fade-up" style="font-size:clamp(1.4rem,2.4vw,1.9rem)">El estándar de facturación para comercios de mostrador en todo el país</h2>
+          <p data-anim="fade-up" data-delay="0.1" class="lead">Ideal para comercios con facturación en mostrador. Y si crecés, PDV es compatible con los módulos de Tango Gestión para escalar sin cambiar de sistema.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Novedades Delta 6 ================= -->
+    <section class="section" id="novedades" data-od-id="pdv-novedades">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Novedades Delta 6</span>
+          <h2 data-anim="fade-up">Innovaciones para <span class="hl">tu comercio</span></h2>
+          <p data-anim="fade-up" data-delay="0.1">Cobrá por donde elija tu cliente y sincronizá todo el ecosistema desde el mostrador.</p>
+        </div>
+        <div class="grid-3" data-anim-group>
+          <article class="card" data-od-id="pdv-mobile">
+            <div class="pdv-mod-icon"><img src="assets/modulos/ModVentas.png" alt=""></div>
+            <span class="pdv-tag pdv-tag--new">Nuevo</span>
+            <h3>Ventas Mobile</h3>
+            <p>App Android para toma de pedidos con integración en tiempo real. Escaneo de códigos, promociones automáticas y cobro integrado.</p>
+            <a class="card-more" href="contacto.html">Probarlo en tu comercio<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+          </article>
+          <article class="card" data-od-id="pdv-cobros">
+            <div class="pdv-mod-icon"><img src="assets/modulos/ModTesoreria.png" alt=""></div>
+            <span class="pdv-tag">Cobros integrados</span>
+            <h3>Cobros Integrados</h3>
+            <p>Mercado Pago (QR/Point), Payway, Clover, GetNet y Nave. Impacto automático en Tesorería, sin carga manual.</p>
+          </article>
+          <article class="card" data-od-id="pdv-ai">
+            <div class="pdv-mod-icon"><img src="assets/modulos/ModStock.png" alt=""></div>
+            <span class="pdv-tag">Búsqueda AI</span>
+            <h3>Búsqueda AI</h3>
+            <p>Buscá artículos con lenguaje natural. Recomendaciones inteligentes de sustitutos y complementarios al instante.</p>
+          </article>
+          <article class="card" data-od-id="pdv-ecommerce">
+            <div class="pdv-mod-icon"><img src="assets/modulos/ModVentas2.png" alt=""></div>
+            <span class="pdv-tag pdv-tag--new">Nuevo</span>
+            <h3>eCommerce Renovado</h3>
+            <p>Gestión integral de publicaciones en Mercado Libre, Tiendanube y Mercado Shops con sincronización de precios y saldos.</p>
+            <a class="card-more" href="contacto.html">Vender online<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+          </article>
+          <article class="card" data-od-id="pdv-venta-online">
+            <div class="pdv-mod-icon"><img src="assets/modulos/ModCentral.png" alt=""></div>
+            <span class="pdv-tag">Venta online</span>
+            <h3>Tango Tiendas</h3>
+            <p>Publicá en Mercado Libre, Mercado Shops y Tiendanube con facturación individual o masiva desde un solo lugar.</p>
+          </article>
+          <article class="card" data-od-id="pdv-live">
+            <div class="pdv-mod-icon"><img src="assets/modulos/ModLive.png" alt=""></div>
+            <span class="pdv-tag">BI incluido</span>
+            <h3>Tango Live</h3>
+            <p>Consultas personalizables, gráficos dinámicos y exportación a Excel, Word o PDF desde cualquier dispositivo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Facturador (HUD) ================= -->
+    <section class="section pdv-hud" id="facturador" data-od-id="pdv-facturador">
+      <div class="container">
+        <div class="section-head">
+          <span class="pdv-tag" data-anim="fade-in">Facturador Delta 6</span>
+          <h2 data-anim="fade-up">Un facturador pensado para <span style="color:#9BE0FF">vender más rápido</span></h2>
+          <p data-anim="fade-up" data-delay="0.1" style="color:oklch(76% 0.05 230)">Cada segundo cuenta en el mostrador. Promociones, favoritos y descuentos automáticos para no hacer esperar a tu cliente.</p>
+        </div>
+        <div class="grid-3" data-anim-group>
+          <article class="card" data-od-id="pdv-promos">
+            <h3>Promociones avanzadas</h3>
+            <p>Generales e individuales: 2x1, A+B, descuentos por artículo y descuentos en cascada de hasta 5 niveles, aplicados automáticamente.</p>
+          </article>
+          <article class="card" data-od-id="pdv-favoritos">
+            <h3>Panel de favoritos</h3>
+            <p>Múltiples facturas simultáneas y tus artículos más vendidos a un clic, para agilizar la atención en los picos de demanda.</p>
+          </article>
+          <article class="card" data-od-id="pdv-qr">
+            <h3>Cobro QR + Caja</h3>
+            <p>Cobro QR con Mercado Pago, cobranzas en múltiples monedas y cierre de caja unificado con arqueo automático.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Equipos compatibles ================= -->
+    <section class="section" id="equipos" data-od-id="pdv-equipos">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Hardware</span>
+          <h2 data-anim="fade-up">Equipos <span class="hl">compatibles</span></h2>
+          <p data-anim="fade-up" data-delay="0.1">Integración directa con el hardware de tu comercio. Te asesoramos en la compra e instalación.</p>
+        </div>
+        <div class="pdv-equip" data-anim-group>
+          <article class="card" data-od-id="eq-fiscal"><h3>Impresoras Fiscales</h3><p>Tickets, ticket-factura y facturas.</p></article>
+          <article class="card" data-od-id="eq-control"><h3>Controladores Fiscales</h3><p>Todos los homologados por la ARCA.</p></article>
+          <article class="card" data-od-id="eq-posnet"><h3>Terminales Posnet</h3><p>Ingénico y Verifone.</p></article>
+          <article class="card" data-od-id="eq-lapos"><h3>Terminales LaPos</h3><p>Validación Visa.</p></article>
+          <article class="card" data-od-id="eq-lectora"><h3>Lectoras de Código</h3><p>Búsqueda rápida de artículos.</p></article>
+          <article class="card" data-od-id="eq-cajon"><h3>Cajón de Dinero</h3><p>Apertura automática.</p></article>
+          <article class="card" data-od-id="eq-visor"><h3>Visores</h3><p>Display para clientes.</p></article>
+          <article class="card" data-od-id="eq-etiquetas"><h3>Impresoras de Etiquetas</h3><p>ZEBRA y SATO.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Licencias ================= -->
+    <section class="section section--surface" id="licencias" data-od-id="pdv-licencias">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Licencias</span>
+          <h2 data-anim="fade-up">Planes <span class="hl">disponibles</span></h2>
+        </div>
+        <div style="overflow-x:auto" data-anim="fade-up">
+          <table class="d6-license">
+            <thead><tr><th>Característica</th><th>Evolución</th><th>Plus</th><th>X-Plus</th><th>Gold</th></tr></thead>
+            <tbody>
+              <tr><td>Base de datos</td><td>4 GB</td><td>4 GB</td><td>10 GB</td><td>Ilimitado</td></tr>
+              <tr><td>Multi-empresa</td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td></tr>
+              <tr><td>Facturación electrónica</td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="lic-stage" data-anim="fade-up">
+          <div class="lic-canvas">
+            <img src="evolucion-planes.jpeg" alt="Diagrama de evolución de planes desde Evolución hasta Gold" width="914" height="514" loading="lazy">
+            <span class="lic-scan" aria-hidden="true"></span>
+            <span class="lic-aura" aria-hidden="true"></span>
+            <span class="lic-ring" aria-hidden="true"></span>
+            <span class="lic-ring lic-ring--two" aria-hidden="true"></span>
+            <span class="lic-core" aria-hidden="true"></span>
+            <span class="lic-stream lic-s1" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="lic-stream lic-s2" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="lic-stream lic-s3" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="lic-stream lic-s4" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="lic-orbit lic-o1" aria-hidden="true"></span>
+            <span class="lic-orbit lic-o2" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section" id="faq" data-od-id="pdv-faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Preguntas frecuentes</span>
+          <h2 data-anim="fade-up">Todo lo que necesitás saber <span class="hl">antes de decidir</span></h2>
+        </div>
+        <div class="acc d6-faq-wrap" data-accordion="single" data-od-id="pdv-faq-acc">
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="pdv-faq-1"><span class="acc-title">¿Qué diferencia hay entre Tango PDV y Tango Gestión?</span><span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-panel" id="pdv-faq-1" role="region"><div class="acc-panel-inner"><p>Tango Punto de Venta es ideal para comercios con facturación en mostrador. Tango Gestión agrega cotizaciones, pedidos, recargos, transportes, consulta BCRA, facturas de crédito, remitos valorizados, series y partidas. PDV es compatible con los módulos de Gestión para escalar.</p></div></div>
+          </div>
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="pdv-faq-2"><span class="acc-title">¿Cómo cobro con Tango PDV?</span><span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-panel" id="pdv-faq-2" role="region"><div class="acc-panel-inner"><p>Desde el facturador podés cobrar con Mercado Pago (QR y Point), Payway, Clover, GetNet y Nave. Los cobros impactan automáticamente en la Tesorería.</p></div></div>
+          </div>
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="pdv-faq-3"><span class="acc-title">¿Qué impresoras y equipos necesito?</span><span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-panel" id="pdv-faq-3" role="region"><div class="acc-panel-inner"><p>Integración con impresoras fiscales, controladores homologados, Posnet, LaPos, lectoras de código, cajón de dinero, visores e impresoras de etiquetas ZEBRA/SATO. Te asesoramos en la elección.</p></div></div>
+          </div>
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="pdv-faq-4"><span class="acc-title">¿Puedo vender online además del local?</span><span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-panel" id="pdv-faq-4" role="region"><div class="acc-panel-inner"><p>Sí. Con Tango eCommerce y Tango Tiendas sincronizás precios y saldos con Mercado Libre, Tiendanube y Mercado Shops en tiempo real, y facturás individual o masivamente.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA final ================= -->
+    <section class="section section--dark pdv-hud" data-od-id="pdv-cta">
+      <div class="container" style="text-align:center">
+        <h2 data-anim="fade-up">Poné tu comercio <span style="color:#9BE0FF">a la velocidad del mostrador</span></h2>
+        <p class="lead" data-anim="fade-up" data-delay="0.1" style="margin-inline:auto;color:oklch(76% 0.05 230)">Implementación certificada, hardware compatible y soporte que responde. Arrancá a facturar rápido.</p>
+        <div class="btn-row" style="justify-content:center" data-anim="fade-up" data-delay="0.2">
+          <a class="btn btn--lg pdv-btn" href="contacto.html" data-od-id="cta-pdv-final">Programar demostración gratuita<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--lg pdv-ghost" href="https://wa.me/5493515135058?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Tango%20Punto%20de%20Venta%20Delta%206" target="_blank" rel="noopener" data-od-id="cta-pdv-wa">Consultar por WhatsApp<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer" data-od-id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" style="color:var(--on-dark)">
+            <img class="brand-logo" src="OGO-BLANCO.jpg" alt="Sandra Chaves y Asociados" width="200" height="46">
+            <img class="brand-logo" src="TS-Dist-Certificado_light.png" alt="Distribuidor Oficial Certificado Tango Software" width="322" height="107">
+          </a>
+          <p>Consultoría informática y Distribuidor Oficial Certificado del ecosistema Tango Software. Córdoba, Argentina.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/sandrachavesyasociados" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.facebook.com/SandraChavesyAsociados" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 8.5H17V5.5h-3c-1.9 0-3.5 1.6-3.5 3.5v2H8v3h2.5v6.5h3V14h2.6l.6-3h-3.2V9c0-.3.2-.5.5-.5z"/></svg></a>
+            <a href="https://wa.me/5493515135058" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg></a>
+            <a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener" aria-label="Linktree"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.1"/><path d="M14 10a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.2-1.1"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Productos</h4>
+          <ul>
+            <li><a href="tango-gestion.html">Tango Gestión Delta 6</a></li>
+            <li><a href="tango-punto-de-venta.html">Tango Punto de Venta</a></li>
+            <li><a href="tango-resto.html">Tango Restô</a></li>
+            <li><a href="tango-capital-humano.html">Tango Capital Humano</a></li>
+            <li><a href="tango-estudios-contables.html">Tango Estudios Contables</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Solución</h4>
+          <ul>
+            <li><a href="#novedades">Novedades Delta 6</a></li>
+            <li><a href="#facturador">Facturador</a></li>
+            <li><a href="#equipos">Equipos compatibles</a></li>
+            <li><a href="#licencias">Licencias</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/5493515135058" target="_blank" rel="noopener">WhatsApp: +54 9 351 513-5058</a></li>
+            <li><a href="https://wa.me/5493512275675" target="_blank" rel="noopener">WhatsApp: +54 9 351 227-5675</a></li>
+            <li><a href="mailto:adm@sandrachavesyasoc.com">adm@sandrachavesyasoc.com</a></li>
+            <li><a href="https://sandrachavesyasoc.com/" target="_blank" rel="noopener">sandrachavesyasoc.com</a></li>
+            <li><a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener">linktr.ee/sandrachavesyasoc</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Sandra Chaves y Asoc. S.A.S. — Córdoba, Argentina</span>
+        <span>Distribuidor Oficial Certificado de Tango Software · Axoft Argentina S.A.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    /* Vórtice / embudo de partículas 3D (efecto Oddity-003) — fondo del logo Tango AI.
+       Espiral cónico que gira y se acelera hacia el pozo central, con reciclaje de
+       partículas en el borde exterior y parallax 3D siguiendo el cursor. */
+    (function () {
+      'use strict';
+      var canvas = document.querySelector('[data-vortex]');
+      if (!canvas || !window.THREE) return;
+
+      var parent = canvas.parentElement;
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+
+      var scene = new THREE.Scene();
+      var camera = new THREE.PerspectiveCamera(70, 1, 0.1, 100);
+      camera.position.z = 4.2;
+
+      var COUNT = 4200;
+      var positions = new Float32Array(COUNT * 3);
+      var radii = new Float32Array(COUNT);
+      var angles = new Float32Array(COUNT);
+      var speeds = new Float32Array(COUNT);
+      var depths = new Float32Array(COUNT);
+      var colors = new Float32Array(COUNT * 3);
+
+      var PALETTE = [
+        new THREE.Color('#38bdf8'), // azul claro
+        new THREE.Color('#06b6d4'), // cyan neón
+        new THREE.Color('#7dd3fc'), // celeste eléctrico
+        new THREE.Color('#e0f2fe')  // blanco azulado
+      ];
+
+      var i;
+      for (i = 0; i < COUNT; i++) resetParticle(i, true);
+
+      function resetParticle(i, initial) {
+        var r = initial ? (0.25 + Math.random() * 1.05) : (1.15 + Math.random() * 0.15);
+        var a = Math.random() * Math.PI * 2;
+        var d = initial ? (Math.random() * 6 - 1.2) : 6.0;
+        var sp = 0.6 + Math.random() * 1.6;
+        radii[i] = r;
+        angles[i] = a;
+        depths[i] = d;
+        speeds[i] = sp;
+        var c = PALETTE[(Math.random() * PALETTE.length) | 0];
+        colors[i * 3] = c.r;
+        colors[i * 3 + 1] = c.g;
+        colors[i * 3 + 2] = c.b;
+      }
+
+      var geo = new THREE.BufferGeometry();
+      geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+      geo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+      var mat = new THREE.PointsMaterial({
+        size: 0.055,
+        vertexColors: true,
+        transparent: true,
+        opacity: 0.9,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false,
+        sizeAttenuation: true
+      });
+
+      var points = new THREE.Points(geo, mat);
+      var wrap = new THREE.Group();
+      wrap.add(points);
+      scene.add(wrap);
+
+      function resize() {
+        var w = parent.clientWidth || 1;
+        var h = parent.clientHeight || 1;
+        renderer.setSize(w, h, false);
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      var mouse = { x: 0, y: 0 };
+      var sm = { x: 0, y: 0 };
+      document.addEventListener('mousemove', function (ev) {
+        mouse.x = (ev.clientX / window.innerWidth) * 2 - 1;
+        mouse.y = -((ev.clientY / window.innerHeight) * 2 - 1);
+      });
+
+      var posAttr = geo.attributes.position;
+
+      function tick(t) {
+        var k;
+        for (i = 0; i < COUNT; i++) {
+          // La rotación se acelera a medida que la partícula se acerca al centro
+          var angular = speeds[i] * (0.4 + (1.3 / (radii[i] + 0.35)));
+          angles[i] += 0.004 * angular;
+          depths[i] -= 0.012 * (0.6 + radii[i] * 0.6);
+
+          // Encoge el radio al profundizar -> forma de embudo cónico
+          var shrink = 1 - (6.0 - depths[i]) / 7.5;
+          if (shrink < 0) shrink = 0;
+          var r = radii[i] * (0.25 + 0.75 * shrink);
+
+          positions[i * 3] = Math.cos(angles[i]) * r;
+          positions[i * 3 + 1] = Math.sin(angles[i]) * r;
+          positions[i * 3 + 2] = depths[i];
+
+          // Reciclaje: al llegar al fondo del pozo reaparece en el borde exterior
+          if (depths[i] < -6.4) resetParticle(i, false);
+        }
+        posAttr.needsUpdate = true;
+
+        // Parallax 3D suave siguiendo el cursor
+        sm.x += (mouse.x - sm.x) * 0.045;
+        sm.y += (mouse.y - sm.y) * 0.045;
+        wrap.rotation.y = sm.x * 0.25;
+        wrap.rotation.x = sm.y * 0.18;
+
+        renderer.render(scene, camera);
+      }
+
+      if (reduced) {
+        tick(0); // frame estático con prefers-reduced-motion
+      } else {
+        renderer.setAnimationLoop(tick);
+      }
+    })();
+  </script>
+</body>
+</html>

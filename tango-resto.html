@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tango Restô Delta 6 — Gestión gastronómica integral | Sandra Chaves y Asociados</title>
+  <meta name="description" content="Tango Restô Delta 6: salón, comandas, cocina, delivery y caja en un solo sistema. Importación PDF con AI, Restô Mobile, integración PedidosYa y cobro integrado. Implementación certificada en Córdoba.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Tango Restô Delta 6",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "Hospitality / Restaurant",
+    "operatingSystem": "Windows, Android, iOS",
+    "inLanguage": "es-AR",
+    "softwareVersion": "Delta 6",
+    "brand": { "@type": "Brand", "name": "Tango Software — Axoft Argentina" },
+    "featureList": "Salón, Delivery, Restô Mobile, Stock Restô, Caja, Compras, Central, Live, Importación PDF con AI, Diseñador de Formularios"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://sandrachavesyasoc.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Productos", "item": "https://sandrachavesyasoc.com/productos-tango.html" },
+      { "@type": "ListItem", "position": 3, "name": "Tango Restô Delta 6" }
+    ]
+  }
+  </script>
+
+  <style>
+    /* =====================================================================
+       TANGO RESTÔ DELTA 6 — Stack exclusivo:
+       "Interactive Modal Showcases & Micro-interactions"
+       1) Vidriera modular con filtrado en tiempo real (sin recarga)
+       2) Pointer magnético (los elementos interactivos se atraen al cursor)
+       3) Tooltips enriquecidos + modales showcase de cada módulo
+       Paleta: rojo #E51937 sobre base oscura gastronómica.
+       ===================================================================== */
+    :root {
+      --resto-red: #E51937;
+      --resto-red-strong: #B30E28;
+      --resto-glow: rgba(229, 25, 55, 0.45);
+      --resto-ink: oklch(14% 0.02 15);
+    }
+
+    .resto-hero {
+      position: relative; overflow: hidden; isolation: isolate;
+      background:
+        radial-gradient(880px 460px at 84% -8%, rgba(229,25,55,.5), transparent 60%),
+        radial-gradient(680px 400px at -8% 112%, rgba(179,14,40,.35), transparent 62%),
+        linear-gradient(138deg, #1C0B10, #120609 60%, #0B0407);
+      color: var(--on-dark); padding-block: clamp(52px, 7vw, 92px);
+    }
+    .resto-hero::before {
+      content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+      background: radial-gradient(600px 360px at 50% 120%, rgba(229,25,55,.14), transparent 70%);
+    }
+    .resto-hero::after {
+      content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: .5;
+      background:
+        radial-gradient(2px 2px at 20% 30%, #fff, transparent),
+        radial-gradient(2px 2px at 70% 60%, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 40% 80%, #ffd9de, transparent),
+        radial-gradient(2px 2px at 90% 20%, #fff, transparent);
+      animation: resto-twinkle 6s ease-in-out infinite alternate;
+    }
+    @keyframes resto-twinkle { from { opacity: .25; } to { opacity: .65; } }
+    .resto-hero__grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(30px, 4vw, 60px); align-items: center; position: relative; z-index: 2; }
+    .resto-hero h1 { color: var(--on-dark); margin: 20px 0 14px; }
+    .resto-hero h1 .resto-grad { background: linear-gradient(100deg, #FF5C73, #E51937 45%, #FFA0AE); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .resto-hero .lead { color: oklch(80% 0.04 20); max-width: 48ch; }
+    .resto-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(229,25,55,.12); border: 1px solid rgba(229,25,55,.4); border-radius: 999px; padding: 7px 16px 7px 9px; font-size: .78rem; font-weight: 600; color: #FFA0AE; backdrop-filter: blur(8px); }
+    .resto-badge img { height: 24px; width: auto; }
+    .resto-btn { position: relative; overflow: hidden; background: linear-gradient(120deg, #B30E28, #E51937); color: #fff; border: none; box-shadow: 0 10px 30px var(--resto-glow); transition: transform .2s, box-shadow .3s; }
+    .resto-btn::after { content: ""; position: absolute; inset: 0; background: linear-gradient(110deg, transparent 32%, rgba(255,255,255,.45) 50%, transparent 68%); transform: translateX(-130%); animation: resto-shine 3.6s ease-in-out infinite; }
+    @keyframes resto-shine { 0% { transform: translateX(-130%); } 55%, 100% { transform: translateX(130%); } }
+    .resto-btn:hover { transform: translateY(-3px); box-shadow: 0 18px 44px rgba(229,25,55,.6); }
+    .resto-ghost { background: rgba(255,255,255,.06); color: var(--on-dark); border: 1.5px solid rgba(229,25,55,.55); backdrop-filter: blur(8px); transition: all .25s; }
+    .resto-ghost:hover { border-color: #E51937; background: rgba(229,25,55,.14); box-shadow: 0 0 26px rgba(229,25,55,.4); transform: translateY(-3px); color: var(--on-dark); }
+
+    /* Pointer magnético */
+    [data-magnet] { transition: transform .22s cubic-bezier(.2,.8,.3,1.2); will-change: transform; }
+
+    /* Hero plate (ilustración gastronómica animada) */
+    .plate {
+      position: relative; aspect-ratio: 1 / 1; max-width: 380px; margin-inline: auto; display: grid; place-items: center;
+    }
+    .plate__ring { position: absolute; inset: 0; border-radius: 50%; border: 2px dashed rgba(229,25,55,.5); animation: plate-spin 40s linear infinite; }
+    .plate__ring2 { position: absolute; inset: 12%; border-radius: 50%; border: 1px solid rgba(255,255,255,.14); }
+    @keyframes plate-spin { to { transform: rotate(360deg); } }
+    .plate__core {
+      width: 62%; aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center;
+      background: radial-gradient(circle at 35% 30%, #FF5C73, #E51937 60%, #7A0717);
+      box-shadow: 0 30px 70px rgba(229,25,55,.5), inset 0 0 60px rgba(0,0,0,.35);
+      position: relative; overflow: hidden;
+    }
+    .plate__core img { width: 62%; height: auto; filter: drop-shadow(0 8px 18px rgba(0,0,0,.4)); }
+    .plate__steam { position: absolute; top: -14%; left: 28%; width: 8px; height: 46px; border-radius: 999px; background: linear-gradient(180deg, rgba(255,255,255,.5), transparent); filter: blur(3px); animation: steam 3s ease-in-out infinite; }
+    .plate__steam.s2 { left: 58%; animation-delay: 1.2s; }
+    .plate__steam.s3 { left: 44%; animation-delay: 2.2s; }
+    @keyframes steam { 0%,100% { transform: translateY(0) scaleY(.8); opacity: .4; } 50% { transform: translateY(-16px) scaleY(1.2); opacity: .9; } }
+    .plate__float { position: absolute; top: -6%; right: -6%; animation: plate-bob 4.8s ease-in-out infinite; }
+    .plate__float img { height: 56px; width: auto; filter: drop-shadow(0 10px 22px rgba(229,25,55,.5)); }
+    @keyframes plate-bob { 0%,100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-10px) rotate(4deg); } }
+
+    /* Vidriera con filtrado */
+    .vidriera-head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; margin-bottom: 28px; }
+    .filters { display: flex; gap: 9px; flex-wrap: wrap; }
+    .filters button {
+      background: var(--surface); border: 1.5px solid var(--border); color: var(--fg); border-radius: 999px;
+      padding: 9px 18px; font-size: .82rem; font-weight: 700; cursor: pointer; transition: all .2s; font-family: var(--font-display);
+    }
+    .filters button:hover { border-color: #E51937; color: #B30E28; }
+    .filters button.is-on { background: #E51937; border-color: #E51937; color: #fff; box-shadow: 0 8px 22px rgba(229,25,55,.4); }
+    .vidriera { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.2vw, 22px); }
+    .resto-card { position: relative; display: flex; flex-direction: column; min-height: 100%; cursor: pointer; }
+    .resto-card .resto-tag { display: inline-flex; align-items: center; gap: 6px; align-self: flex-start; font-family: var(--font-mono); font-size: .64rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #B30E28; background: rgba(229,25,55,.1); border-radius: 999px; padding: 5px 12px; margin-bottom: 14px; }
+    .resto-tag--new { background: linear-gradient(120deg, #B30E28, #E51937); color: #fff; }
+    .resto-card h3 { margin: 0 0 8px; }
+    .resto-card p { font-size: .9rem; color: var(--muted); line-height: 1.55; flex: 1; }
+    .resto-card .card-more { margin-top: 12px; }
+
+    /* Tooltip enriquecido */
+    .tt-wrap { position: relative; }
+    .tt {
+      position: absolute; left: 50%; bottom: calc(100% + 14px); transform: translateX(-50%) translateY(8px) scale(.95);
+      width: 250px; background: #1C0B10; color: var(--on-dark); border: 1px solid rgba(229,25,55,.5); border-radius: 14px;
+      padding: 14px 16px; opacity: 0; pointer-events: none; transition: all .22s ease; z-index: 30;
+      box-shadow: 0 20px 50px rgba(0,0,0,.5), 0 0 30px rgba(229,25,55,.2);
+    }
+    .tt::after { content: ""; position: absolute; left: 50%; bottom: -7px; transform: translateX(-50%) rotate(45deg); width: 14px; height: 14px; background: #1C0B10; border-right: 1px solid rgba(229,25,55,.5); border-bottom: 1px solid rgba(229,25,55,.5); }
+    .tt b { color: #FFA0AE; display: block; margin-bottom: 4px; }
+    .tt span { font-size: .76rem; color: oklch(80% 0.04 20); line-height: 1.5; display: block; }
+    .tt-wrap:hover .tt { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+
+    /* Modal */
+    .modal {
+      position: fixed; inset: 0; z-index: 1500; display: none; align-items: center; justify-content: center; padding: 20px;
+      background: rgba(5, 2, 4, .72); backdrop-filter: blur(6px);
+    }
+    .modal.open { display: flex; animation: modal-in .25s ease; }
+    @keyframes modal-in { from { opacity: 0; } to { opacity: 1; } }
+    .modal__box {
+      width: min(560px, 100%); max-height: 86vh; overflow: auto; border-radius: 20px; padding: 30px;
+      background: linear-gradient(160deg, #2A0D15, #17060A); border: 1px solid rgba(229,25,55,.45);
+      color: var(--on-dark); box-shadow: 0 40px 100px rgba(0,0,0,.6), 0 0 60px rgba(229,25,55,.2);
+      animation: modal-box .3s cubic-bezier(.2,.9,.3,1.3);
+    }
+    @keyframes modal-box { from { transform: translateY(30px) scale(.95); opacity: 0; } to { transform: none; opacity: 1; } }
+    .modal__box h3 { color: #fff; font-size: 1.5rem; margin: 12px 0 10px; }
+    .modal__box p { color: oklch(80% 0.04 20); line-height: 1.65; }
+    .modal__box ul { list-style: none; display: grid; gap: 10px; margin: 16px 0; }
+    .modal__box li { display: flex; gap: 10px; font-size: .9rem; color: var(--on-dark); }
+    .modal__box li svg { width: 18px; height: 18px; color: #E51937; flex: none; margin-top: 2px; }
+    .modal__close { margin-top: 18px; background: linear-gradient(120deg, #B30E28, #E51937); border: none; color: #fff; border-radius: 12px; padding: 12px 22px; font-weight: 700; cursor: pointer; font-family: var(--font-display); }
+    .modal__close:hover { transform: translateY(-2px); box-shadow: 0 10px 26px var(--resto-glow); }
+
+    .resto-tag2 { display: inline-flex; font-family: var(--font-mono); font-size: .64rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #B30E28; background: rgba(229,25,55,.1); border-radius: 999px; padding: 5px 12px; }
+    .resto-pagos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .resto-pagos .card { text-align: center; padding: 22px 14px; }
+    .resto-pagos .card h3 { font-size: .95rem; margin: 10px 0 4px; }
+    .resto-pagos .card p { font-size: .78rem; }
+    .resto-serv { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .resto-serv .card { text-align: center; padding: 22px 14px; }
+
+    @media (max-width: 960px) {
+      .resto-hero__grid { grid-template-columns: 1fr; }
+      .vidriera, .resto-pagos, .resto-serv { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) { .vidriera, .resto-pagos, .resto-serv { grid-template-columns: 1fr; } }
+    @media (prefers-reduced-motion: reduce) { .resto-hero::after, .resto-btn::after, .plate__ring, .plate__steam, .plate__float { animation: none !important; } }
+
+    /* ---------- Licencias (tabla de planes) ---------- */
+    .d6-license { width: 100%; border-collapse: separate; border-spacing: 0; overflow: hidden; border: 1px solid var(--border); border-radius: var(--r-md); background: var(--surface); box-shadow: var(--shadow-sm); }
+    .d6-license th { background: var(--ink); color: var(--on-dark); padding: 15px 18px; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.04em; text-align: center; }
+    .d6-license th:first-child { text-align: left; }
+    .d6-license td { padding: 13px 18px; text-align: center; border-top: 1px solid var(--border); font-size: 0.9rem; color: var(--fg); }
+    .d6-license td:first-child { text-align: left; font-weight: 600; }
+    .d6-license tbody tr:hover { background: var(--brand-soft); }
+    .d6-license .d6-check { color: var(--success); }
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="animations.js" defer></script>
+  <link rel="icon" type="image/jpeg" href="LOGO-ICONO.jpg">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- ================= Topbar ================= -->
+  <div class="topbar" data-od-id="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <a href="https://wa.me/5493515135058" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg>
+          +54 9 351 513-5058
+        </a>
+        <a href="https://wa.me/5493512275675" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg>
+          +54 9 351 227-5675
+        </a>
+      </div>
+      <div class="topbar-right">
+        <span>Distribuidor Oficial Certificado — Tango Software</span>
+        <a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.1"/><path d="M14 10a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.2-1.1"/></svg>
+          linktr.ee/sandrachavesyasoc
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Header + Mega menú ================= -->
+  <header class="site-header" data-od-id="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Sandra Chaves y Asociados — Inicio">
+        <img class="brand-logo" src="LGO-PRINCIPAL.jpg" alt="Sandra Chaves y Asociados — Distribuidor Oficial Tango Software" width="200" height="46">
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="nav-mega">
+            <button class="nav-mega-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="mega-soluciones">
+              Soluciones
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="mega" id="mega-soluciones" role="region" aria-label="Menú de soluciones">
+              <div class="mega-grid">
+                <div class="mega-col">
+                  <h4>Módulos Tango</h4>
+                  <ul>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Ventas y Facturación</strong><span>Pedidos, clientes, libro IVA automático</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Stock y Depósitos</strong><span>Saldos, comprometido y valorización</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Compras y Proveedores</strong><span>Circuito completo de abastecimiento</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Tesorería y Bancos</strong><span>Conciliación bancaria automática</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Contabilidad e I.V.A.</strong><span>Registración, ajustes y balances</span></a></li>
+                    <li><a class="mega-link" href="tango-gestion.html#modulos"><strong>Live y Tango Net</strong><span>Tableros y conexión de sucursales</span></a></li>
+                  </ul>
+                </div>
+                <div class="mega-col">
+                  <h4>Servicios Sandra Chaves</h4>
+                  <ul>
+                    <li><a class="mega-link" href="contacto.html"><strong>Implementación</strong><span>Relevamiento funcional y puesta en marcha</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Migración de datos</strong><span>Pasaje ordenado desde tu sistema actual</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Capacitación</strong><span>Formación de equipos, también universitaria</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Soporte técnico</strong><span>Asistencia remota y en tu empresa</span></a></li>
+                    <li><a class="mega-link" href="contacto.html"><strong>Desarrollo a medida</strong><span>Interfaces externas que potencian Tango</span></a></li>
+                  </ul>
+                </div>
+                <a class="mega-feature" href="productos-tango.html" data-od-id="mega-feature-delta5">
+                  <span><strong>Novedad: Tango Delta 6</strong><span>La última versión del ecosistema: agilidad y seguridad operativa.</span></span>
+                  <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li><a href="productos-tango.html" aria-current="page">Productos</a></li>
+          <li><a href="tango-gestion.html">Tango Gestión</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a class="btn btn--primary" href="contacto.html" data-od-id="cta-header-demo">Solicitar Demostración</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Abrir menú" aria-controls="mobile-panel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Panel mobile -->
+  <div class="mobile-panel" id="mobile-panel">
+    <a class="m-link" href="index.html">Inicio</a>
+    <a class="m-link" href="productos-tango.html" aria-current="page">Productos Tango</a>
+    <a class="m-link" href="tango-gestion.html">Tango Gestión</a>
+    <a class="m-link" href="nosotros.html">Nosotros</a>
+    <a class="m-link" href="contacto.html">Contacto</a>
+    <a class="btn btn--primary" href="contacto.html">Solicitar Demostración</a>
+  </div>
+
+  <main id="contenido">
+    <!-- Migas de pan -->
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Migas de pan" data-od-id="breadcrumbs">
+        <ol>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos-tango.html">Productos</a></li>
+          <li aria-current="page">Tango Restô Delta 6</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- ================= Hero ================= -->
+    <section class="resto-hero" data-od-id="resto-hero">
+      <div class="container">
+        <div class="resto-hero__grid">
+          <div>
+            <span class="resto-badge" data-anim="fade-in">
+              <img src="D6-n.png" alt="Insignia Delta 6" width="24" height="24">
+              Nueva versión · TANGO DELTA 6
+            </span>
+            <h1 data-anim="fade-up" data-delay="0.1">Tango Restô <span class="resto-grad">Delta 6</span></h1>
+            <p class="lead" data-anim="fade-up" data-delay="0.2">Administrá todas las operaciones de tu restaurant con la mayor rentabilidad y el mejor servicio al cliente. Mové el cursor sobre las tarjetas: cada módulo te espera con su propia vista.</p>
+            <div class="btn-row" data-anim="fade-up" data-delay="0.25" data-magnet>
+              <a class="btn btn--lg resto-btn" href="#vidriera" data-od-id="cta-resto-vidriera">Explorar la vidriera
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+              <a class="btn btn--lg resto-ghost" href="contacto.html" data-od-id="cta-resto-demo">Solicitar Demostración</a>
+            </div>
+          </div>
+          <div data-anim="fade-left" data-delay="0.2">
+            <div class="plate">
+              <div class="plate__ring" aria-hidden="true"></div>
+              <div class="plate__ring2" aria-hidden="true"></div>
+              <span class="plate__float" aria-hidden="true"><img src="D6-b.png" alt="" width="56" height="56"></span>
+              <div class="plate__core">
+                <img src="TangoResto_v2.png" alt="Tango Restô Delta 6" width="180" height="150">
+              </div>
+              <span class="plate__steam" aria-hidden="true"></span>
+              <span class="plate__steam s2" aria-hidden="true"></span>
+              <span class="plate__steam s3" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Novedades ================= -->
+    <section class="section" id="novedades" data-od-id="resto-novedades">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Novedades Delta 6</span>
+          <h2 data-anim="fade-up">Innovaciones para <span class="hl">tu gastronomía</span></h2>
+          <p data-anim="fade-up" data-delay="0.1">Inteligencia artificial aplicada a la gestión diaria del restaurant.</p>
+        </div>
+        <div class="grid-3" data-anim-group>
+          <article class="card tt-wrap" data-od-id="resto-pdf-ai">
+            <span class="resto-tag2">Importación PDF · AI</span>
+            <h3 style="margin-top:12px">Importación PDF con AI <span class="new-badge">NUEVO</span></h3>
+            <p>Simplificá la gestión de compras con importación automática de comprobantes en formato PDF gracias a la inteligencia artificial.</p>
+            <div class="tt"><b>¿Cómo funciona?</b><span>Escaneá o subí el PDF de tu proveedor y Tango detecta datos clave, arma la compra y actualiza el inventario automáticamente.</span></div>
+          </article>
+          <article class="card tt-wrap" data-od-id="resto-formularios">
+            <span class="resto-tag2">Diseñador de formularios</span>
+            <h3 style="margin-top:12px">Diseñador de Formularios <span class="new-badge">NUEVO</span></h3>
+            <p>Creá formularios personalizados de forma visual con colores, imágenes, secciones, fórmulas condicionales y modelos predefinidos.</p>
+            <div class="tt"><b>Sin programar</b><span>Diseñá comandas y fichas a tu medida con editor visual, listas para imprimir o enviar por pantalla.</span></div>
+          </article>
+          <article class="card tt-wrap" data-od-id="resto-mobile-nuevo">
+            <span class="resto-tag2">Restô Mobile</span>
+            <h3 style="margin-top:12px">Restô Mobile</h3>
+            <p>Pedidos desde tablet o smartphone con envío directo a cocina, mapa de mesas, promociones y media porción.</p>
+            <div class="tt"><b>En vivo</b><span>El mozo toma el pedido en el salón y la cocina lo recibe al instante, sin correr papeles.</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Vidriera interactiva con filtros ================= -->
+    <section class="section section--surface" id="vidriera" data-od-id="resto-vidriera">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Vidriera interactiva</span>
+          <h2 data-anim="fade-up">Gestión integral <span class="hl">gastronómica</span></h2>
+          <p data-anim="fade-up" data-delay="0.1">Filtrá por área en tiempo real y hacé clic en cada módulo para abrir su showcase completo.</p>
+        </div>
+        <div class="vidriera-head" data-anim="fade-up">
+          <div class="filters" data-resto-filters role="group" aria-label="Filtrar módulos">
+            <button class="is-on" data-cat="all" type="button">Todos</button>
+            <button data-cat="salon" type="button">Salón</button>
+            <button data-cat="delivery" type="button">Delivery</button>
+            <button data-cat="backoffice" type="button">Backoffice</button>
+          </div>
+        </div>
+        <div class="vidriera" data-resto-vidriera data-anim-group>
+
+          <article class="card resto-card" data-cat="salon" data-od-id="mod-salon" data-magnet data-modal="Salón" data-desc="Mapa de mesas con estados y colores. Adicionista con control total del salón, terminales touch screen y tiempos de permanencia." data-feats="Mapa de mesas con estados y colores|Adicionista con control total del salón|Terminales touch screen|Control de tiempos de permanencia">
+            <span class="resto-tag">Salón</span>
+            <h3>Salón</h3>
+            <p>Mapa de mesas con estados y colores. Adicionista con control total del salón y terminales touch screen.</p>
+            <span class="card-more">Abrir showcase<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span>
+          </article>
+
+          <article class="card resto-card" data-cat="delivery" data-od-id="mod-delivery" data-magnet data-modal="Delivery" data-desc="Recargo automático por zona, geolocalización, rendiciones de repartidores e integración con PedidosYa." data-feats="Recargo automático por zona|Geolocalización de entregas|Rendiciones de repartidores|Integración PedidosYa">
+            <span class="resto-tag">Delivery</span>
+            <h3>Delivery</h3>
+            <p>Recargo automático por zona, geolocalización y rendiciones de repartidores. Integración directa con PedidosYa.</p>
+            <span class="card-more">Abrir showcase<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span>
+          </article>
+
+          <article class="card resto-card" data-cat="salon" data-od-id="mod-mobile" data-magnet data-modal="Restô Mobile" data-desc="Pedidos desde tablet o smartphone con envío directo a cocina, mapa de mesas, promociones y media porción." data-feats="Pedidos desde tablet o smartphone|Envío directo a cocina|Mapa de mesas móvil|Promociones y media porción">
+            <span class="resto-tag">Salón · Móvil</span>
+            <h3>Restô Mobile</h3>
+            <p>Pedidos desde tablet o smartphone. Envío directo a cocina, mapa de mesas, promociones y media porción.</p>
+            <span class="card-more">Abrir showcase<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span>
+          </article>
+
+          <article class="card resto-card" data-cat="backoffice" data-od-id="mod-stock" data-magnet data-modal="Stock Restô" data-desc="Descarga automática por receta, control de mermas, múltiples depósitos y rentabilidad bruta." data-feats="Descarga automática por receta|Control de mermas|Múltiples depósitos|Rentabilidad bruta por plato">
+            <span class="resto-tag">Backoffice</span>
+            <h3>Stock Restô</h3>
+            <p>Descarga automática por receta. Control de mermas, múltiples depósitos y rentabilidad bruta.</p>
+            <span class="card-more">Abrir showcase<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span>
+          </article>
+
+          <article class="card resto-card" data-cat="backoffice" data-od-id="mod-caja" data-magnet data-modal="Caja" data-desc="Multi-caja con cierres independientes, control total en una pantalla y división de cuentas." data-feats="Multi-caja con cierres independientes|Control total en una pantalla|División de cuentas|Cobro integrado">
+            <span class="resto-tag">Backoffice</span>
+            <h3>Caja</h3>
+            <p>Multi-caja con cierres independientes. Control total en una pantalla y división de cuentas.</p>
+            <span class="card-more">Abrir showcase<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span>
+          </article>
+
+          <article class="card resto-card" data-cat="backoffice" data-od-id="mod-compras" data-magnet data-modal="Compras" data-desc="Importación automática PDF con AI, órdenes de compra y actualización de inventario automática." data-feats="Importación automática PDF con AI|Órdenes de compra|Actualización de inventario automática|Libro de IVA Compras">
+            <span class="resto-tag">Backoffice</span>
+            <h3>Compras</h3>
+            <p>Importación automática PDF con AI. Órdenes de compra y actualización de inventario automática.</p>
+            <span class="card-more">Abrir showcase<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span>
+          </article>
+
+          <article class="card resto-card" data-cat="backoffice" data-od-id="mod-central" data-magnet data-modal="Central" data-desc="Multi-sucursal con Tangonet: sincronización automática y control centralizado de precios y reportes." data-feats="Multi-sucursal|Tangonet: sincronización automática|Control centralizado de precios|Rankings consolidados">
+            <span class="resto-tag">Backoffice</span>
+            <h3>Central</h3>
+            <p>Multi-sucursal. Tangonet: sincronización automática y control centralizado.</p>
+            <span class="card-more">Abrir showcase<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span>
+          </article>
+
+          <article class="card resto-card" data-cat="delivery" data-od-id="mod-pagos" data-magnet data-modal="Medios de pago" data-desc="Mercado Pago Delivery (link por WhatsApp o email), Point+ (terminal integrada) y Smart (QR). Integración PedidosYa." data-feats="Mercado Pago Delivery: link por WhatsApp o email|Mercado Pago Point+: terminal integrada|Mercado Pago Smart: cobro QR|PedidosYa: integración directa con delivery">
+            <span class="resto-tag">Delivery · Cobro</span>
+            <h3>Medios de pago</h3>
+            <p>Mercado Pago Delivery, Point+ y Smart, más integración directa con PedidosYa.</p>
+            <span class="card-more">Abrir showcase<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span>
+          </article>
+
+          <article class="card resto-card" data-cat="backoffice" data-od-id="mod-live" data-magnet data-modal="Tango Live" data-desc="Consultas personalizables con gráficos dinámicos y exportación a Excel, Word o PDF." data-feats="Consultas personalizables|Gráficos dinámicos|Tablas dinámicas|Exportación Excel/Word/PDF">
+            <span class="resto-tag">Backoffice · BI</span>
+            <h3>Tango Live</h3>
+            <p>Consultas personalizables. Gráficos dinámicos y exportación a Excel, Word o PDF.</p>
+            <span class="card-more">Abrir showcase<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal showcase -->
+    <div class="modal" data-resto-modal role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal__box">
+        <span class="resto-tag">Módulo Tango Restô</span>
+        <h3 id="modal-title">Salón</h3>
+        <p data-modal-desc></p>
+        <ul data-modal-feats></ul>
+        <button class="modal__close" type="button" data-modal-close>Cerrar</button>
+      </div>
+    </div>
+
+    <!-- ================= Servicios adicionales ================= -->
+    <section class="section" id="servicios" data-od-id="resto-servicios">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Soporte y servicios</span>
+          <h2 data-anim="fade-up">Planes de <span class="hl">servicios adicionales</span></h2>
+          <p data-anim="fade-up" data-delay="0.1">Elegí el nivel de acompañamiento que tu restaurant necesita.</p>
+        </div>
+        <div class="resto-serv" data-anim-group>
+          <article class="card" data-od-id="serv-standard"><h3>Standard</h3><p>Consultas telefónicas y soporte remoto (8:30–18:30).</p></article>
+          <article class="card" data-od-id="serv-basico"><h3>Básico</h3><p>Standard + urgencias + instalación de actualizaciones.</p></article>
+          <article class="card" data-od-id="serv-full"><h3>Full</h3><p>Básico + hotfix prioritarios.</p></article>
+          <article class="card" data-od-id="serv-premium"><h3>Premium</h3><p>Full + backup automático. Urgencias: imposibilidad de facturar, días hábiles 18:30–24hs, sábados 11–15 y 18–24hs.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Licencias ================= -->
+    <section class="section section--surface" id="licencias" data-od-id="resto-licencias">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Licencias</span>
+          <h2 data-anim="fade-up">Planes <span class="hl">disponibles</span></h2>
+        </div>
+        <div style="overflow-x:auto" data-anim="fade-up">
+          <table class="d6-license">
+            <thead><tr><th>Característica</th><th>Evolución</th><th>Plus</th><th>X-Plus</th><th>Gold</th></tr></thead>
+            <tbody>
+              <tr><td>Base de datos</td><td>4 GB</td><td>4 GB</td><td>10 GB</td><td>Ilimitado</td></tr>
+              <tr><td>Ventas Restô</td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td></tr>
+              <tr><td>Stock Restô</td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td></tr>
+              <tr><td>Central</td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td><td><span class="d6-check">✓</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="lic-stage" data-anim="fade-up">
+          <div class="lic-canvas">
+            <img src="evolucion-planes.jpeg" alt="Diagrama de evolución de planes desde Evolución hasta Gold" width="914" height="514" loading="lazy">
+            <span class="lic-scan" aria-hidden="true"></span>
+            <span class="lic-aura" aria-hidden="true"></span>
+            <span class="lic-ring" aria-hidden="true"></span>
+            <span class="lic-ring lic-ring--two" aria-hidden="true"></span>
+            <span class="lic-core" aria-hidden="true"></span>
+            <span class="lic-stream lic-s1" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="lic-stream lic-s2" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="lic-stream lic-s3" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="lic-stream lic-s4" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="lic-orbit lic-o1" aria-hidden="true"></span>
+            <span class="lic-orbit lic-o2" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section" id="faq" data-od-id="resto-faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-anim="fade-in">Preguntas frecuentes</span>
+          <h2 data-anim="fade-up">Todo lo que necesitás saber <span class="hl">antes de decidir</span></h2>
+        </div>
+        <div class="acc d6-faq-wrap" data-accordion="single" data-od-id="resto-faq-acc">
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="resto-faq-1"><span class="acc-title">¿Cómo llegan los pedidos de delivery a la cocina?</span><span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-panel" id="resto-faq-1" role="region"><div class="acc-panel-inner"><p>Los pedidos tomados en Restô Mobile o recibidos de PedidosYa impactan en la pantalla de cocina al instante, con prioridad y tiempos de permanencia. El stock se descarga automáticamente por receta.</p></div></div>
+          </div>
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="resto-faq-2"><span class="acc-title">¿Puedo cobrar con Mercado Pago en el salón y en delivery?</span><span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-panel" id="resto-faq-2" role="region"><div class="acc-panel-inner"><p>Sí. En el salón con Mercado Pago Smart (QR) o Point+ (terminal), y en delivery con links de pago por WhatsApp o email desde Mercado Pago Delivery.</p></div></div>
+          </div>
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="resto-faq-3"><span class="acc-title">¿Se calcula la rentabilidad por plato?</span><span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-panel" id="resto-faq-3" role="region"><div class="acc-panel-inner"><p>Sí. Con Stock Restô, cada receta descarga ingredientes automáticamente y podés ver la rentabilidad bruta por plato, con control de mermas y múltiples depósitos.</p></div></div>
+          </div>
+          <div class="acc-item" data-anim="fade-up">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="resto-faq-4"><span class="acc-title">¿Qué pasa cuando cambia una norma de la ARCA?</span><span class="acc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-panel" id="resto-faq-4" role="region"><div class="acc-panel-inner"><p>El ecosistema se actualiza de manera constante y se anticipa a los cambios legales e impositivos: tu restaurant queda siempre en regla, sin gestiones extra de tu lado.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA final ================= -->
+    <section class="section section--dark resto-hero" data-od-id="resto-cta" style="padding-block:clamp(64px,9vw,96px)">
+      <div class="container" style="text-align:center">
+        <h2 data-anim="fade-up">Dale a tu restaurant <span style="color:#FFA0AE">el servicio de un grande</span></h2>
+        <p class="lead" data-anim="fade-up" data-delay="0.1" style="margin-inline:auto;color:oklch(80% 0.04 20)">Implementación certificada y acompañamiento para que cada servicio sea una experiencia memorable.</p>
+        <div class="btn-row" style="justify-content:center" data-anim="fade-up" data-delay="0.2">
+          <a class="btn btn--lg resto-btn" href="contacto.html" data-od-id="cta-resto-final">Programar demostración gratuita<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--lg resto-ghost" href="https://wa.me/5493515135058?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Tango%20Rest%C3%B4%20Delta%206" target="_blank" rel="noopener" data-od-id="cta-resto-wa">Consultar por WhatsApp<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer" data-od-id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" style="color:var(--on-dark)">
+            <img class="brand-logo" src="OGO-BLANCO.jpg" alt="Sandra Chaves y Asociados" width="200" height="46">
+            <img class="brand-logo" src="TS-Dist-Certificado_light.png" alt="Distribuidor Oficial Certificado Tango Software" width="322" height="107">
+          </a>
+          <p>Consultoría informática y Distribuidor Oficial Certificado del ecosistema Tango Software. Córdoba, Argentina.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/sandrachavesyasociados" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.facebook.com/SandraChavesyAsociados" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 8.5H17V5.5h-3c-1.9 0-3.5 1.6-3.5 3.5v2H8v3h2.5v6.5h3V14h2.6l.6-3h-3.2V9c0-.3.2-.5.5-.5z"/></svg></a>
+            <a href="https://wa.me/5493515135058" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/></svg></a>
+            <a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener" aria-label="Linktree"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.1"/><path d="M14 10a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.2-1.1"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Productos</h4>
+          <ul>
+            <li><a href="tango-gestion.html">Tango Gestión Delta 6</a></li>
+            <li><a href="tango-punto-de-venta.html">Tango Punto de Venta</a></li>
+            <li><a href="tango-resto.html">Tango Restô</a></li>
+            <li><a href="tango-capital-humano.html">Tango Capital Humano</a></li>
+            <li><a href="tango-estudios-contables.html">Tango Estudios Contables</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Solución</h4>
+          <ul>
+            <li><a href="#novedades">Novedades Delta 6</a></li>
+            <li><a href="#vidriera">Vidriera de módulos</a></li>
+            <li><a href="#servicios">Servicios adicionales</a></li>
+            <li><a href="#licencias">Licencias</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/5493515135058" target="_blank" rel="noopener">WhatsApp: +54 9 351 513-5058</a></li>
+            <li><a href="https://wa.me/5493512275675" target="_blank" rel="noopener">WhatsApp: +54 9 351 227-5675</a></li>
+            <li><a href="mailto:adm@sandrachavesyasoc.com">adm@sandrachavesyasoc.com</a></li>
+            <li><a href="https://sandrachavesyasoc.com/" target="_blank" rel="noopener">sandrachavesyasoc.com</a></li>
+            <li><a href="https://linktr.ee/sandrachavesyasoc" target="_blank" rel="noopener">linktr.ee/sandrachavesyasoc</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Sandra Chaves y Asoc. S.A.S. — Córdoba, Argentina</span>
+        <span>Distribuidor Oficial Certificado de Tango Software · Axoft Argentina S.A.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* Vidriera: filtrado en tiempo real */
+    (function () {
+      'use strict';
+      var filters = document.querySelector('[data-resto-filters]');
+      var cards = Array.prototype.slice.call(document.querySelectorAll('[data-resto-vidriera] .resto-card'));
+
+      filters.addEventListener('click', function (ev) {
+        var b = ev.target.closest('button');
+        if (!b) return;
+        var cat = b.getAttribute('data-cat');
+        filters.querySelectorAll('button').forEach(function (c) { c.classList.toggle('is-on', c === b); });
+        cards.forEach(function (card) {
+          var show = cat === 'all' || card.getAttribute('data-cat') === cat;
+          card.style.display = show ? '' : 'none';
+        });
+      });
+
+      /* Modales showcase */
+      var modal = document.querySelector('[data-resto-modal]');
+      var title = modal.querySelector('#modal-title');
+      var desc = modal.querySelector('[data-modal-desc]');
+      var feats = modal.querySelector('[data-modal-feats]');
+
+      document.querySelectorAll('[data-modal]').forEach(function (card) {
+        card.addEventListener('click', function () {
+          title.textContent = card.getAttribute('data-modal');
+          desc.textContent = card.getAttribute('data-desc');
+          feats.innerHTML = card.getAttribute('data-feats').split('|').map(function (f) {
+            return '<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>' + f + '</li>';
+          }).join('');
+          modal.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+      modal.querySelector('[data-modal-close]').addEventListener('click', close);
+      modal.addEventListener('click', function (ev) { if (ev.target === modal) close(); });
+      function close() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+
+      /* Pointer magnético (solo pointer fino, sin reduced motion) */
+      var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var fine = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      if (fine && !reduceMotion) {
+        document.querySelectorAll('[data-magnet]').forEach(function (el) {
+          el.addEventListener('mousemove', function (ev) {
+            var r = el.getBoundingClientRect();
+            var cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+            var dx = ev.clientX - cx, dy = ev.clientY - cy;
+            var dist = Math.sqrt(dx * dx + dy * dy);
+            var max = 160;
+            if (dist < max) {
+              var pull = (1 - dist / max) * 8;
+              var nx = (dx / (dist || 1)) * pull;
+              var ny = (dy / (dist || 1)) * pull;
+              el.style.transform = 'translate(' + nx + 'px,' + ny + 'px) scale(1.02)';
+            } else { el.style.transform = ''; }
+          });
+          el.addEventListener('mouseleave', function () { el.style.transform = ''; });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
