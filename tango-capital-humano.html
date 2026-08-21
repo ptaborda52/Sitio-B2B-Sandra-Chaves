@@ -628,7 +628,6 @@
 
       /* Timeline activada por scroll (IntersectionObserver) */
       var steps = document.querySelectorAll('[data-timeline] .tl-step');
-      var bar = document.querySelector('[data-timeline]::after');
       if ('IntersectionObserver' in window) {
         var io = new IntersectionObserver(function (entries) {
           entries.forEach(function (en) { if (en.isIntersecting) en.target.classList.add('is-on'); });
