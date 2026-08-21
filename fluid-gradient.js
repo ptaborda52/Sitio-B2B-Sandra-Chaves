@@ -165,8 +165,10 @@
       }, { threshold: 0.05 }).observe(canvas);
     }
 
-    this._resizeObserver = new ResizeObserver(this._resize.bind(this));
-    this._resizeObserver.observe(canvas.parentElement || canvas);
+    if (typeof ResizeObserver !== 'undefined') {
+      this._resizeObserver = new ResizeObserver(this._resize.bind(this));
+      this._resizeObserver.observe(canvas.parentElement || canvas);
+    }
 
     canvas.parentElement && canvas.parentElement.classList.add('is-fluid');
 

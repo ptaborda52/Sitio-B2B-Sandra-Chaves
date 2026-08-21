@@ -665,10 +665,31 @@
         renderer.render(scene, camera);
       }
 
+      var running = false;
+      function startLoop() {
+        if (!running) { running = true; renderer.setAnimationLoop(tick); }
+      }
+      function stopLoop() {
+        running = false;
+        renderer.setAnimationLoop(null);
+      }
+
       if (reduced) {
         tick(0); // frame estático con prefers-reduced-motion
       } else {
-        renderer.setAnimationLoop(tick);
+        startLoop();
+        // Pausa el renderizado cuando la pestaña deja de estar activa
+        document.addEventListener('visibilitychange', function () {
+          if (document.hidden) stopLoop(); else startLoop();
+        });
+        // Pausa el renderizado cuando el canvas queda fuera del viewport
+        if ('IntersectionObserver' in window) {
+          new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+              if (en.isIntersecting) startLoop(); else stopLoop();
+            });
+          }, { threshold: 0.05 }).observe(parent);
+        }
       }
     })();
   </script>

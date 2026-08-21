@@ -652,6 +652,9 @@
       modal.querySelector('[data-modal-close]').addEventListener('click', close);
       modal.addEventListener('click', function (ev) { if (ev.target === modal) close(); });
       function close() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+      document.addEventListener('keydown', function (ev) {
+        if (ev.key === 'Escape' && modal.classList.contains('open')) close();
+      });
 
       /* Pointer magnético (solo pointer fino, sin reduced motion) */
       var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;

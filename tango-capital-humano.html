@@ -628,6 +628,8 @@
 
       /* Timeline activada por scroll (IntersectionObserver) */
       var steps = document.querySelectorAll('[data-timeline] .tl-step');
+      // Los pseudo-elementos (::after) no se pueden seleccionar con querySelector;
+      // el estado visual de la barra se controla vía clases CSS sobre .tl-step.is-on.
       if ('IntersectionObserver' in window) {
         var io = new IntersectionObserver(function (entries) {
           entries.forEach(function (en) { if (en.isIntersecting) en.target.classList.add('is-on'); });
