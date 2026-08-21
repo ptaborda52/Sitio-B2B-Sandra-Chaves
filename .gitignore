@@ -13,3 +13,6 @@ Capital Humano.mp4
 # Sistema / editor
 .DS_Store
 Thumbs.db
+
+# Paquete comprimido para el cliente
+*.zip
